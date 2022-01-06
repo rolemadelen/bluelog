@@ -1,5 +1,7 @@
 ---
 title: "[RoR] Updating a section with AJAX"
+subtitle: "Learn how to render section of a page using AJAX"
+lang: "en"
 date: '2022-01-01'
 ---
 

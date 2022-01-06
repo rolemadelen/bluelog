@@ -1,5 +1,4 @@
-import '../styles/global.css'
-import "prismjs/themes/prism-tomorrow.css";
+import '../styles/sass/global.scss'
 
 export default function App({ Component, pageProps }) {
   return <Component {...pageProps} />

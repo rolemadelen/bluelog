@@ -1,5 +1,7 @@
 ---
 title: "Apache & Nginx Basic Authentication"
+subtitle: "Setting up Basic Authentication in Apache and Nginx"
+lang: "en"
 date: "2021-06-21"
 ---
 
