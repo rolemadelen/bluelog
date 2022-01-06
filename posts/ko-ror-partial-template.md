@@ -1,5 +1,7 @@
 ---
 title: "[RoR] Partial Template 사용하기"
+subtitle: "Learn how to create partials with local variables"
+lang: "ko"
 date: '2022-01-01'
 ---
 

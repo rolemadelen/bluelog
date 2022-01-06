@@ -1,0 +1,150 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import "./colors.module";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  line-height: 1.6;
+  font-size: 18px;
+  background-color: #1e242e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+    position: relative;
+}
+
+span {
+    &.ko:before, &.en:before, &.ja:before {
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 5em;
+        top:0;
+        bottom:0;
+    }
+    &.ko:before, &.en:before, &.ja:before {
+        right: 100%;
+    }
+    &.ko, &.en, &.ja {
+        display: block;
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 0.8em;
+        right: 1em;
+        border-radius: 50%;
+        background-color: transparent;
+        transition: all 0.3s;
+    }
+    &.ko:hover, &.en:hover, &.ja:hover {
+        //transform: rotate(540deg);
+        transition: all 0.3s;
+    }
+    &.ko {
+        box-shadow: 0px 0px 2px 0px #ff6666, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #1e242e;
+    }
+    &.en {
+        box-shadow: 0px 0px 2px 0px #1e242e8c, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #6464ff;
+    }
+    &.ja {
+        box-shadow: 0px 0px 2px 0px #1e242e8c, 0px 0px 3px 0px #ff6666, 0px 0px 2px 0px #ff6666;
+    }
+    &.ko:hover {
+        box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px white;
+    }
+    &.en:hover {
+        box-shadow: 6px -4px 1px 1px #6464ff, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px #6464ff;
+    }
+    &.ja:hover {
+        box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #ff6666, -7px -4px 1px 1px #ff6666;
+    }
+}
+
+a {
+  color: $--primary;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: from-font;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article {
+    color: $--primary;
+
+    h1 { font-size: 1.5em; }
+    h2 { font-size: 1.25em; }
+    h3 { font-size: 1.125em; }
+    h4 { font-size: 1em; }
+    h5 { font-size: 0.875em; }
+    h1, h2, h3, h4, h5 {
+        font-weight: bold;
+        padding: 1em 0em 0.5em 0;
+    }
+    p {
+        padding: 0.25em 0;
+        font-size: 16px;
+        code {
+            background-color: $--code;
+            font-size: 0.8em;
+            padding: 0.3em 0.5em;
+            border-radius: 5px;
+        }
+    }
+    pre {
+        overflow-x: auto;
+        font-size: 14px;
+        background-color: $--code-bg;
+        padding: 1em 1.5em;
+        margin: 0.65em 0;
+        border-radius: 5px;
+    }
+
+    hr {
+        margin: 1em 0;
+        color: $--hr;
+    }
+
+    ul,ol {
+        list-style: inside;
+    }
+
+    a {
+        color: $--link;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    height: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $--code-bg; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #000; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

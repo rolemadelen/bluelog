@@ -1,0 +1,30 @@
+@import "./colors.module";
+
+.container {
+    max-width: 45rem;
+    padding: 0 1rem;
+    margin: 3rem auto 6rem;
+  }
+  
+  .header {
+    display: flex;
+  }
+  
+  .backToHome {
+    margin: 3rem 0 0;
+  }
+
+  .navLogo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffffe6;
+    transition: all 0.3s ease-in;
+    text-shadow: 1px 1px #946b2d;
+  }
+  .navLogo:hover {
+      text-decoration: none;
+      transform: rotate(-5deg);
+      text-shadow: 15px 6px #3f5ed138;
+      color: #6183ff;
+      transition: all 0.3s ease-out;
+  }
