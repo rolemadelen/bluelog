@@ -3,8 +3,14 @@ import { getAllPostIds, getPostData } from '../../lib/posts'
 import Head from 'next/head'
 import Date from '../../components/date'
 import utilStyles from '../../styles/utils.module.css'
+import { useEffect } from 'react'
+import Prism from 'prismjs'
 
 export default function Post({ postData }) {
+    useEffect(() => {
+        Prism.highlightAll();
+    }, []);
+
   return (
     <Layout>
      <Head>
