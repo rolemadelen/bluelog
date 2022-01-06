@@ -26,7 +26,7 @@ span {
     &.ko:before, &.en:before, &.ja:before {
         content: '';
         position: absolute;
-        width: 40em;
+        width: 100px;
         height: 5em;
         top:0;
         bottom:0;
