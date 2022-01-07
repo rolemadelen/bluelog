@@ -37,12 +37,15 @@ li {
         right: 1em;
         border-radius: 50%;
         background-color: transparent;
-        transition: all 0.3s;
+        transform: rotate(0);
+        transition: all 0.3s ease-out;
     }
     &.ko:hover:before, &.en:hover:before, &.ja:hover:before {
+        transform: rotate(540deg);
         animation: rotate 0.7s infinite;
         animation-direction: alternate;
         animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: all 0.3s;
     }
     &.ko:before {
         box-shadow: 0px 0px 2px 0px #ff6666, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #1e242e;
