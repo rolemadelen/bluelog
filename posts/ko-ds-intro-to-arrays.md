@@ -60,7 +60,7 @@ int main()
 }
 ```
 
-제 머신에서 실행했을 때의 결과입니다.
+실행결과는 이렇습니다.
 ![addresses increasing by 4 bytes](/images/in-post/dsa/array/int-array-memory.png)
 
 메모리 주소는 랜덤이기 때문에 제 결과와는 값이 다를겁니다. 각 주소가 4씩 늘어난다는 것만 확인해주세요. 
