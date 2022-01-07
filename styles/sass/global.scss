@@ -16,6 +16,9 @@ body {
   font-size: $--root;
   background-color: #1e242e;
 }
+main {
+    position: relative;
+}
 
 * {
   box-sizing: border-box;
@@ -37,7 +40,7 @@ li {
         transition: all 0.3s;
     }
     &.ko:hover:before, &.en:hover:before, &.ja:hover:before {
-        animation: rotate 0.5s infinite;
+        animation: rotate 0.7s infinite;
         animation-direction: alternate;
         animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     }
@@ -126,28 +129,27 @@ article {
     a {
         color: $--link;
     }
+    
+    /* width */
+    ::-webkit-scrollbar {
+        height: 5px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: $--code-bg; 
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #000; 
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+    }
 }
-
-/* width */
-::-webkit-scrollbar {
-    height: 5px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: $--code-bg; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #000; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
-
 @keyframes rotate {
     from {transform: rotate(0);}
     to {transform: rotate(540deg);}

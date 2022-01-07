@@ -28,12 +28,24 @@ export default function Layout({ children, home }) {
                 <Link href={"/"} >
                     <a className={`${styles.navLogo}`}>Blue</a>
                 </Link>
+
+                <div className={styles.navLanguage}>
+                    <Link href={"/ko"}>
+                        <a>🇰🇷 </a>
+                    </Link>
+                    <Link href={"/en"}>
+                        <a>🇺🇸 </a>
+                    </Link>
+                    <Link href={"/ja"}>
+                        <a>🇯🇵</a>
+                    </Link>
+                </div>
             </header>
             <main>{children}</main>
             {!home && (
                 <div className={styles.backToHome}>
                     <Link href="/">
-                        <a>← Back to home</a>
+                        <a>← back</a>
                     </Link>
                 </div>
             )}
