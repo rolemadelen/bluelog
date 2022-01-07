@@ -64,8 +64,12 @@ int main()
 }
 ```
 
+<<<<<<< HEAD
 제 머신에서 실행했을 때의 결과입니다.
 <<<<<<< HEAD
+=======
+실행결과는 이렇습니다.
+>>>>>>> bef193f (old posts migrated)
 ![addresses increasing by 4 bytes](/images/in-post/dsa/array/int-array-memory.png)
 =======
 ![addresses increasing by 4 bytes](/img/in-post/ds-algo/array/20211024-int-array-memory.png)
