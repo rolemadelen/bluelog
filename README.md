@@ -10,13 +10,12 @@
 - 2022-01-07
   + Overall theme (blue-ish) defined. Utilized SASS's variable to set color schemes.
   + Finished posts (card style) UI using tailwindcss.
-  + post's show (contents) UI done for now. Markdown not yet added but simply added a background color to differenciate with normal texts.
-  <img src="./public/readme/20220107-show.jpg" width="500" alt="Post's content UI" />
-  + Each post's language is labeled with a circle with an animation.
-  <img src="./public/readme/20220107-5.webp" width="500" alt="Post's content UI" />
+  + post's show (contents) UI done for now. Markdown not yet added but simply added a background color to differenciate with normal texts.<br/><img src="./public/readme/20220107-show.jpg" width="500" alt="Post's content UI" />
+  + Each post's language is labeled with a circle with an animation.<br/><img src="./public/readme/20220107-5.webp" width="500" alt="Post's content UI" />
     * Korean => Red + Blue + White
     * English => Blue
     * Japan => Red
-  + Modified transition's to a keyframe animation.<br/>
-  <img src="./public/readme/keyframe.webp" width="150" alt="keyframe animation">
+  + Modified transition's to a keyframe animation.<br/><img src="./public/readme/keyframe.webp" width="150" alt="keyframe animation">
   + Footer added
+  + Language selection added. I can click a lang to view only posts in that language.
+    + I can also check available languages within a post.
