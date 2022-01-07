@@ -2,7 +2,7 @@
 
 ## Progress
 - 2022-01-05
-  + Inital blog created by following [this](https://nextjs.org/learn/basics/create-nextjs-app) tutorial from Next.js
+  + Inital blog created by following [this](https://nextjs.org/learn/basics/create-nextjs-app) tutorial from Next.js <br /><img src="./public/readme/20220105-initial.jpg" width="500" alt="Initial blog" />
   + url modified --> `/posts/<post-language>/<slug>/`
 - 2022-01-06
   + Attempted to add 'prism' for syntax highlighting but it didn't go well. After parsing markdown files, no classes were added to tags.
