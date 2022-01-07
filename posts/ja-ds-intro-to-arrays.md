@@ -1,11 +1,11 @@
 ---
-title: "[C/C++] Introduction to Arrays"
-subtitle: "An array is a collection of items stored at contiguous memory locations."
+title: "C/C++ の配列"
+subtitle: "配列というのは？ 配列の機能は？"
 date: "2021-10-27"
-lang: "en"
+lang: "ja"
 ---
 
-## What is an Array?
+## 配列 (Array) とは
 
 Imagine we have to declare 100 distinct `int` variables to use 100 different values.
 
@@ -13,28 +13,28 @@ Imagine we have to declare 100 distinct `int` variables to use 100 different val
 int a1, a2, a3, a4, ...., a97, a98, a99, a100; 
 ```
 
-This will be very tedious and time-consuming task. Instead, wouldn't it be better if we can declare a single container-ish variable
-that can hold 100 `int` variables?
+すごく時間かかるし、とても inefficient な作業になります。
+100個の変数を保存して使いたいとき使えるコンテナーみたいなのがあったら便利でしょう。
 
 <br>
 
-C/C++ provides a way to declare a container-like variable or to be specific, a data structure. It's called an Array.
+実は、できます。
+
+<br>
+
+C/C++言語は配列 (Array) という名のデータ構造をprovideします。
 
 ```cpp
+// int系の変数100個保存できる配列
 int numbers[100];
 ```
 
-An **array** is a collection of elements of the same type **stored at contiguous memory locations** which can be referenced using 
-an index.
+**配列**はエレメントのcollectionで、**エレメントはメモリ上に連続して配置している**データ構造です。
 
 
-## Elements & Memory Address
+## 配列のエレメントとメモリ住所
 
-<<<<<<< HEAD
-![Memory Location](/images/in-post/dsa/array/memory-location.svg)
-=======
 ![Memory Location](/img/in-post/ds-algo/array/20211024-memory-location.svg)
->>>>>>> 8b1a5f0 (intro to arrays post added)
 
 The above figure represents an integer array. Take a look at any two adjacent hexadecimal numbers -- memory address -- prefixed with `0x`. They are defer by 4 bytes, but why? Earlier we said that elements are stored at contiguous memory locations. So shouldn't it be differ by a byte like 200, 201, 202, ... etc?
 
@@ -64,11 +64,7 @@ int main()
 ```
 Here's the output of the program ran in my machine.
 
-<<<<<<< HEAD
-![addresses increasing by 4 bytes](/images/in-post/dsa/array/int-array-memory.png)
-=======
 ![addresses increasing by 4 bytes](/img/in-post/ds-algo/array/20211024-int-array-memory.png)
->>>>>>> 8b1a5f0 (intro to arrays post added)
 
 Memory addresses are random so the value will be different, but your output should show that it increases by 4 bytes.
 
@@ -84,7 +80,7 @@ If you want to make sure that that 4 is really coming from the data type `int`, 
 
 **Remember**: Location of the next element depends on the data type we use.
 
-## Array's Size
+## 配列の長さ
 
 Arrays in C/C++ has a fixed size container, meaning the size cannot be shirked nor expanded.
 
@@ -100,29 +96,25 @@ Shrinking seems like an okay move, but this is something only a compiler can do.
 
 (*We can actually use dynamic array to expand and shrink the size but we'll cover that later.)*
 
-## Array Indexing
+## 配列インデクシング (indexing)
 
 The index of an array in C/C++ starts from 0 not 1. This is called **zero-based indexing**. 
 
-<<<<<<< HEAD
-![Array zero-based indexing](/images/in-post/dsa/array/array-indexing.svg)
-=======
 ![Array zero-based indexing](/img/in-post/ds-algo/array/20211024-array-indexing.svg)
->>>>>>> 8b1a5f0 (intro to arrays post added)
 
 There are other types of indexing as well such as **1-based** which starts from 1, or **n-based**, where the index starts from any chosen value.
 
-## Advantages of using arrays
+## 配列の長所
 
 1. Can access any element very fast using the index - random access is allowed.
 2. Better [Cache locality](https://en.wikipedia.org/wiki/Locality_of_reference).
 3. Can store multiple of same type variables.
 
-## Disadvantages of using arrays
+## 配列の短所
 
 1. Fixed size - cannot shrink nor expand the size.
 2. Insertion and deletion of elements can be costly.
 3. An array of objects could take a lot of memory.
 
-## Reference
+## 参照
 - [https://www.geeksforgeeks.org/introduction-to-arrays/](https://www.geeksforgeeks.org/introduction-to-arrays/)

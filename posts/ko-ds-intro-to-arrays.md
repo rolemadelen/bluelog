@@ -28,7 +28,11 @@ int numbers[100];
 
 ## 배열의 원소와 주소값
 
+<<<<<<< HEAD
 ![Memory Location](/images/in-post/dsa/array/memory-location.svg)
+=======
+![Memory Location](/img/in-post/ds-algo/array/20211024-memory-location.svg)
+>>>>>>> 8b1a5f0 (intro to arrays post added)
 
 위 그림은 정수(`int`)의 배열을 나타내고 있습니다. 그런데 보시면 첫 번째와 두 번째 원소의 주소값이 200과 204로, 4의 차이를 나타내고 있습니다. 그 뿐 아니라 모든 주소값이 4씩 늘어나고 있죠. 분명 메모리 상에 연속하게 나열되어 있다고 했으니 200, 201, 202,.. 가 되어야 할 것 같은데 왜 4씩 늘어나는 것일까요?
 
@@ -61,7 +65,11 @@ int main()
 ```
 
 제 머신에서 실행했을 때의 결과입니다.
+<<<<<<< HEAD
 ![addresses increasing by 4 bytes](/images/in-post/dsa/array/int-array-memory.png)
+=======
+![addresses increasing by 4 bytes](/img/in-post/ds-algo/array/20211024-int-array-memory.png)
+>>>>>>> 8b1a5f0 (intro to arrays post added)
 
 메모리 주소는 랜덤이기 때문에 제 결과와는 값이 다를겁니다. 각 주소가 4씩 늘어난다는 것만 확인해주세요. 
 
@@ -95,7 +103,11 @@ C/C++에서 배열은 고정적 크기를 가집니다. 10개의 변수를 담�
 ## 배열의 인덱싱
 
 C/C++에서 배열의 첫 번째 원소의 인덱스는 1번이 아니라 0번 부터 표기하는데, 이를 **제로 베이스 인덱싱 (zero-based indexing)**라고 합니다.
+<<<<<<< HEAD
 ![Array zero-based indexing](/images/in-post/dsa/array/array-indexing.svg)
+=======
+![Array zero-based indexing](/img/in-post/ds-algo/array/20211024-array-indexing.svg)
+>>>>>>> 8b1a5f0 (intro to arrays post added)
 
 
 ## 배열의 장점 
