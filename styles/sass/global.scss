@@ -8,25 +8,30 @@ $--text: 16px;
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  line-height: 1.6;
-  font-size: $--root;
-  background-color: #1e242e;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+        Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    line-height: 1.6;
+    font-size: $--root;
+    background-color: #1e242e;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-li {
+main {
     position: relative;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 li {
-    &.ko:before, &.en:before, &.ja:before {
+    list-style: none;
+    position: relative;
+
+    &.ko:before,
+    &.en:before,
+    &.ja:before {
         content: '';
         display: block;
         position: absolute;
@@ -36,65 +41,100 @@ li {
         right: 1em;
         border-radius: 50%;
         background-color: transparent;
-        transition: all 0.3s;
+        transform: rotate(0);
+        transition: all 0.3s ease-out;
     }
-    &.ko:hover:before, &.en:hover:before, &.ja:hover:before {
+
+    &.ko:hover:before,
+    &.en:hover:before,
+    &.ja:hover:before {
         transform: rotate(540deg);
+        animation: rotate 0.7s infinite;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
         transition: all 0.3s;
     }
+
     &.ko:before {
         box-shadow: 0px 0px 2px 0px #ff6666, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #1e242e;
     }
+
     &.en:before {
         box-shadow: 0px 0px 2px 0px #1e242e8c, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #6464ff;
     }
+
     &.ja:before {
         box-shadow: 0px 0px 2px 0px #1e242e8c, 0px 0px 3px 0px #ff6666, 0px 0px 2px 0px #ff6666;
     }
+
     &.ko:hover:before {
         box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px white;
     }
+
     &.en:hover:before {
         box-shadow: 6px -4px 1px 1px #6464ff, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px #6464ff;
     }
+
     &.ja:hover:before {
         box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #ff6666, -7px -4px 1px 1px #ff6666;
     }
 }
 
 a {
-  color: $--primary;
-  text-decoration: none;
+    color: $--primary;
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: from-font;
+    text-decoration: underline;
+    text-decoration-thickness: from-font;
 }
 
 img {
-  max-width: 100%;
-  display: block;
+    max-width: 100%;
+    display: block;
 }
 
 article {
     color: $--primary;
 
-    h1 { font-size: 1.5em; }
-    h2 { font-size: 1.25em; }
-    h3 { font-size: 1.125em; }
-    h4 { font-size: 1em; }
-    h5 { font-size: 0.875em; }
-    h1, h2, h3, h4, h5 {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.25em;
+    }
+
+    h3 {
+        font-size: 1.125em;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+
+    h5 {
+        font-size: 0.875em;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
         font-weight: bold;
         padding: 1em 0em 0.5em 0;
     }
+
     img {
         background-color: white;
     }
+
     p {
         padding: 0.25em 0;
         font-size: $--text;
+
         code {
             background-color: $--code;
             font-size: 0.8em;
@@ -102,6 +142,7 @@ article {
             border-radius: 5px;
         }
     }
+
     pre {
         overflow-x: auto;
         font-size: 14px;
@@ -116,7 +157,8 @@ article {
         color: $--hr;
     }
 
-    ul,ol {
+    ul,
+    ol {
         list-style: inside;
 
         li {
@@ -127,24 +169,43 @@ article {
     a {
         color: $--link;
     }
+
+    /* width */
+    ::-webkit-scrollbar {
+        height: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: $--code-bg;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #000;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
 }
 
-/* width */
-::-webkit-scrollbar {
-    height: 5px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: $--code-bg; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #000; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
-  }
+footer {
+    div {
+        margin: 0.35em 0;
+    }
+    img {
+        margin: 0 0.35em;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(540deg);
+    }
+}
