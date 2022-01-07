@@ -23,8 +23,7 @@ export default function Home({ allPostsData }){
       <section>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, subtitle, lang, date, title }) => (
-            <li className={`${utilStyles.card}`} key={id}>
-                <span className={`${lang}`}></span>
+            <li className={`${utilStyles.card} ${lang}`} key={id}>
               <Link href={`/posts/${id[0]}/${id[1]}`}>
                   <a class="text-lg font-semibold">{title}</a>
               </Link>

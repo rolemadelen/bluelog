@@ -22,19 +22,9 @@ li {
     position: relative;
 }
 
-span {
+li {
     &.ko:before, &.en:before, &.ja:before {
         content: '';
-        position: absolute;
-        width: 100px;
-        height: 5em;
-        top:0;
-        bottom:0;
-    }
-    &.ko:before, &.en:before, &.ja:before {
-        right: 100%;
-    }
-    &.ko, &.en, &.ja {
         display: block;
         position: absolute;
         width: 10px;
@@ -45,26 +35,26 @@ span {
         background-color: transparent;
         transition: all 0.3s;
     }
-    &.ko:hover, &.en:hover, &.ja:hover {
-        //transform: rotate(540deg);
+    &.ko:hover:before, &.en:hover:before, &.ja:hover:before {
+        transform: rotate(540deg);
         transition: all 0.3s;
     }
-    &.ko {
+    &.ko:before {
         box-shadow: 0px 0px 2px 0px #ff6666, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #1e242e;
     }
-    &.en {
+    &.en:before {
         box-shadow: 0px 0px 2px 0px #1e242e8c, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #6464ff;
     }
-    &.ja {
+    &.ja:before {
         box-shadow: 0px 0px 2px 0px #1e242e8c, 0px 0px 3px 0px #ff6666, 0px 0px 2px 0px #ff6666;
     }
-    &.ko:hover {
+    &.ko:hover:before {
         box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px white;
     }
-    &.en:hover {
+    &.en:hover:before {
         box-shadow: 6px -4px 1px 1px #6464ff, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px #6464ff;
     }
-    &.ja:hover {
+    &.ja:hover:before {
         box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #ff6666, -7px -4px 1px 1px #ff6666;
     }
 }
