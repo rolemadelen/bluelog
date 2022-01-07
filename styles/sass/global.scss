@@ -97,6 +97,9 @@ img {
 
 article {
     color: $--primary;
+    li {
+        list-style: inside;
+    }
 
     h1 {
         font-size: 1.5em;
@@ -129,6 +132,9 @@ article {
 
     img {
         background-color: white;
+        padding: 0.5em;
+        margin: 0.5em 0;
+        border-radius: 5px;
     }
 
     p {
