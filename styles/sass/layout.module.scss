@@ -4,27 +4,55 @@
     max-width: 38rem;
     padding: 0 1rem;
     margin: 3rem auto 5rem;
-  }
-  
-  .header {
-    display: flex;
-  }
-  
-  .backToHome {
-    margin: 3rem 0 0;
-  }
+}
 
-  .navLogo {
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.backToHome {
+    margin: 3rem 0 0;
+}
+
+.navLogo {
     font-size: 2em;
     font-weight: bold;
     color: #ffffffe6;
     transition: all 0.3s ease-in;
     text-shadow: 1px 1px #946b2d;
-  }
-  .navLogo:hover {
-      text-decoration: none;
-      transform: rotate(-5deg);
-      text-shadow: 15px 6px #3f5ed138;
-      color: #6183ff;
-      transition: all 0.3s ease-out;
-  }
+
+    &:hover {
+        text-decoration: none;
+        transform: rotate(-5deg);
+        text-shadow: 15px 6px #3f5ed138;
+        color: #6183ff;
+        transition: all 0.3s ease-out;
+    }
+}
+
+.navLanguage {
+    position: absolute;
+    right: 0;
+    top: -2.5em;
+
+    a {
+        padding: 0 0.5em;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+@keyframes floating {
+    from {
+        transform: scale(1.0);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
