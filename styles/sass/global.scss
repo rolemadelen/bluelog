@@ -22,10 +22,8 @@ body {
 }
 
 li {
+    list-style: none;
     position: relative;
-}
-
-li {
     &.ko:before, &.en:before, &.ja:before {
         content: '';
         display: block;
@@ -39,8 +37,9 @@ li {
         transition: all 0.3s;
     }
     &.ko:hover:before, &.en:hover:before, &.ja:hover:before {
-        transform: rotate(540deg);
-        transition: all 0.3s;
+        animation: rotate 0.5s infinite;
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     }
     &.ko:before {
         box-shadow: 0px 0px 2px 0px #ff6666, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #1e242e;
@@ -148,3 +147,8 @@ article {
   ::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
+
+@keyframes rotate {
+    from {transform: rotate(0);}
+    to {transform: rotate(540deg);}
+}
