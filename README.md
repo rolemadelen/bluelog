@@ -15,7 +15,9 @@
     * Korean => Red + Blue + White
     * English => Blue
     * Japan => Red
-  + Modified transition's to a keyframe animation.<br/><img src="./public/readme/keyframe.webp" width="150" alt="keyframe animation">
+  + Modified transition's to a keyframe animation.<br/><img src="./public/readme/20220107-keyframe.webp" width="150" alt="keyframe animation">
   + Footer added
   + Language selection added. I can click a lang to view only posts in that language.
     + I can also check available languages within a post.
+- 2022-01-08
+  + tagging added <br/><img src="./public/readme/20220108-tagging.webp" width="500" alt="tagging">
