@@ -22,10 +22,10 @@ export default function Home({ allPostsData }){
       </Head>
       <section>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, subtitle, lang, date, title }) => (
+          {allPostsData.map(({ id, subtitle, lang, date, title, tags }) => (
             <li className={`${utilStyles.card} ${lang}`} key={id}>
               <Link href={`/posts/${id[0]}/${id[1]}`}>
-                  <a class="text-lg font-semibold">{title}</a>
+                  <a className="text-lg font-semibold">{title}</a>
               </Link>
               <br/>
               <div className={`${utilStyles.subtext} text-sm pt-1 pb-2`}>
@@ -33,6 +33,13 @@ export default function Home({ allPostsData }){
               </div>
               <div className={`${utilStyles.subtext} text-xs`}>
                   <Date dateString={date} />
+              </div>
+              <div className={`${utilStyles.tags} flex justify-end`}>
+                {tags.map((tag,i) => (
+                    <div key={i} className={"px-2 m-1 text-xs"}>
+                        {tag}
+                    </div>
+                ))}
               </div>
             </li>
           ))}

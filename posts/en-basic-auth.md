@@ -3,6 +3,10 @@ title: "Apache & Nginx Basic Authentication"
 subtitle: "Setting up Basic Authentication in Apache and Nginx"
 lang: "en"
 date: "2021-06-21"
+tags:
+- basic auth
+- apache
+- nginx
 ---
 
 > I'm running my web under Nginx, so take it as grain of salt about my findings for adding basic auth to your page running under the Apache server.
