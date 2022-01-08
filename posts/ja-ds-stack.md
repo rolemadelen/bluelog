@@ -3,6 +3,8 @@ title: "スタック (Stack)"
 subtitle: "スタックの基本概念と機能について知る。"
 date: "2021-06-20"
 lang: "ja"
+tags:
+- stack
 ---
 
 ## スタック (Stack) とは

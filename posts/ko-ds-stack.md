@@ -3,6 +3,8 @@ title: "스택 (Stack)"
 subtitle: "스택의 기본 개념과 기능에 대하여 알아본다"
 date: "2021-06-20"
 lang: "ko"
+tags:
+- stack
 ---
 
 ## 스택(Stack) 이란

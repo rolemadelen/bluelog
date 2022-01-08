@@ -3,6 +3,8 @@ title: "配列 (Array)"
 subtitle: "配列というのは？ 配列の機能は？"
 date: "2021-05-10"
 lang: "ja"
+tags:
+- arrays
 ---
 
 

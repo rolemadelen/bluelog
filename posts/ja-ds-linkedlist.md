@@ -3,6 +3,8 @@ title: "連結リスト (LinkedList)"
 subtitle: "連結リストの特性、タイプ、そして機能について調べよう。"
 date: "2021-05-17"
 lang: "ja"
+tags:
+- linked list
 ---
 
 # 連結リスト (Linked List)

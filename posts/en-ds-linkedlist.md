@@ -3,6 +3,8 @@ title: "Linked List"
 subtitle: "Characteristics, types, and operations of Linked List"
 date: "2021-05-17"
 lang: "en"
+tags:
+- linked list
 ---
 
 ## Linked List

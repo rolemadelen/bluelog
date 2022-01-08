@@ -3,6 +3,8 @@ title: "배열 (Array)"
 subtitle: "배열의 기본 성질과 기능에 대해 알아본다"
 date: "2021-05-10"
 lang: "ko"
+tags: 
+- arrays
 ---
 
 

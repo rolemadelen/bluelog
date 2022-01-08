@@ -3,6 +3,8 @@ title:  "Tree"
 subtitle: "Learn about Tree properties and terminology, and how to implement one."
 date:   "2021-06-26"
 lang: "en"
+tags:
+- tree
 ---
 
 ## What is Tree?
