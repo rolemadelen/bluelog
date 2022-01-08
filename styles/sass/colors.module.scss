@@ -1,12 +1,24 @@
-$--theme: #2d3746;
-$--primary: #ffffffe6;
-$--secondary: #93a1b6;
+/* Dark Theme */
+$--theme-dark: #1e242e;
+$--primary-dark: #ffffffe6;
+$--secondary-dark: #93a1b6;
+$--card-bg-dark: #0d131c;
+$--tags-bg-dark: #224344;
 
-$--card-bg: #2b384e;
+$--code-dark: #214262;
+$--code-bg-dark: #0d131c;
 
-$--tags-bg: #224344;
+$--link-dark: #2996ff;
+$--hr-dark: #0d131c42;
 
+/* Light Theme */
+$--theme: #f1f1f175;
+$--primary: #1b212e;
+$--secondary: #1b212e91;
+$--card-bg: #cbddf36e;
+$--tags-bg: #acc3d785;
+
+$--code: #d9d9d9;
 $--code-bg: #0d131c;
-$--code: #214262;
-$--link: #2996ff;
-$--hr: #0d131c42;
+$--link: #0c64c1;
+$--hr: #e5e5e5;

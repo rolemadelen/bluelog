@@ -1,9 +1,21 @@
 import Head from 'next/head'
 import styles from '../styles/sass/layout.module.scss'
 import Link from 'next/link'
+import React from 'react'
 
 const name = 'Blue Eu'
 export const siteTitle = 'Blue Log'
+
+export function toggleDarkMode() {
+    document.querySelector('html').classList.toggle('dark');
+}
+
+const MyButton = React.forwardRef(({ onClick }, ref) => {
+    return (
+      <span onClick={onClick} ref={ref} className={"fa fa-bolt dark:text-white duration-300"}>
+      </span>
+    )
+  })
 
 export default function Layout({ children, home }) {
     return (
@@ -26,9 +38,11 @@ export default function Layout({ children, home }) {
 
             <header className={styles.header}>
                 <Link href={"/"} >
-                    <a className={`${styles.navLogo}`}>Blue</a>
+                    <a className={`${styles.navLogo} text-primary dark:text-dark_primary`}>Blue</a>
                 </Link>
-
+                <div className={"switch hover:cursor-pointer"} >
+                    <MyButton onClick={toggleDarkMode}/>
+                </div>
                 <div className={styles.navLanguage}>
                     <Link href={"/ko"}>
                         <a>🇰🇷 </a>

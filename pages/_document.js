@@ -8,13 +8,13 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html lang="en">
+            <Html lang="en" className={"dark dark:bg-dark_theme duration-300"}>
                 <Head />
-                <body>
+                <body className={"bg-theme dark:bg-dark_theme duration-300"}>
                     <Main />
                     <NextScript />
                 </body>
-                <footer className="flex flex-col justify-center items-center mb-8 text-sm text-secondary">
+                <footer className="flex flex-col justify-center items-center mb-8 text-sm text-primary dark:text-dark_secondary">
                     <div>
                         2022©<a href="https://github.com/euisblue">Blue Eu</a>. powered by&nbsp;<a href="https://vercel.com/">Vercel</a>
                     </div>
