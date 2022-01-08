@@ -3,6 +3,8 @@ title: "Stack"
 subtitle: "Characteristics, types, and operations of Stack"
 date: "2021-06-20"
 lang: "en"
+tags:
+- stack
 ---
 
 ## What is Stack?

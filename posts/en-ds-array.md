@@ -3,6 +3,8 @@ title: "Array"
 subtitle: "Learn characteristics and basic operations of an Arrary"
 date: "2021-05-10"
 lang: "en"
+tags:
+- arrays
 ---
 
 

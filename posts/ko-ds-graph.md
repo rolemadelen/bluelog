@@ -3,6 +3,8 @@ title: "그래프(Graph)"
 subtitle: "그래프의 타입과 구현 방식에 대해 알아본다."
 date: "2021-07-04"
 lang: "ko"
+tags:
+- graph
 ---
 
 ## 그래프(Graph) 란

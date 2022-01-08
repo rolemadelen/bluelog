@@ -14,6 +14,13 @@ export default function Post({ postData }) {
                 <div className={`${utilStyles.subtext} text-xs pt-3`}>
                     <Date dateString={postData.date} />
                 </div>
+                <div className={`${utilStyles.tags} flex justify-end`}>
+                {postData.tags.map((tag,i) => (
+                    <div key={i} className={"px-2 m-1 text-xs"}>
+                        {tag}
+                    </div>
+                ))}
+              </div>
             </li>
             <div className={utilStyles.availableLanguage}>
                 {postData.availableLanguage.map(post => (

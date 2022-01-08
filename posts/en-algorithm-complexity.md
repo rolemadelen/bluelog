@@ -3,6 +3,9 @@ title:  "Time & Space Complexity"
 subtitle: "What is time & space complexity in CP? What is Big-Oh?"
 date:   "2021-05-03"
 lang: "en"
+tags:
+- cp
+- complexity
 ---
 
 ## Time Complexity

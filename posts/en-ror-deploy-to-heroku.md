@@ -3,6 +3,11 @@ title: "[RoR] Migrating from SQLite3 to PostgreSQL"
 subtitle: "Migrate pre-existing rails app's database from sqlite3 to postgresql"
 lang: "en"
 date: "2021-12-17"
+tags:
+- ror 
+- heroku
+- postgres
+- sqlite3
 ---
 
 Machine used: **macOS Monterey Version 12.0.1**

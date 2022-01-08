@@ -3,6 +3,8 @@ title:  "Binary Tree"
 subtitle: "Learn about the characteristcs of binary tree, types, and tree traversals."
 date:   "2021-07-14"
 lang: "en"
+tags:
+- binary tree
 ---
 
 <style>

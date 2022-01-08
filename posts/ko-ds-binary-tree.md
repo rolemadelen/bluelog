@@ -3,6 +3,9 @@ title:  "이진 트리 (Binary Tree)"
 subtitle: "이진 트리의 기본 특성과 용어 그리고 순회(traversal)하는 법을 알아본다."
 date:   "2021-06-27"
 lang: "ko"
+tags:
+- binary tree
+- tree
 ---
 
 ## 이진 트리(Binary Tree) 란?

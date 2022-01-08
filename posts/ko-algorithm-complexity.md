@@ -3,6 +3,9 @@ title:  "시간 & 공간 복잡도 (Time & Space Complexity)"
 subtitle: "PS에서의 시간복잡도? 공간복잡도? Big-Oh? 는 무엇을 의미하는가"
 date:   "2021-05-03"
 lang: "ko"
+tags:
+- cp
+- complexity
 ---
 
 ## 시간 복잡도 (Time Complexity)
