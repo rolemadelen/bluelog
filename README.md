@@ -21,3 +21,5 @@
     + I can also check available languages within a post.
 - 2022-01-08
   + tagging added <br/><img src="./public/readme/20220108-tagging.webp" width="500" alt="tagging">
+- 2022-01-08
+  + Dark/Light toggle added <br/> <img src="./public/readme/20220109-mode.webp" width="500" alt="Toggling mode">
