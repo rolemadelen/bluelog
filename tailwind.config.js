@@ -5,7 +5,7 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   presets: [],
-  darkMode: 'media', // or 'class'
+  darkMode: 'class', // or 'media'
   theme: {
     screens: {
       sm: '640px',
@@ -42,7 +42,16 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
-      secondary: '#93a1b6',
+      dark_theme: '#1e242e',
+      dark_primary: '#ffffffe6',
+      dark_secondary: '#93a1b6',
+      dark_card_bg: '#0d131c',
+      dark_tags_bg: '#224344',
+      theme: '#f1f1f175',
+      primary: '#1b212e',
+      secondary: '#1b212e91',
+      card_bg: '#cbddf36e',
+      tags_bg: '#acc3d785',
     }),
     columns: {
       auto: 'auto',
