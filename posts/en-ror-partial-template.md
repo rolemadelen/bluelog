@@ -3,6 +3,9 @@ title: "[RoR] How to use partial template"
 subtitle: "Learn how to create partials with local variables"
 lang: "en"
 date: "2022-01-01"
+tags:
+- ror
+- partial template
 ---
 
 ## Partial Template

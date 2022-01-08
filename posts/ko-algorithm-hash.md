@@ -3,6 +3,8 @@ title: "해시(Hash) 란"
 subtitle: "임의의 크기의 데이터를 고정된 길이를 가진 데이터로 매핑(mapping)한 값."
 date: "2021-07-24"
 lang: "ko"
+tags:
+- hash
 ---
 
 # 해시(Hash) 란

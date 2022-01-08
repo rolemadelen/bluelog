@@ -3,6 +3,8 @@ title: "[C/C++] Introduction to Arrays"
 subtitle: "An array is a collection of items stored at contiguous memory locations."
 date: "2021-10-27"
 lang: "en"
+tags:
+- arrays
 ---
 
 ## What is an Array?

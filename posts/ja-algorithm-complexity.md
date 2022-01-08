@@ -3,6 +3,9 @@ title:  "Big-O記法とは"
 subtitle: "ビッグ・オー (Big-O) 最悪の場合"
 date:   "2021-05-03"
 lang: "ja"
+tags:
+- cp
+- complexity
 ---
 
 ## Big-O記法とは

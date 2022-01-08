@@ -3,6 +3,8 @@ title: "Queue"
 subtitle: "Learn about characteristics, operations, and applications of Queue"
 date: "2021-06-20"
 lang: "en"
+tags:
+- queue
 ---
 
 ## What is Queue

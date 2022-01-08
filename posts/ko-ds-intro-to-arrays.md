@@ -3,6 +3,8 @@ title: "[C/C++] 배열(Array)이란?"
 subtitle: "여러개의 변수를 한 번에 정의할 수 있을까?"
 date: "2021-10-27"
 lang: "ko"
+tags:
+- arrays
 ---
 
 ## 배열이란

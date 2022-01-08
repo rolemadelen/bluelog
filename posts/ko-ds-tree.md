@@ -3,6 +3,8 @@ title:  "트리 (Tree)"
 subtitle: "트리의 기본 특성과 용어를 공부하고 구현을 해본다."
 date:   "2021-06-26"
 lang: "ko"
+tags:
+- tree
 ---
 
 ## 트리(Tree) 란
