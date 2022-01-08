@@ -26,7 +26,7 @@ export default function Post({ postData }) {
                 {postData.availableLanguage.map((post, i) => (
                     <div key={i}>
                         <Link href={`/posts/${post.lang}/${post.slug}`}>
-                            <a className={"text-primary bg-tags_bg"}>{post.langName}</a>
+                            <a className={"text-white dark:text-dark_primary bg-tags_bg"}>{post.langName}</a>
                         </Link>
                     </div>
                 ))}
