@@ -92,13 +92,13 @@ void BinaryTree::postorder(Node *node) {
 
 This function basically creates a Full Binary Tree where nodes are filled from left to right.
 
-<br>
+
 
 Steps:
 1. If `root` is empty, let new node be the `root`.
-2. Use *queue* to explore the tree in level order. <br>
-    2-1) Insert the new node at current node's left if it's empty, else enqueue the node. <br>
-    2-2) Insert the new node at current node's right if it's empty, else enqueue the node.<br>
+2. Use *queue* to explore the tree in level order. 
+    2-1) Insert the new node at current node's left if it's empty, else enqueue the node. 
+    2-2) Insert the new node at current node's right if it's empty, else enqueue the node.
 3. Repeat the step #2 until *queue* is empty.
 
 ```cpp
@@ -137,7 +137,7 @@ void BinaryTree::insertNode(int data) {
 
 Find the leaf node (the right-most node at the bottom level), and delete it.
 
-<br>
+
 
 ```cpp
 void BinaryTree::deleteNode(void) {

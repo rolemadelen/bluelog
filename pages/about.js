@@ -42,7 +42,7 @@ export default function About() {
                         />
                         <Image
                             priority
-                            src="/images/draw3.jpg"
+                            src="/images/draw2.jpg"
                             className={"absolute left-0 top-0 rounded"}
                             height={230}
                             width={600}

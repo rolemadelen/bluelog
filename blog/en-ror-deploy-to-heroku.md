@@ -36,7 +36,7 @@ gem 'pg'
 
 Then, run `bundle install`.
 
-<br>
+
 
 If you face an error while installing `pg`, try:
 

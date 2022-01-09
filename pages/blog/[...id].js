@@ -1,8 +1,10 @@
-import Layout from '../../components/layout'
-import { getAllPostIds, getPostData } from '../../lib/posts'
-import Date from '../../components/date'
-import utilStyles from '../../styles/sass/utils.module.scss'
+import Layout from '/components/layout'
+import { getAllPostIds, getPostData } from '/lib/posts'
+import Date from '/components/date'
+import utilStyles from '/styles/sass/utils.module.scss'
 import Link from 'next/link'
+import Codeblock from '/lib/codeblock.js'
+import ReactMarkdown from 'react-markdown'
 
 export default function Post({ postData }) {
     return (
@@ -32,8 +34,7 @@ export default function Post({ postData }) {
                 ))}
             </div>
             <article className={`text-primary dark:text-dark_primary`}>
-                <br />
-                <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+                <ReactMarkdown components={Codeblock}>{postData.markdown}</ReactMarkdown>
             </article>
         </Layout>
     )

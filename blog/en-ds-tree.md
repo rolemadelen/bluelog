@@ -16,11 +16,11 @@ Tree is a non-linear data structure composed of one or more **nodes**.
 The top-most (first) node of the tree is called the **root** node. There is only one *root* in a tree and it can have either 
  0 or more **child** node(s).
 
-<br>
+
 
 A tree is actually a **graph**. It is an **acyclic connected graph**, meaning a graph, where all nodes are connected, without a cycle.
 
-<br>
+
 
 ![Tree check](/images/in-post/dsa/tree/tree-cycle.jpg)
 
@@ -97,7 +97,7 @@ void deleteTreeRec(Node *root) {
 }
 ```
 
-<br>
+
 
 We can also delete nodes level by level in a tree.
 

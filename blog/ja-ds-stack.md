@@ -22,7 +22,7 @@ tags:
 
 `push(data)` は `data` をスタックのトップにpushします。
 
-<br>
+
 
 ```cpp
 void Stack::push(int data) {
@@ -40,7 +40,7 @@ pushの逆で、データを除去することをpopといいます。
 
 `pop()`関数はスタックの上にあるデータを取り除きます。
 
-<br>
+
 
 ```cpp
 void Stack::pop(void) {
@@ -57,7 +57,7 @@ void Stack::pop(void) {
 
 スタックの上にあるデータを返す関数です。popはデータを取り除きますが、peekの場合はデータを返すだけでスタックには残っています。
 
-<br>
+
 
 ```cpp
 int Stack::peek(void) {
@@ -69,7 +69,7 @@ int Stack::peek(void) {
 
 空スタックかを判別する関数です。空スタックの場合は`true`を、空スタックではないなら`false`を返します。
 
-<br>
+
 
 ```cpp
 bool Stack::isEmpty(void) {

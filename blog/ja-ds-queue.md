@@ -21,7 +21,7 @@ tags:
 ### enqueue操作
 enqueue(エンキュー)操作は新しいデータをqueueに追加します。
 
-<br> 
+ 
 
 ```cpp
 void Queue::enqueue(int data) {
@@ -40,7 +40,7 @@ void Queue::enqueue(int data) {
 
 dequeue(ディキュー)操作はqueueの一番前にあるデータ(*front*)を消去します。
 
-<br>
+
 
 ```cpp
 void Queue::dequeue(void) {
@@ -55,7 +55,7 @@ void Queue::dequeue(void) {
 
 getFront関数はキューの一番最初のデータを返します。
 
-<br>
+
 
 ```cpp
 int Queue::getFront(void) {
@@ -67,7 +67,7 @@ int Queue::getFront(void) {
 
 getBack関数はキューの一番最後のデータを返します。
 
-<br>
+
 
 ```cpp
 int Queue::getBack(void) {
@@ -79,7 +79,7 @@ int Queue::getBack(void) {
 
 空キューを確認する関数です。キューの中にデータがな場合は `true` を返して、データがある場合は `false` を返します。
 
-<br>
+
 
 ```cpp
 bool Queue::isEmpty(void) {

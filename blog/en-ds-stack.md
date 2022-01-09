@@ -13,14 +13,14 @@ It is also known as a **LIFO (Last-In First-Out)** data structure.
 
 ![stack figure](/images/in-post/dsa/stack/stack1.png)
 
-<br>
+
 
 Think of a pile of plates to clean on a restaurant. 
 In order to get to the bottom (without lifting the whole pile), we need to remove it one by one from the top.
 And the plate on the top must have been the last one (or the most recent one) to join that pile and therefore it gets to
 leave that pile first, hence it is LIFO.
 
-<br>
+
 
 This is how Stack works. Only the data on the top is available and we need to remove or _pop_ it to access
 any other data beneath it.

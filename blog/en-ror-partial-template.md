@@ -12,7 +12,7 @@ tags:
 
 We have two files: `a.html.erb` and `b.html.erb`, with similar contents.
 
-<br>
+
 
 a.html.erb
 ```erb
@@ -57,7 +57,6 @@ Contents of both files are identical except `<h1>` tag. I'm going to follow the 
 ### Creating a partial
 The name of the partial template or a partial starts with an underscore(`_`). 
 
-<br>
 
 Here's my partial `_langList.html.erb`:
 ```erb
@@ -98,7 +97,7 @@ b.html.erb
 
 Note that I didn't use `'_langList'`. You don't need to include the underscore when passing the name. In fact, you shouldn't include it otherwise rails wont be able to locate partials.
 
-<br>
+
 
 Sometimes you might need to specify the partial in a specific view directory. Let say you have a `_langList.html.erb` inside the `home` view.
 ```erb
@@ -108,7 +107,7 @@ Sometimes you might need to specify the partial in a specific view directory. Le
 ### Passing local variables
 We can further reduce those codes in `a.html.erb` and `b.html.erb` by passing in contents inside the `<h1>` tag with a variable to the partial.
 
-<br>
+
 
 a.html.erb
 ```erb
@@ -126,7 +125,7 @@ b.html.erb
 
 Using `:locals`, we can pass in variables to the partial. Here, `:title` is the key I named, and I can access its value with `title` (without the colon) in partial.
 
-<br>
+
 
 _langList.html.erb
 ```erb
@@ -147,7 +146,7 @@ _langList.html.erb
 
 If you want, you can even include those `<div>` tags inside the partial and reduce the code even further more.
 
-<br>
+
 
 _langList.html.erb
 ```erb

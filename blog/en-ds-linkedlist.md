@@ -23,7 +23,7 @@ A linked list is a linear data structure composed of collection of nodes where e
 ![linkedlist type](/images/in-post/dsa/linkedlist/en/linkedlist-type1.png)
 As noted earlier, a linked list is a linear data structure where each element is a node. In a **singly linked list**, each node holds a refernece to the next node which allows the list to be traversed in one way.
 
-<br>
+
 
 **Doubly linked list** is almost identical except that each node has two references, *previous* and *next* node. One additional node gives the list an ability to traverse in any direction we want.
 
