@@ -51,7 +51,7 @@ export default function Layout({ children, home, blog }) {
                         <Link href="/til">
                             <a className={"text-primary dark:text-dark_primary"}>TIL</a>
                         </Link>
-                        <Link href="/code">
+                        <Link href="/cp">
                             <a className={"text-primary dark:text-dark_primary"}>CP</a>
                         </Link>
                     </div>
