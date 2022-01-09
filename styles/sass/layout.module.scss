@@ -32,6 +32,15 @@
     }
 }
 
+.navLink {
+    a {
+        padding: 0 0.7em;
+    }
+    a:last-child {
+        margin-right: 1em;
+    }
+}
+
 .navLanguage {
     position: absolute;
     right: 0;

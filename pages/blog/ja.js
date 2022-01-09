@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import Layout, { siteTitle } from '../components/layout'
-import utilStyles from '../styles/sass/utils.module.scss'
-import { getSortedPostsData  } from '../lib/posts'
+import Layout, { siteTitle } from '/components/layout'
+import utilStyles from '/styles/sass/utils.module.scss'
+import { getSortedPostsData  } from '/lib/posts'
 import Link from 'next/link'
-import Date from '../components/date'
+import Date from '/components/date'
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData("ja")
@@ -14,9 +14,9 @@ export async function getStaticProps() {
     }
 }
 
-export default function Home({ allPostsData }){
+export default function Blog({ allPostsData }){
   return (
-    <Layout home>
+    <Layout blog>
       <Head>
         <title>{siteTitle}</title>
       </Head>
@@ -24,7 +24,7 @@ export default function Home({ allPostsData }){
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, subtitle, lang, date, title, tags}) => (
             <li className={`${utilStyles.card} ${lang} bg-card_bg dark:bg-dark_card_bg shadow-[0px_1px_3px_1px_#80afe7] dark:shadow-[0px_1px_3px_1px_black]`} key={id}>
-              <Link href={`/posts/${id[0]}/${id[1]}`}>
+              <Link href={`/blog/${id[0]}/${id[1]}`}>
               <a className="text-lg font-semibold text-primary dark:text-dark_primary">{title}</a>
               </Link>
               <br/>

@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function Post({ postData }) {
     return (
-        <Layout>
+        <Layout blog>
             <li className={`${utilStyles.postHeader} ${postData.lang} text-primary bg-card_bg dark:bg-dark_card_bg dark:text-dark_primary shadow-[0px_1px_5px_1px_#80afe7] dark:shadow-[0px_1px_5px_1px_black]`}>
                 <title>{postData.title}</title>
                 <h1 className={`text-primary dark:text-dark_primary text-xl font-semibold`}>{postData.title}</h1>
@@ -25,7 +25,7 @@ export default function Post({ postData }) {
             <div className={utilStyles.availableLanguage}>
                 {postData.availableLanguage.map((post, i) => (
                     <div key={i}>
-                        <Link href={`/posts/${post.lang}/${post.slug}`}>
+                        <Link href={`/blog/${post.lang}/${post.slug}`}>
                             <a className={"text-white dark:text-dark_primary bg-tags_bg"}>{post.langName}</a>
                         </Link>
                     </div>

@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Date from '../components/date'
 
 export async function getStaticProps() {
-    const allPostsData = getSortedPostsData("ko")
+    const allPostsData = getSortedPostsData("all")
     return{
         props: {
             allPostsData
@@ -14,18 +14,18 @@ export async function getStaticProps() {
     }
 }
 
-export default function Home({ allPostsData }){
+export default function Blog({ allPostsData }){
   return (
-    <Layout home>
+    <Layout blog>
       <Head>
         <title>{siteTitle}</title>
       </Head>
       <section>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, subtitle, lang, date, title, tags}) => (
-            <li className={`${utilStyles.card} ${lang} bg-card_bg dark:bg-dark_card_bg shadow-[0px_1px_3px_1px_#80afe7] dark:shadow-[0px_1px_3px_1px_black]`} key={id}>
-              <Link href={`/posts/${id[0]}/${id[1]}`}>
-              <a className="text-lg font-semibold text-primary dark:text-dark_primary">{title}</a>
+          {allPostsData.map(({ id, subtitle, lang, date, title, tags }) => (
+            <li className={`${utilStyles.card} ${lang} bg-card_bg dark:bg-dark_card_bg shadow-[0px_1px_3px_1px_#80afe7] dark:shadow-[0px_1px_3px_1px_black] duration-300`} key={id}>
+              <Link href={`/blog/${id[0]}/${id[1]}`}>
+                  <a className="text-lg font-semibold text-primary dark:text-dark_primary">{title}</a>
               </Link>
               <br/>
               <div className={`text-sm pt-1 pb-2 text_secondary dark:text-dark_secondary`}>
