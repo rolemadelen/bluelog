@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/sass/layout.module.scss'
+import styles from '/styles/sass/layout.module.scss'
 import Link from 'next/link'
 import React from 'react'
 
@@ -12,12 +12,12 @@ export function toggleDarkMode() {
 
 const MyButton = React.forwardRef(({ onClick }, ref) => {
     return (
-      <span onClick={onClick} ref={ref} className={"fa fa-bolt dark:text-white duration-300"}>
-      </span>
+        <span onClick={onClick} ref={ref} className={"fa fa-bolt dark:text-white duration-300"}>
+        </span>
     )
-  })
+})
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, blog }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -40,29 +40,40 @@ export default function Layout({ children, home }) {
                 <Link href={"/"} >
                     <a className={`${styles.navLogo} text-primary dark:text-dark_primary`}>Blue</a>
                 </Link>
-                <div className={"switch hover:cursor-pointer"} >
-                    <MyButton onClick={toggleDarkMode}/>
+                <div className={"flex"}>
+                    <div className={styles.navLink}>
+                        <Link href="/blog">
+                            <a className={"text-primary dark:text-dark_primary"}>Blog</a>
+                        </Link>
+                        <Link href="/about">
+                            <a className={"text-primary dark:text-dark_primary"}>About</a>
+                        </Link>
+                        <Link href="/til">
+                            <a className={"text-primary dark:text-dark_primary"}>TIL</a>
+                        </Link>
+                        <Link href="/code">
+                            <a className={"text-primary dark:text-dark_primary"}>CP</a>
+                        </Link>
+                    </div>
+                    <div className={"switch hover:cursor-pointer"} >
+                        <MyButton onClick={toggleDarkMode} />
+                    </div>
                 </div>
+                {blog && (
                 <div className={styles.navLanguage}>
-                    <Link href={"/ko"}>
+                    <Link href={"/blog/ko"}>
                         <a>🇰🇷 </a>
                     </Link>
-                    <Link href={"/en"}>
+                    <Link href={"/blog/en"}>
                         <a>🇺🇸 </a>
                     </Link>
-                    <Link href={"/ja"}>
+                    <Link href={"/blog/ja"}>
                         <a>🇯🇵</a>
                     </Link>
                 </div>
+                )}
             </header>
             <main>{children}</main>
-            {!home && (
-                <div className={styles.backToHome}>
-                    <Link href="/">
-                        <a>← back</a>
-                    </Link>
-                </div>
-            )}
         </div>
     )
 }
