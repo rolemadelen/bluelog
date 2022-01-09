@@ -12,19 +12,19 @@ tags:
 I was implementing a search feature for my [toy-project](https://github.com/euisblue/til-archive).
 The logic itself was simple enough.
 
-<br>
+
 
 ```rb
 search_value = FROM_THE_SEARCH_INPUT
 posts = Post.all.select{ |post| post.include? search_value }
 ```
 
-<br>
+
 
 From here, however, I didin't know how to render the page to show filtered `posts`. I can redirect the page but 
 who wants to use a page that refreshes every time when you search something?
 
-<br>
+
 
 I figured **AJAX** (asynchronous javascript and xml) is what I need.
 

@@ -38,16 +38,16 @@ int countEven(int N) {
 
 Now if we put those together, we get `1+1*N(2+2+1)+1` or `5N+3`. Now we know about how many operations are done in the function.
 
-<br>
+
 
 Earlier we mentioned that a program can process about 100 million operations per second. If `N=10_000_000`, we can safely assume that the program will finish under a second since 50 million is below 100 million.
 But if `N=50_000_000`, it requires around 250 million operations which will take more than a second.
 
-<br>
+
 
 So what does `5N + 3` has to do with the time complexity? What's important here is the proportionality. As `N` gets larger, the number of operations and the runtime of a program increases. And as `N` gets smaller, the total number of operations and the runtime decreases which means it runs faster.
 
-<br>
+
 
 Using the Big-Oh notation, we say that the function `countEven` has `O(n)` (_Big-Oh of N_ or _Oh-N_) time complexity.
 

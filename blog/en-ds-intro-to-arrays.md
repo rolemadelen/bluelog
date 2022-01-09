@@ -18,7 +18,7 @@ int a1, a2, a3, a4, ...., a97, a98, a99, a100;
 This will be very tedious and time-consuming task. Instead, wouldn't it be better if we can declare a single container-ish variable
 that can hold 100 `int` variables?
 
-<br>
+
 
 C/C++ provides a way to declare a container-like variable or to be specific, a data structure. It's called an Array.
 
@@ -36,12 +36,12 @@ an index.
 
 The above figure represents an integer array. Take a look at any two adjacent hexadecimal numbers -- memory address -- prefixed with `0x`. They are defer by 4 bytes, but why? Earlier we said that elements are stored at contiguous memory locations. So shouldn't it be differ by a byte like 200, 201, 202, ... etc?
 
-<br>
+
 
 Actually those elements are located contiguously in memory. How big is `int` type? 4 bytes.
 Remember that that array in the figure is a type of `int`. So, each element takes up 4 bytes of space in the memory.
 
-<br>
+
 
 Let's try it. Compile below code and see what the output is.
 
@@ -66,15 +66,15 @@ Here's the output of the program ran in my machine.
 
 Memory addresses are random so the value will be different, but your output should show that it increases by 4 bytes.
 
-<br>
+
 
 The name of the array `arr` is equivalent to the memory address of the first element of the array `arr[0]`. And when you add one (`arr + 1`) to the memory address, it doesn't just add a value 1. It offsets the distance by the type of your data from the base. Since our array is of type `int`, it will increment the value by 4 which then points to the second element of the array (`arr[1]`).
 
-<br>
+
 
 If you want to make sure that that 4 is really coming from the data type `int`, try compiling the code above again with different type of arrays such as `char`. Then the output will display number of memory addresses which differ by 1 byte only.
 
-<br>
+
 
 **Remember**: Location of the next element depends on the data type we use.
 
@@ -82,15 +82,15 @@ If you want to make sure that that 4 is really coming from the data type `int`, 
 
 Arrays in C/C++ has a fixed size container, meaning the size cannot be shirked nor expanded.
 
-<br>
+
 
 Array elements are located contiguously in the memory and we cannot be sure whether the space after that is free to use or not. There maybe some other important data that we should not overwrite it by allocating extra memory to expand the array. This is important especially in C/C++ because it does not throw an error for index out of bound.
 
-<br>
+
 
 Shrinking seems like an okay move, but this is something only a compiler can do. When we complie the code, the compiler first reserves or allocates a block of memory for however big our array is. We cannot tell our compiler to deallocate and shrink the array during the runtime.
 
-<br>
+
 
 (*We can actually use dynamic array to expand and shrink the size but we'll cover that later.)*
 

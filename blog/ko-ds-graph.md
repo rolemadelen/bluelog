@@ -34,7 +34,7 @@ tags:
 ![images](/images/in-post/dsa/graph/adjacency-list.jpg)
 
 그래프를 구현하는데 있어 가장 일반적으로 사용되는 방법이 바로 인접 리스트라고 한다. 
-<br>
+
 
 ### 인접리스트의 특징
 1. 간선의 개수가 적을 때 사용하기 좋다.
@@ -115,7 +115,7 @@ void addEdge(vector<int> adj[], int u, int v) {
 ![images](/images/in-post/dsa/graph/adjacency-matrix.jpg)
 
 인접 행렬은 정점들을 2차원 배열 형태로 구현하는 방식이다.
-<br>
+
 
 ### 인접 행렬의 특징 
 1. 간선의 개수가 많은 밀집 그래프의 경우 사용하는 것이 좋다.

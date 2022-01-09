@@ -91,10 +91,14 @@ img {
 }
 
 html {
+    a {
+        color: $--link;
+    }
+
     main {
         position: relative;
     }
-    
+
     article {
         li {
             list-style: inside;
@@ -128,6 +132,10 @@ html {
             font-weight: bold;
             padding: 1em 0em 0.5em 0;
         }
+        
+        pre {
+            font-size: 15px;
+        }
 
         img {
             background-color: white;
@@ -144,19 +152,13 @@ html {
                 font-size: 0.8em;
                 padding: 0.3em 0.5em;
                 border-radius: 5px;
+                background-color: $--code;
             }
-        }
-
-        pre {
-            overflow-x: auto;
-            font-size: 14px;
-            padding: 1em 1.5em;
-            margin: 0.65em 0;
-            border-radius: 5px;
         }
 
         hr {
             margin: 1em 0;
+            color: $--hr;
         }
 
         ul,
@@ -167,23 +169,12 @@ html {
                 font-size: $--text;
             }
         }
-
-        /* width */
-        ::-webkit-scrollbar {
-            height: 5px;
-        }
     }
 }
 
 html {
-    a {
-        color: $--link;
-    }
 
     article {
-        pre {
-            background-color: $--card-bg;
-        }
 
         p {
             code {
@@ -201,11 +192,8 @@ html.dark {
     a {
         color: $--link-dark;
     }
-    
+
     article {
-        pre {
-            background-color: $--card-bg-dark;
-        }
 
         p {
             code {
