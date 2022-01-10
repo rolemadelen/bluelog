@@ -90,6 +90,7 @@ html {
         li { 
             list-style: inside;
             box-shadow: none;
+            overflow-wrap: break-word;
          }
 
         h1 { font-size: 1.5em; }
