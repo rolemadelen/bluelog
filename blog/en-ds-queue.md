@@ -75,14 +75,5 @@ bool Queue::isEmpty(void) {
 - Serving requests on a single shared resource, like a printer, CPU task scheduling, etc
 - Handling of interrupts in real-time systems
 
-<!-- 
-### Practice Problem (Leetcode)
-- [933. Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/)
-  
----
-
-#### 933. Number of Recent Calls [code](https://leetcode.com/problems/number-of-recent-calls/)
---->
-
 ## Reference
 - [What is a Queue Data Structure?](https://www.studytonight.com/data-structures/queue-data-structure)

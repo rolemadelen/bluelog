@@ -81,36 +81,35 @@ Some well-known problems with a factorial time complexity.
 
 ## Big-O記法のルール
 
-**Coefficient Rule**
-- 無限に近い数字に何の数字をかけても無限なので、 Nに影響がない係数は全て捨てられる。
-    ```
-    O(kf(n))  ->  O(f(n)) 
-    O(5n)     ->  O(n)
-    ```
+### Coefficient Rule
+無限に近い数字に何の数字をかけても無限なので、 Nに影響がない係数は全て捨てられる。
+```text
+O(kf(n))  ->  O(f(n)) 
+O(5n)     ->  O(n)
+```
 
-**Sum Rule**
-- 最終時間計算量が複数の式の和（sum）の場合は、最終Big-Oも複数のBig-Oの和で表記する。
-    ```
-    O(h(n)) + O(g(n))  ->  O(h(n) + g(n))
-    O(n)+O(m)          ->  O(n+m)
-    ```
+### Sum Rule
+最終時間計算量が複数の式の和（sum）の場合は、最終Big-Oも複数のBig-Oの和で表記する。
+```text
+O(h(n)) + O(g(n))  ->  O(h(n) + g(n))
+O(n)+O(m)          ->  O(n+m)
+```
 
-**Product Rule**
-- 最終時間計算量が一つ以上の計算量の積で成り立っている場合、 最終Big-Oも複数のBig-Oの積で表記する。
-    ```
-    O(f(n)) \times O(g(n))   ->  O(f(n)g(n))
-    O(n^2) \times O(log(n))  ->  O(n^2 log(n))
-    O(n) \times O(m)         ->  O(nm)
-    ```
+### Product Rule
+最終時間計算量が一つ以上の計算量の積で成り立っている場合、 最終Big-Oも複数のBig-Oの積で表記する。
+```text
+O(f(n)) \times O(g(n))   ->  O(f(n)g(n))
+O(n^2) \times O(log(n))  ->  O(n^2 log(n))
+O(n) \times O(m)         ->  O(nm)
+```
 
-**Polynomial Rule**
-- 時間計算量が多項式の場合、Big-Oは当該式の最高次項（highest degree）になる。
-    ```
-    f(n) = 5n^2 + 7n  ->   O(n^2)
-    f(n) = 10n + 2    ->   O(n)
-    f(n) = 10         ->   O(1)
-    ```
----
+### Polynomial Rule
+時間計算量が多項式の場合、Big-Oは当該式の最高次項（highest degree）になる。
+```text
+f(n) = 5n^2 + 7n  ->   O(n^2)
+f(n) = 10n + 2    ->   O(n)
+f(n) = 10         ->   O(1)
+```
 
-## 参考
+## Reference
 - JavaScript Data Structures and Algorithms - Sammie Bae

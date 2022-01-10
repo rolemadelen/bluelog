@@ -111,9 +111,7 @@ Leetcodeで下の4つの問題を解いてみよう。
 + [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)
 + [203. Remove Linked List Elements](https://leetcode.com/problems/remove-linked-list-elements/)
 
----
-
-### 21. Merge Two Sorted Lists [🔗](https://leetcode.com/problems/merge-two-sorted-lists/)
+### 21. Merge Two Sorted Lists
 ```cpp
 class Solution {
     public:
@@ -152,7 +150,7 @@ class Solution {
 };
 ```
 
-### 141. Linked List Cycle [🔗](https://leetcode.com/problems/linked-list-cycle/)
+### 141. Linked List Cycle
 ```cpp
 class Solution {
     public:
@@ -176,7 +174,7 @@ class Solution {
 };
 ```
 
-### 160. Intersection of Two Linked Lists [🔗](https://leetcode.com/problems/intersection-of-two-linked-lists/)
+### 160. Intersection of Two Linked Lists
 ```cpp
 class Solution {
     public:
@@ -200,7 +198,7 @@ class Solution {
 };
 ```
 
-### 203. Remove Linked List Elements [🔗](https://leetcode.com/problems/remove-linked-list-elements/)
+### 203. Remove Linked List Elements
 ```cpp
 class Solution {
     public:

@@ -10,7 +10,7 @@ tags:
 
 ## Array
 
-- A linear data structure where all the elements are stored in consecutive memory locations.
+A linear data structure where all the elements are stored in consecutive memory locations.
 ![array](/images/in-post/dsa/array/array.png)
 
 
@@ -23,16 +23,10 @@ tags:
 ### Operations
 > We're going to assume the array is dynamic where its size automatically grows and shrinks.
 
-<style>
-img {max-width: 90% !important;}
-</style>
-
 #### Access & Modify: O(1)
 ![array access/modify](/images/in-post/dsa/array/array-access-modify.png)
 
 We can use the `[]` operator to access and modify the element directly in constant time.
-
-<br />
 
 ```cpp
 int size = 8;
@@ -58,8 +52,6 @@ Inserting a new node in the middle of the list requires an extra bit of steps.
 Once we find the position to insert a new node, we need to shift every nodes after that position by one space to the right.
 And this task requires a linear time. 
 
-<br />
-
 ```cpp
 void insertAt(int index, int data, int *arr, int &len) {
   int temp = len; 
@@ -79,8 +71,6 @@ void insertAt(int index, int data, int *arr, int &len) {
 Deleting a node in the middle of the list is similar to the one inserting in the middle. 
 Instead of shifting everything to the right, we need to shift everything back so there's no gap in the middle.
 Which also requires a linear time.
-
-<br />
 
 ```cpp
 void removeAt(int index, int *arr, int &len) {

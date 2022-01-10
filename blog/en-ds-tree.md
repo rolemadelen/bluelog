@@ -25,26 +25,6 @@ A tree is actually a **graph**. It is an **acyclic connected graph**, meaning a 
 ![Tree check](/images/in-post/dsa/tree/tree-cycle.jpg)
 
 The left figure is NOT a tree since it has a cycle. On the other hand, the right figure is a tree.
-<!-- 
-## Tree terminology
-
-| Terms  | Description  |
-|:-----|:-----|
-| degree (node) | The total number of children of that node. |
-| degree (tree) | The highest degree of a node in the tree. |
-| root | The entry point or the first node of a tree.|
-| parent | The node which has one or more children. |
-| child | The node which is a descendant of some node. |
-| siblings | Nodes which belong to the same parent. |
-| Leaf node | The node which does not have any child.|
-| edge | The connecting link between any two nodes. |
-| levels | Each step from top to bottom is called as level of a tree. The level count starts with 0 and increments by 1 at each level. |
-| depth (node)| Total number of edges from root node to a particular node. |
-| depth (tree) | Total number of edges from root node to a leaf node in the longest path. |
-| height (node) | Total number of edges that lies on the longest path from any leaf node to a particular node. |
-| height (tree)| The height of root node.|  
-
-Examples can be found at [here](https://www.gatevidyalay.com/tree-data-structure-tree-terminology/). -->
 
 ## Properties
 - There is one and only one path between any two nodes in a tree.
@@ -117,11 +97,9 @@ void deleteTree(Node *root) {
 ```
 
 ### Practice
-- [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
-- [144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)
-- [965. Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/)
-
-My solutions: [94](https://github.com/yuueu/cp/tree/leetcode/easy/94), [144](https://github.com/yuueu/cp/tree/leetcode/easy/144), [965](https://github.com/yuueu/cp/tree/leetcode/easy/965/965.cpp)
+- [94. Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/) ([code](https://github.com/euisblue/cp/tree/leetcode/easy/94))
+- [144. Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/) ([code](https://github.com/euisblue/cp/tree/leetcode/easy/144))
+- [965. Univalued Binary Tree](https://leetcode.com/problems/univalued-binary-tree/) ([code](https://github.com/euisblue/cp/tree/leetcode/easy/965/965.cpp))
 
 ## Reference
 - [https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm](https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm)

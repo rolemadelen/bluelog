@@ -100,5 +100,5 @@ bool Queue::isEmpty(void) {
 - [スタック(Stack)とは](/ja/ds/stack)
 
 ## Reference
-- [[자료구조] 큐(Queue)란](https://gmlwjd9405.github.io/2018/08/02/data-structure-queue.html){:target="_blank"}
-- [Stacks and Queues](https://www.andrew.cmu.edu/course/15-121/lectures/Stacks%20and%20Queues/Stacks%20and%20Queues.html){:target="_blank"}
+- [[자료구조] 큐(Queue)란](https://gmlwjd9405.github.io/2018/08/02/data-structure-queue.html)
+- [Stacks and Queues](https://www.andrew.cmu.edu/course/15-121/lectures/Stacks%20and%20Queues/Stacks%20and%20Queues.html)

@@ -6,6 +6,8 @@
 $--root: 18px;
 $--text: 16px;
 
+* { box-sizing: border-box; }
+
 html,
 body {
     padding: 0;
@@ -15,8 +17,6 @@ body {
     line-height: 1.6;
     font-size: $--root;
 }
-
-* { box-sizing: border-box; }
 
 li {
     list-style: none;
@@ -56,19 +56,9 @@ li {
     &.ja:hover:before { box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #ff6666, -7px -4px 1px 1px #ff6666; }
 }
 
-a {
-    color: $--primary;
-    text-decoration: none;
-}
-
 a:hover {
     text-decoration: underline;
     text-decoration-thickness: from-font;
-}
-
-img {
-    max-width: 100%;
-    display: block;
 }
 
 html {
@@ -77,16 +67,27 @@ html {
     main { position: relative; }
 
     li {
-        box-shadow: 0px 1px 3px 0px black;
-
         a { color: #f1f1f1e6; }
+
+        box-shadow: 0px 1px 3px 0px black;
+        
         &.easy { background-color: $--level-easy; }
         &.medium { background-color: $--level-medium; }
         &.hard { background-color: $--level-hard; }
+        &.bronze { background-color: $--level-bronze; }
+        &.silver { 
+            background-color: $--level-silver;
+            a {
+                color: $--primary;
+            }
+        }
     }
 
     article {
-        li { list-style: inside; }
+        li { 
+            list-style: inside;
+            box-shadow: none;
+         }
 
         h1 { font-size: 1.5em; }
         h2 { font-size: 1.25em; }
@@ -139,9 +140,9 @@ html {
 }
 
 html.dark {
-    a { color: $--link-dark; }
-
+    
     article {
+        a { color: $--link-dark; }
         p {
             code { background-color: $--code-dark; }
         }
@@ -152,18 +153,10 @@ html.dark {
     footer {
         a { color: $--primary-dark; }
     }
-
-    li {
-        a { color: #f1f1f1e6; }
-
-        &.easy { background-color: $--level-easy; }
-        &.medium { background-color: $--level-medium; }
-        &.hard { background-color: $--level-hard; }
-    }
 }
 
 footer {
-    div { margin: 0.35em 0; }
+    div { margin: 0 0 0.35em 0; }
 
     a {
         color: $--primary;

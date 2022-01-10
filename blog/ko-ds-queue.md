@@ -73,13 +73,6 @@ bool Queue::isEmpty(void) {
 - 프린터의 출력 처리
 - 프로세스 관리
 
-<!-- ### 연습 문제  (Leetcode)
-- [933. Number of Recent Calls](https://leetcode.com/problems/number-of-recent-calls/){:target="_blank"}
-  
----
-
-#### 933. Number of Recent Calls [🔗](https://leetcode.com/problems/number-of-recent-calls/){:target="_blank"} -->
-
 ## Reference
-- [[자료구조] 큐(Queue)란](https://gmlwjd9405.github.io/2018/08/02/data-structure-queue.html){:target="_blank"}
-- [Stacks and Queues](https://www.andrew.cmu.edu/course/15-121/lectures/Stacks%20and%20Queues/Stacks%20and%20Queues.html){:target="_blank"}
+- [[자료구조] 큐(Queue)란](https://gmlwjd9405.github.io/2018/08/02/data-structure-queue.html)
+- [Stacks and Queues](https://www.andrew.cmu.edu/course/15-121/lectures/Stacks%20and%20Queues/Stacks%20and%20Queues.html)
