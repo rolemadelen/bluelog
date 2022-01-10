@@ -36,9 +36,9 @@ export default function Layout({ children, home, blog }) {
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
 
-            <header className={styles.header}>
+            <header className={`flex relative items-center justify-end mb-5`}>
                 <Link href={"/"} >
-                    <a className={`${styles.navLogo} text-primary dark:text-dark_primary`}>Blue</a>
+                    <a className={`${styles.navLogo} text-primary dark:text-dark_primary absolute left-0 top-[-1.5em]`}>Blue</a>
                 </Link>
                 <div className={"flex"}>
                     <div className={styles.navLink}>

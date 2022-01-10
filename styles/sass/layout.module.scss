@@ -1,17 +1,11 @@
 @import "./colors.module";
 
 .container {
-    max-width: 45rem;
+    max-width: 42rem;
     padding: 0 1rem;
     margin: 3rem auto 5rem;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-}
 
 .backToHome { margin: 3rem 0 0; }
 

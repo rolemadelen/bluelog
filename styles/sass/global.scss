@@ -5,11 +5,12 @@
 
 $--root: 18px;
 $--text: 16px;
-
+$--MIN-WIDTH: 425px;
 * { box-sizing: border-box; }
 
 html,
 body {
+    min-width: $--MIN-WIDTH;
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
