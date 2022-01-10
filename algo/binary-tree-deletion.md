@@ -1,6 +1,6 @@
 ---
 title: "Binary Tree - Deletion"
-date: "2021-12-04"
+date: "2021-12-02"
 category: 'tree'
 lang: "Ruby"
 ---

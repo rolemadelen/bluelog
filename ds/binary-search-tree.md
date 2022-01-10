@@ -1,6 +1,6 @@
 ---
 title: "Binary Search Tree"
-date: "2021-12-08"
+date: "2021-12-09"
 category: 'tree'
 lang: "Ruby"
 ---

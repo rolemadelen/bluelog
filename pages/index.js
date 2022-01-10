@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
 import Date from '/components/date'
 import Layout, { siteTitle } from '/components/layout'
 import utilStyles from '/styles/sass/utils.module.scss'
@@ -25,12 +26,12 @@ export default function Home({ blogPosts, algoPosts, dsPosts }) {
                 <title>{siteTitle}</title>
             </Head>
             <section className={"mt-8"}>
-            <h1 className={"text-2xl text-primary dark:text-dark_primary mb-2"}>Recent Posts</h1>
+                <h1 className={"text-2xl text-primary dark:text-dark_primary mb-2"}>Recent Posts</h1>
                 <div className={"recentBlog mb-8"}>
                     <div className={"flex justify-between items-center border-b-[1px] mb-2"}>
                         <h1 className={"text-lg font-semibold text-primary dark:text-dark_primary"}>Blog</h1>
                         <Link href="/blog">
-                            <a className={`flex justify-end text-sm text-primary dark:text-dark_primary`}>Read more...</a>
+                            <a className={`flex justify-end text-sm text-primary dark:text-dark_primary`}>View more...</a>
                         </Link>
                     </div>
                     <ul className={utilStyles.list}>
@@ -50,7 +51,7 @@ export default function Home({ blogPosts, algoPosts, dsPosts }) {
                     <div className={"flex justify-between items-center border-b-[1px] mb-2"}>
                         <h1 className={"text-lg font-semibold text-primary dark:text-dark_primary"}>Data Structure</h1>
                         <Link href="/ds">
-                            <a className={`flex justify-end text-sm text-primary dark:text-dark_primary`}>Read more...</a>
+                            <a className={`flex justify-end text-sm text-primary dark:text-dark_primary`}>View more...</a>
                         </Link>
                     </div>
                     <ul className={utilStyles.list}>
@@ -70,7 +71,7 @@ export default function Home({ blogPosts, algoPosts, dsPosts }) {
                     <div className={"flex justify-between items-center border-b-[1px] mb-2"}>
                         <h1 className={"text-lg font-semibold text-primary dark:text-dark_primary"}>Algorithm</h1>
                         <Link href="/algo">
-                            <a className={`flex justify-end text-sm text-primary dark:text-dark_primary`}>Read more...</a>
+                            <a className={`flex justify-end text-sm text-primary dark:text-dark_primary`}>View more...</a>
                         </Link>
                     </div>
                     <ul className={utilStyles.list}>
