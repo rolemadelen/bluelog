@@ -1,6 +1,6 @@
 ---
 title: "Evaluate Postfix (Reverse Polish Notation)"
-date: "2021-12-04"
+date: "2021-12-05"
 category: 'stack'
 lang: "Ruby"
 ---
