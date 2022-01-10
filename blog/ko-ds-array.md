@@ -23,16 +23,10 @@ tags:
 ### 배열의 기능
 여기서의 배열은 크기가 자동적으로 늘어나고 줄어드는 가변 크기 배열이라고 가정하고 설명합니다.
 
-<style>
-img {max-width: 90% !important;}
-</style>
-
 #### 임의의 원소에 접근 및 변경: O(1)
 ![array access/modify](/images/in-post/dsa/array/array-access-modify.png)
 
 index를 사용하여 임의의 원소에 바로 접근하여 값을 출력하거나 변경하거나 할 수 있습니다.
-
-<br />
 
 ```cpp
 int size = 8;
@@ -59,8 +53,6 @@ arr[5] = 8; // O(1)
 예를들어 맨 처음에 원소를 삽입하기 위해서는, 모든 원소들을 한 칸씩 오른쪽으로 밀어주는 과정이 필요합니다.
 그래서 O(N)의 시간이 걸립니다.
 
-<br />
-
 ```cpp
 void insertAt(int index, int data, int *arr, int &len) {
   int temp = len; 
@@ -79,8 +71,6 @@ void insertAt(int index, int data, int *arr, int &len) {
 
 삭제도 삽입과 마찬가지로 해당 원소에 접근하는 것 까지는 O(1)입니다.
 하지만 원소를 삭제한 후, 그 뒤에 있는 모든 원소들을 한 칸씩 옮겨주는 작업이 필요하기 때문에 삭제도 평균적으로 O(N)의 시간이 걸립니다.
-
-<br />
 
 ```cpp
 void removeAt(int index, int *arr, int &len) {

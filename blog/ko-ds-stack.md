@@ -68,7 +68,7 @@ bool Stack::isEmpty(void) {
 
 ---
 
-#### 20. Valid Parentheses [code](https://leetcode.com/problems/valid-parentheses/)
+#### 20. Valid Parentheses
 ```cpp
 class Solution {
   public:
@@ -95,7 +95,7 @@ class Solution {
 };
 ```
 
-#### 1021. Remove Outermost Parentheses [code](https://leetcode.com/problems/remove-outermost-parentheses/)
+#### 1021. Remove Outermost Parentheses
 ```cpp
 class Solution {
   public:
@@ -119,7 +119,7 @@ class Solution {
 };
 ```
 
-#### Bonus: 155. Min Stack [code](https://leetcode.com/problems/min-stack/)
+#### Bonus: 155. Min Stack
 ```cpp
 class MinStack {
   public:

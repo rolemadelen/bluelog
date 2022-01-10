@@ -25,7 +25,7 @@ export default function Code({ allPostsData }) {
                     {allPostsData.filter((file) => {
                         return file.from == 'leetcode'
                     }).map(({ id, level }) => (
-                        <li className={`${level} p-2 m-1.5 w-20 text-center rounded duration-300`} key={`${id}`}>
+                        <li className={`${level} p-1 m-1.5 w-20 text-center rounded duration-300`} key={`${id}`}>
                             <Link href={`/cp/${id[0]}/${id[1]}`}>
                                 <a className="text-sm">{`${id[1]}`}</a>
                             </Link>
@@ -37,9 +37,9 @@ export default function Code({ allPostsData }) {
                     {allPostsData.filter((file) => {
                         return file.from == 'baekjoon'
                     }).map(({ id, level }) => (
-                        <li className={`${level} p-2 m-1.5 w-20 text-center bg-card_bg dark:bg-dark_card_bg rounded duration-300`} key={id}>
+                        <li className={`${level} p-1 m-1.5 w-20 text-center rounded duration-300`} key={id}>
                             <Link href={`/cp/${id[0]}/${id[1]}`}>
-                                <a className="text-sm text-primary dark:text-dark_primary">{`${id[1]}`}</a>
+                                <a className="text-sm">{`${id[1]}`}</a>
                             </Link>
                         </li>
                     ))}
