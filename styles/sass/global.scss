@@ -84,6 +84,7 @@ html {
     }
 
     article {
+        a { color: $--link; }
         li { 
             list-style: inside;
             box-shadow: none;
@@ -140,7 +141,6 @@ html {
 }
 
 html.dark {
-    
     article {
         a { color: $--link-dark; }
         p {

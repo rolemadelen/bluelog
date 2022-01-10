@@ -1,12 +1,13 @@
 import Layout from '/components/layout'
-import { getAllPostIds, getPostData } from '/lib/codes'
+import { getAllPostIds, getPostData } from '/lib/ds'
 import Codeblock from '/lib/codeblock.js'
 import ReactMarkdown from 'react-markdown'
 
-export default function Code({ postData }) {
+export default function DS({ postData }) {
     return (
-        <Layout code>
-            <title>{`${postData.from}-${postData.level}`}</title>
+        <Layout ds>
+            <title>{postData.title}</title>
+            <h1 className={`text-primary dark:text-dark_primary text-xl font-semibold mb-5`}>{postData.title}</h1>
             <article className={`text-primary dark:text-dark_primary`}>
                 <ReactMarkdown components={Codeblock}>{postData.markdown}</ReactMarkdown>
             </article>
