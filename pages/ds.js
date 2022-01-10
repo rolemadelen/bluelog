@@ -22,11 +22,11 @@ export default function DS({ allPostsData }) {
             <section className={"mt-5"}>
                 <ul className={`${utilStyles.list}`}>
                     {allPostsData.map(({ id, title, lang, category}) => (
-                        <li className={"shadow-none flex justify-between pb-2 "} key={id}>
+                        <li className={'shadow-none flex justify-between flex-wrap mb-2 border-b-[1px] dark:border-gray-600'} key={id}>
                             <Link href={`/ds/${id[0]}`}>
-                                <a className="text-sm text-primary dark:text-dark_primary">{title}</a>
+                                <a className="text-sm text-primary dark:text-dark_primary w-3/4">{title}</a>
                             </Link>
-                            <div className={`text-xs text-secondary dark:text-dark_secondary`}>
+                            <div className={`text-xs text-secondary dark:text-dark_secondary w-1/4 text-right`}>
                                 <span>{`${lang.toLowerCase()} | ${category}`}</span>
                             </div>
                         </li>
