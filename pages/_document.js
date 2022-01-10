@@ -16,7 +16,7 @@ class MyDocument extends Document {
                 </body>
                 <footer className="flex flex-col justify-center items-center mb-8 text-sm text-primary dark:text-dark_secondary">
                     <div>
-                        2022©<a href="https://github.com/euisblue">Blue Eu</a>. powered by&nbsp;<a href="https://vercel.com/">Vercel</a>
+                        © 2022 <a href="https://github.com/euisblue">Blue Eu</a>. powered by&nbsp;<a href="https://vercel.com/">Vercel</a>
                     </div>
                     <div className="snsLinks flex items-center justify-center">
                     <a href="https://github.com/euisblue/bluelog">

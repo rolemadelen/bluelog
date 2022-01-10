@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/sass/layout.module.scss'
+import styles from '/styles/sass/layout.module.scss'
 import Link from 'next/link'
 import React from 'react'
 
@@ -10,14 +10,14 @@ export function toggleDarkMode() {
     document.querySelector('html').classList.toggle('dark');
 }
 
-const MyButton = React.forwardRef(({ onClick }, ref) => {
+const ToggleButton = React.forwardRef(({ onClick }, ref) => {
     return (
-      <span onClick={onClick} ref={ref} className={"fa fa-bolt dark:text-white duration-300"}>
-      </span>
+        <span onClick={onClick} ref={ref} className={"fa fa-bolt dark:text-white duration-300"}>
+        </span>
     )
-  })
+})
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, blog }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -40,29 +40,43 @@ export default function Layout({ children, home }) {
                 <Link href={"/"} >
                     <a className={`${styles.navLogo} text-primary dark:text-dark_primary`}>Blue</a>
                 </Link>
-                <div className={"switch hover:cursor-pointer"} >
-                    <MyButton onClick={toggleDarkMode}/>
+                <div className={"flex"}>
+                    <div className={styles.navLink}>
+                        <Link href="/blog">
+                            <a className={"text-primary dark:text-dark_primary"}>Blog</a>
+                        </Link>
+                        <Link href="/about">
+                            <a className={"text-primary dark:text-dark_primary"}>About</a>
+                        </Link>
+                        <Link href="/ds">
+                            <a className={"text-primary dark:text-dark_primary"}>DS</a>
+                        </Link>
+                        <Link href="/algo">
+                            <a className={"text-primary dark:text-dark_primary"}>Algo</a>
+                        </Link>
+                        <Link href="/cp">
+                            <a className={"text-primary dark:text-dark_primary"}>CP</a>
+                        </Link>
+                    </div>
+                    <div className={"switch hover:cursor-pointer"} >
+                        <ToggleButton onClick={toggleDarkMode} />
+                    </div>
                 </div>
-                <div className={styles.navLanguage}>
-                    <Link href={"/ko"}>
-                        <a>🇰🇷 </a>
-                    </Link>
-                    <Link href={"/en"}>
-                        <a>🇺🇸 </a>
-                    </Link>
-                    <Link href={"/ja"}>
-                        <a>🇯🇵</a>
-                    </Link>
-                </div>
+                {blog && (
+                    <div className={styles.navLanguage}>
+                        <Link href={"/blog/ko"}>
+                            <a>🇰🇷 </a>
+                        </Link>
+                        <Link href={"/blog/en"}>
+                            <a>🇺🇸 </a>
+                        </Link>
+                        <Link href={"/blog/ja"}>
+                            <a>🇯🇵</a>
+                        </Link>
+                    </div>
+                )}
             </header>
             <main>{children}</main>
-            {!home && (
-                <div className={styles.backToHome}>
-                    <Link href="/">
-                        <a>← back</a>
-                    </Link>
-                </div>
-            )}
         </div>
     )
 }
