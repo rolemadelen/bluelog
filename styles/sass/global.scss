@@ -72,6 +72,7 @@ html {
         box-shadow: 0px 1px 3px 0px black;
         
         &.easy { background-color: $--level-easy; }
+        &.easy2 { background-color: $--level-easy2; }
         &.medium { background-color: $--level-medium; }
         &.hard { background-color: $--level-hard; }
         &.bronze { background-color: $--level-bronze; }
