@@ -5,6 +5,7 @@ import utilStyles from '/styles/sass/utils.module.scss'
 import Link from 'next/link'
 import Codeblock from '/lib/codeblock.js'
 import ReactMarkdown from 'react-markdown'
+import Comments from '/components/comments'
 
 export default function Post({ postData }) {
     return (
@@ -33,9 +34,10 @@ export default function Post({ postData }) {
                     </div>
                 ))}
             </div>
-            <article className={`text-primary dark:text-dark_primary`}>
+            <article className={`text-primary dark:text-dark_primary pb-5 border-b-[1px] dark:border-gray-600`}>
                 <ReactMarkdown components={Codeblock}>{postData.markdown}</ReactMarkdown>
             </article>
+            <Comments />
         </Layout>
     )
 }
