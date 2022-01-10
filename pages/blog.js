@@ -28,10 +28,10 @@ export default function Blog({ allPostsData }){
                   <a className="text-lg font-semibold text-primary dark:text-dark_primary">{title}</a>
               </Link>
               <br/>
-              <div className={`text-sm pt-1 pb-2 text_secondary dark:text-dark_secondary`}>
+              <div className={`text-sm pt-1 pb-2 text-secondary dark:text-dark_secondary`}>
                   {subtitle}
               </div>
-              <div className={`text-xs text_secondary dark:text-dark_secondary`}>
+              <div className={`text-xs text-secondary dark:text-dark_secondary`}>
                   <Date dateString={date} />
               </div>
               <div className={`${utilStyles.tags} flex justify-end`}>
