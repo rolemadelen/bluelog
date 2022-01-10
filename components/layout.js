@@ -10,7 +10,7 @@ export function toggleDarkMode() {
     document.querySelector('html').classList.toggle('dark');
 }
 
-const MyButton = React.forwardRef(({ onClick }, ref) => {
+const ToggleButton = React.forwardRef(({ onClick }, ref) => {
     return (
         <span onClick={onClick} ref={ref} className={"fa fa-bolt dark:text-white duration-300"}>
         </span>
@@ -48,29 +48,32 @@ export default function Layout({ children, home, blog }) {
                         <Link href="/about">
                             <a className={"text-primary dark:text-dark_primary"}>About</a>
                         </Link>
-                        <Link href="/til">
-                            <a className={"text-primary dark:text-dark_primary"}>TIL</a>
+                        <Link href="/ds">
+                            <a className={"text-primary dark:text-dark_primary"}>DS</a>
+                        </Link>
+                        <Link href="/algo">
+                            <a className={"text-primary dark:text-dark_primary"}>Algo</a>
                         </Link>
                         <Link href="/cp">
                             <a className={"text-primary dark:text-dark_primary"}>CP</a>
                         </Link>
                     </div>
                     <div className={"switch hover:cursor-pointer"} >
-                        <MyButton onClick={toggleDarkMode} />
+                        <ToggleButton onClick={toggleDarkMode} />
                     </div>
                 </div>
                 {blog && (
-                <div className={styles.navLanguage}>
-                    <Link href={"/blog/ko"}>
-                        <a>🇰🇷 </a>
-                    </Link>
-                    <Link href={"/blog/en"}>
-                        <a>🇺🇸 </a>
-                    </Link>
-                    <Link href={"/blog/ja"}>
-                        <a>🇯🇵</a>
-                    </Link>
-                </div>
+                    <div className={styles.navLanguage}>
+                        <Link href={"/blog/ko"}>
+                            <a>🇰🇷 </a>
+                        </Link>
+                        <Link href={"/blog/en"}>
+                            <a>🇺🇸 </a>
+                        </Link>
+                        <Link href={"/blog/ja"}>
+                            <a>🇯🇵</a>
+                        </Link>
+                    </div>
                 )}
             </header>
             <main>{children}</main>

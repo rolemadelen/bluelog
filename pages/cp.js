@@ -1,7 +1,7 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Layout, { siteTitle } from '/components/layout'
 import utilStyles from '/styles/sass/utils.module.scss'
-import Link from 'next/link'
 import { getSortedPostsData } from '/lib/codes'
 
 export async function getStaticProps() {
