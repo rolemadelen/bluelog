@@ -19,9 +19,11 @@ export default function Code({ allPostsData }) {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <section className={"mt-8"}>
-                <h1 className={"text-md text-primary dark:text-dark_primary mt-8"}><a href="https://www.acmicpc.net/" className={"text-primary dark:text-dark_primary"}>Baekjoon OJ</a></h1>
-                <ul className={`${utilStyles.list} flex flex-wrap`}>
+            <section className={"mt-8 text-center"}>
+                <h1 className={"text-lg font-semibold text-primary dark:text-dark_primary mt-8 pb-2"}>
+                    <a href="https://www.acmicpc.net/" className={"text-primary dark:text-dark_primary"}>Baekjoon OJ</a>
+                </h1>
+                <ul className={`${utilStyles.list} flex flex-wrap justify-center`}>
                     {allPostsData.filter((file) => {
                         return file.from == 'baekjoon'
                     }).map(({ id, level }) => (
@@ -32,8 +34,10 @@ export default function Code({ allPostsData }) {
                         </li>
                     ))}
                 </ul>
-                <h1 className={"text-md text-primary dark:text-dark_primary mt-8"}><a href="https://programmers.co.kr/learn/challenges" className={"text-primary dark:text-dark_primary"}>프로그래머스</a></h1>
-                <ul className={`${utilStyles.list} flex flex-wrap`}>
+                <h1 className={"text-lg font-semibold text-primary dark:text-dark_primary mt-8 pb-2"}>
+                    <a href="https://programmers.co.kr/learn/challenges" className={"text-primary dark:text-dark_primary"}>프로그래머스</a>
+                </h1>
+                <ul className={`${utilStyles.list} flex flex-wrap justify-center`}>
                     {allPostsData.filter((file) => {
                         return file.from == 'programmers'
                     }).map(({ id, level }) => (
@@ -44,8 +48,10 @@ export default function Code({ allPostsData }) {
                         </li>
                     ))}
                 </ul>
-                <h1 className={"text-md text-primary dark:text-dark_primary mt-8"}><a href="https://leetcode.com/explore/" className={"text-primary dark:text-dark_primary"}>Leetcode</a></h1>
-                <ul className={`${utilStyles.list} flex flex-wrap`}>
+                <h1 className={"text-lg font-semibold text-primary dark:text-dark_primary mt-8 pb-2"}>
+                    <a href="https://leetcode.com/explore/" className={"text-primary dark:text-dark_primary"}>Leetcode</a>
+                </h1>
+                <ul className={`${utilStyles.list} flex flex-wrap justify-center`}>
                     {allPostsData.filter((file) => {
                         return file.from == 'leetcode'
                     }).map(({ id, level }) => (

@@ -8,17 +8,17 @@ export default function About() {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <section>
+            <section className={"mx-auto"}>
                 <div className={"text-center text-primary dark:text-dark_primary"}>
                     <Image
                         priority
                         src="/images/profile.jpg"
-                        className={"absolute left-0 top-0 rounded"}
+                        className={"absolute left-0 top-0 rounded mx-auto"}
                         height={180}
                         width={225}
                         alt={"blue eu"}
                     />
-                    <div className={"w-[28em] mx-auto text-sm"}>
+                    <div className={"mx-auto text-sm"}>
                         <h1 className={"font-semibold text-2xl"}>Blue Eu</h1>
                         <div className={"pb-2"}>🇰🇷 &nbsp; 🇺🇸  &nbsp; 🇯🇵 &nbsp;</div>
                         배움을 즐기는 1년차 프론트엔드 개발자입니다.
@@ -32,14 +32,14 @@ export default function About() {
                         그림 그리는 걸 좋아합니다.
                         <br /> <br />
 
-                        <img src="/video/draw.webp" type="video/webp" alt="Drawing video" className={"mb-1"}/>
+                        <img src="/video/draw.webp" type="video/webp" alt="Drawing video" className={"mb-1 mx-auto"}/>
                         <Image
                             priority
                             src="/images/draw1.jpg"
                             className={"absolute left-0 top-0 rounded"}
-                            height={330}
-                            width={480}
-                            alt={"blue eu"}
+                            height={400}
+                            width={600}
+                            alt={"My drawing eg 1"}
                         />
                         <Image
                             priority
@@ -47,7 +47,7 @@ export default function About() {
                             className={"absolute left-0 top-0 rounded"}
                             height={230}
                             width={600}
-                            alt={"blue eu"}
+                            alt={"My drawing eg 2"}
                         />
                     </div>
                 </div>
