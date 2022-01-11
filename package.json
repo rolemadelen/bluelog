@@ -8,6 +8,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "date-fns": "^2.28.0",
+    "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "next": "latest",
     "prismjs": "^1.25.0",
