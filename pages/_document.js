@@ -29,6 +29,9 @@ class MyDocument extends Document {
                         </a>
                         <a href="https://twitter.com/euisblue">
                             <img src="/images/social/twitter.svg" width="20" height="20" />
+                        </a>                       
+                         <a href="https://euisblue.me/rss.xml">
+                            <img src="/images/social/rss.svg" width="20" height="20" />
                         </a>
                     </div>
                 </footer>

@@ -1,11 +1,11 @@
-import Layout from '/components/layout'
-import { getAllPostIds, getPostData } from '/lib/posts'
-import Date from '/components/date'
-import utilStyles from '/styles/sass/utils.module.scss'
 import Link from 'next/link'
-import Codeblock from '/lib/codeblock.js'
-import ReactMarkdown from 'react-markdown'
+import Date from '/components/date'
+import Layout from '/components/layout'
 import Comments from '/components/comments'
+import ReactMarkdown from 'react-markdown'
+import Codeblock from '/lib/codeblock.js'
+import { getAllPostIds, getPostData } from '/lib/posts'
+import utilStyles from '/styles/sass/utils.module.scss'
 
 export default function Post({ postData }) {
     return (
@@ -18,12 +18,12 @@ export default function Post({ postData }) {
                     <Date dateString={postData.date} />
                 </div>
                 <div className={`${utilStyles.tags} flex justify-end`}>
-                {postData.tags.map((tag,i) => (
-                    <div key={i} className={"px-2 m-1 text-xs bg-tags_bg text-secondary dark:bg-dark_tags_bg dark:text-dark_secondary"}>
-                        {tag}
-                    </div>
-                ))}
-              </div>
+                    {postData.tags.map((tag, i) => (
+                        <div key={i} className={"px-2 m-1 text-xs bg-tags_bg text-secondary dark:bg-dark_tags_bg dark:text-dark_secondary"}>
+                            {tag}
+                        </div>
+                    ))}
+                </div>
             </li>
             <div className={utilStyles.availableLanguage}>
                 {postData.availableLanguage.map((post, i) => (
