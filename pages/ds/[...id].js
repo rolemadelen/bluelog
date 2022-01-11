@@ -1,5 +1,5 @@
 import Layout from '/components/layout'
-import { getAllPostIds, getPostData } from '/lib/ds'
+import { getAllPostIds, getPostData } from '/lib/template'
 import Codeblock from '/lib/codeblock.js'
 import ReactMarkdown from 'react-markdown'
 import Comments from '/components/comments'
@@ -18,7 +18,7 @@ export default function DS({ postData }) {
 }
 
 export async function getStaticPaths() {
-    const paths = getAllPostIds()
+    const paths = getAllPostIds("ds")
     return {
         paths,
         fallback: false
@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const postData = await getPostData(params.id)
+    const postData = await getPostData("ds", params.id)
     return {
         props: {
             postData
