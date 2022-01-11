@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 
+
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx)
@@ -8,8 +9,12 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html lang="en" className={"dark dark:bg-dark_theme duration-300 mt-3"}>
-                <Head />
+            <Html id="vantabg" lang="en" className={"dark dark:bg-dark_theme duration-300 mt-3"}>
+                <Head>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
+                </Head>
+
                 <body className={"bg-theme dark:bg-dark_theme duration-300"}>
                     <Main />
                     <NextScript />
@@ -19,12 +24,12 @@ class MyDocument extends Document {
                         © 2022 <a href="https://github.com/euisblue">Blue Eu</a>. powered by&nbsp;<a href="https://vercel.com/">Vercel</a>
                     </div>
                     <div className="snsLinks flex items-center justify-center">
-                    <a href="https://github.com/euisblue/bluelog">
-                        <img src="/images/social/github.svg" width="20" height="20" />
-                    </a>
-                    <a href="https://twitter.com/euisblue">
-                        <img src="/images/social/twitter.svg" width="20" height="20" />
-                    </a>
+                        <a href="https://github.com/euisblue/bluelog">
+                            <img src="/images/social/github.svg" width="20" height="20" />
+                        </a>
+                        <a href="https://twitter.com/euisblue">
+                            <img src="/images/social/twitter.svg" width="20" height="20" />
+                        </a>
                     </div>
                 </footer>
             </Html>
