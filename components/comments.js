@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
 
-import useScript from "/lib/usescript";
+import giscus from "/lib/giscus";
 
 const Comments = () => {
     const comment = useRef(null);
 
-    const status = useScript({
+    const status = giscus({
         url: "https://giscus.app/client.js",
         repo: "euisblue/nextjs-blog-comments",
         repoId: "R_kgDOGp6ovg",

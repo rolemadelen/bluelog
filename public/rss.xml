@@ -3,8 +3,8 @@
     <channel>
         <title>Articles by Blue Eu</title>
         <link>https://euisblue.me/blog</link>
-        <description>우당당탕 주니어 개발자의 기록을 열람할 수 있습니다 </description>
-        <lastBuildDate>Tue, 11 Jan 2022 15:00:30 GMT</lastBuildDate>
+        <description>우당당탕 주니어 개발자의 기록 </description>
+        <lastBuildDate>Thu, 13 Jan 2022 11:52:40 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>

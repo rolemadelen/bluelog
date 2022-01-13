@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Date from '/components/date'
-import Layout, { siteTitle } from '/components/layout'
-import utilStyles from '/styles/sass/utils.module.scss'
-import { getBlogPosts, getAlgoPosts, getDSPosts } from '/lib/home'
+import Date from '../components/date'
+import Layout, { siteTitle } from '../components/layout'
+import utilStyles from '../styles/sass/utils.module.scss'
+import { getBlogPosts, getAlgoPosts, getDSPosts } from '../lib/home'
 
 export async function getStaticProps() {
     const blogPosts = getBlogPosts()
