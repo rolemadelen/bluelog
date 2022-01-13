@@ -1,8 +1,8 @@
-import Head from 'next/head'
 import Link from 'next/link'
 import { getSortedPostsData } from '/lib/template'
-import Layout, { siteTitle } from '/components/layout'
-import utilStyles from '/styles/sass/utils.module.scss'
+import utilStyles from '/styles/utils.module.scss'
+import Container from '../components/Container'
+import metadata from '../data/metadata'
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData("algo")
@@ -14,11 +14,11 @@ export async function getStaticProps() {
 }
 
 export default function Algo({ allPostsData }) {
+    const customMeta = {
+        title: `${metadata.title} - Algorithms`
+    }
     return (
-        <Layout algo>
-            <Head>
-                <title>{siteTitle}</title>
-            </Head>
+        <Container customMeta={customMeta}>
             <section className={"mt-5"}>
                 <ul className={`${utilStyles.list}`}>
                     {allPostsData.map(({ id, title, lang, category }) => (
@@ -34,6 +34,6 @@ export default function Algo({ allPostsData }) {
                 </ul>
             </section>
 
-        </Layout>
+        </Container>
     )
 }

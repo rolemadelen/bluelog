@@ -26,3 +26,6 @@
   + competitive programming section added. <br /> <img src="./public/readme/20220109-cp.gif" width="400" alt="cp">
 - 2022-01-10
   + various tabs added (Blog, About, DS, Algo, CP) and Home as well.<br /> <img src="./public/readme/20220110-nav.jpg" width="400" alt="cp">
+- 2022-01-14
+  + Reviewed how other people built their blogs using Next.js
+  + Refactored my code - Tried to break my codes into components. 

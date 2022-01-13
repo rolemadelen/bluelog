@@ -6,7 +6,6 @@
     margin: 3rem auto 5rem;
 }
 
-
 .backToHome { margin: 3rem 0 0; }
 
 .navLogo {
@@ -39,9 +38,4 @@
 
         &:hover { text-decoration: none; }
     }
-}
-
-@keyframes floating {
-    from { transform: scale(1.0); }
-    to {  transform: scale(1.1); }
 }

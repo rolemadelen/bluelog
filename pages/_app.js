@@ -1,4 +1,4 @@
-import '/styles/sass/global.scss'
+import '/styles/global.scss'
 import '@fortawesome/fontawesome-free/css/all.css';
 import { useEffect } from 'react';
 

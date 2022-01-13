@@ -1,9 +1,8 @@
-import Head from 'next/head'
-import Layout, { siteTitle } from '/components/layout'
-import utilStyles from '/styles/sass/utils.module.scss'
+import utilStyles from '/styles/utils.module.scss'
 import { getSortedPostsData  } from '/lib/blog'
 import Link from 'next/link'
 import Date from '/components/date'
+import Container from '../../components/Container'
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData("ko")
@@ -16,10 +15,7 @@ export async function getStaticProps() {
 
 export default function Blog({ allPostsData }){
   return (
-    <Layout blog>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
+    <Container page={"blog"}>
       <section>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, subtitle, lang, date, title, tags}) => (
@@ -45,6 +41,6 @@ export default function Blog({ allPostsData }){
           ))}
         </ul>
       </section>
-    </Layout>
+    </Container>
   )
 }
