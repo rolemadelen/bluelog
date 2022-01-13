@@ -1,4 +1,5 @@
-# Blue Blog
+# [Blue Blog](http://euisblue.me/)
+
 
 ## Progress
 - 2022-01-05
@@ -14,7 +15,7 @@
   + Each post's language is labeled with a circle with an animation.<br/><img src="./public/readme/20220107-5.webp" width="400" alt="Post's content UI" />
     * Korean => Red + Blue + White
     * English => Blue
-    * Japan => Red
+    * Japanese => Red
   + Modified transition's to a keyframe animation.<br/><img src="./public/readme/20220107-keyframe.webp" width="150" alt="keyframe animation">
   + Footer added
   + Language selection added. I can click a lang to view only posts in that language.
@@ -27,13 +28,21 @@
 =======
   + tagging added <br/><img src="./public/readme/20220108-tagging.webp" width="400" alt="tagging">
 - 2022-01-09
+  + Markdown - syntax highlighting added
   + competitive programming section added. <br /> <img src="./public/readme/20220109-cp.gif" width="400" alt="cp">
 <<<<<<< HEAD
 >>>>>>> bbfc6c5 (cp part gif README updated)
 =======
 - 2022-01-10
-  + various tabs added (Blog, About, DS, Algo, CP) and Home as well.<br /> <img src="./public/readme/20220110-nav.jpg" width="400" alt="cp">
+  + Home, Blog, and About section added
+  + TIL separated into DS and Algo section <br /> <img src="./public/readme/20220110-nav.jpg" width="400" alt="cp">
+- 2022-01-11
+  + RSS added (not sure if it's done properly.... 🤔 ) 
+  + custom 404 page added - used [vanta.js](https://www.vantajs.com/)
 - 2022-01-14
   + Reviewed how other people built their blogs using Next.js
   + Refactored my code - Tried to break my codes into components. 
+<<<<<<< HEAD
 >>>>>>> 7dabddf (Refactored my codes - components)
+=======
+>>>>>>> 5da0dba (Refactored my codes - components)
