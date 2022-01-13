@@ -22,9 +22,9 @@ const metadata = {
       id: 'euisblue',
       url: 'https://giscus.app/client.js',
       repo: 'euisblue/bluelog',
-      repoId: 'R_kgDOGp6ovg',
+      repoId: 'R_kgDOGoLwEg',
       category: 'General',
-      categoryId: 'DIC_kwDOGp6ovs4CAoEv',
+      categoryId: 'DIC_kwDOGoLwEs4CAqgq',
     },
 
     analytics: {
