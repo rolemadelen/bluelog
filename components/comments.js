@@ -1,16 +1,17 @@
 import React, { useRef } from "react";
-
+import metadata from "../data/metadata";
 import giscus from "/lib/giscus";
+
 
 const Comments = () => {
     const comment = useRef(null);
 
     const status = giscus({
-        url: "https://giscus.app/client.js",
-        repo: "euisblue/nextjs-blog-comments",
-        repoId: "R_kgDOGp6ovg",
-        category: "General",
-        categoryId: "DIC_kwDOGp6ovs4CAoEv",
+        url: metadata.giscus.url,
+        repo: metadata.giscus.repo,
+        repoId: metadata.giscus.repoId,
+        category: metadata.giscus.category,
+        categoryId: metadata.giscus.categoryId,
         mapping: "url",
         theme: "dark_dimmed",
         crossorigin: "anonymous",

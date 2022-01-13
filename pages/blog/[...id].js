@@ -1,15 +1,15 @@
 import Link from 'next/link'
 import Date from '/components/date'
-import Layout from '/components/layout'
 import Comments from '/components/comments'
 import ReactMarkdown from 'react-markdown'
 import Codeblock from '/lib/codeblock.js'
 import { getAllPostIds, getPostData } from '/lib/blog'
-import utilStyles from '/styles/sass/utils.module.scss'
+import utilStyles from '/styles/utils.module.scss'
+import Container from '../../components/Container'
 
 export default function Post({ postData }) {
     return (
-        <Layout blog>
+        <Container page={"blog"}>
             <li className={`${utilStyles.postHeader} ${postData.lang} text-primary bg-card_bg dark:bg-dark_card_bg dark:text-dark_primary shadow-[0px_1px_5px_1px_#80afe7] dark:shadow-[0px_1px_5px_1px_black]`}>
                 <title>{postData.title}</title>
                 <h1 className={`text-primary dark:text-dark_primary text-xl font-semibold`}>{postData.title}</h1>
@@ -38,7 +38,7 @@ export default function Post({ postData }) {
                 <ReactMarkdown components={Codeblock}>{postData.markdown}</ReactMarkdown>
             </article>
             <Comments />
-        </Layout>
+        </Container>
     )
 }
 

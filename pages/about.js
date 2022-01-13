@@ -1,13 +1,13 @@
-import Head from 'next/head';
 import Image from 'next/image';
-import Layout, { siteTitle } from '/components/layout';
+import Container from '../components/Container';
+import metadata from '../data/metadata';
 
 export default function About() {
+    const customMeta = {
+        title: `${metadata.title} - About`
+    }
     return (
-        <Layout about>
-            <Head>
-                <title>{siteTitle}</title>
-            </Head>
+        <Container customMeta={customMeta}>
             <section className={"mx-auto"}>
                 <div className={"text-center text-primary dark:text-dark_primary"}>
                     <Image
@@ -52,6 +52,6 @@ export default function About() {
                     </div>
                 </div>
             </section>
-        </Layout>
+        </Container>
     )
 }
