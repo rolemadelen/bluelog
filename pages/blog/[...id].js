@@ -4,7 +4,7 @@ import Layout from '/components/layout'
 import Comments from '/components/comments'
 import ReactMarkdown from 'react-markdown'
 import Codeblock from '/lib/codeblock.js'
-import { getAllPostIds, getPostData } from '/lib/posts'
+import { getAllPostIds, getPostData } from '/lib/blog'
 import utilStyles from '/styles/sass/utils.module.scss'
 
 export default function Post({ postData }) {
