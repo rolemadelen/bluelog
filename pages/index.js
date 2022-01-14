@@ -12,9 +12,9 @@ export default function Home({ blogPosts, algoPosts, dsPosts }) {
                     <h1 className={"text-primary dark:text-dprimary text-5xl sm:text-6xl font-bold font-[Poppins] absolute top-[20%] sm:top-[28%] left-0 sm:left-[5%]"}>Hello<Span>!</Span><br/>I<Span>&apos;</Span>m Blue<Span>.</Span></h1>
                 </div>
                 <Header>Recent Posts</Header>
-                <RecentPostsContainer value={"Blog"} link={"/blog"} posts={blogPosts ? blogPosts : []} />
-                <RecentPostsContainer value={"Data Structure"} link={"/ds"} posts={dsPosts ? dsPosts : []} />
-                <RecentPostsContainer value={"Algorithm"} link={"/algo"} posts={algoPosts ? algoPosts : []} />
+                <RecentPostsContainer value={"Blog"} link={"blog"} posts={blogPosts ? blogPosts : []} />
+                <RecentPostsContainer value={"Data Structure"} link={"ds"} posts={dsPosts ? dsPosts : []} />
+                <RecentPostsContainer value={"Algorithm"} link={"algo"} posts={algoPosts ? algoPosts : []} />
             </>
         </Container>
     )
