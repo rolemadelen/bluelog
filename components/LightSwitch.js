@@ -10,4 +10,5 @@ const LightSwitch = React.forwardRef((props, ref) => {
     )
 })
 
+LightSwitch.displayName = 'LightSwitch';
 export default LightSwitch;

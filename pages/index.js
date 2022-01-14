@@ -9,7 +9,7 @@ export default function Home({ blogPosts, algoPosts, dsPosts }) {
             <>
                 <div className={"relative"}>
                     <div className={"rounded bg-bluexx dark:bg-bluexy w-full h-[14em] sm:h-[25em] bg-cover bg-no-repeat duration-200"}></div>
-                    <h1 className={"text-primary dark:text-dprimary text-5xl sm:text-6xl font-bold font-[Poppins] absolute top-[20%] sm:top-[28%] left-0 sm:left-[5%]"}>Hello<Span>!</Span><br/>I<Span>'</Span>m Blue<Span>.</Span></h1>
+                    <h1 className={"text-primary dark:text-dprimary text-5xl sm:text-6xl font-bold font-[Poppins] absolute top-[20%] sm:top-[28%] left-0 sm:left-[5%]"}>Hello<Span>!</Span><br/>I<Span>&apos;</Span>m Blue<Span>.</Span></h1>
                 </div>
                 <Header>Recent Posts</Header>
                 <RecentPostsContainer value={"Blog"} link={"/blog"} posts={blogPosts ? blogPosts : []} />

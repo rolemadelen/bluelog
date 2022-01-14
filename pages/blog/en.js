@@ -17,8 +17,8 @@ export default function Blog({ allPostsData }){
     <Container  page={"blog"}>
       <section>
         <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, subtitle, lang, date, title, tags }) => (
-            <CardContainer lang={id[0]} slug={id[1]} subtitle={subtitle} date={date} title={title} tags={tags ? tags : []}/>
+          {allPostsData.map(({ id, subtitle, date, title, tags }) => (
+            <CardContainer lang={id[0]} slug={id[1]} subtitle={subtitle} date={date} title={title} tags={tags ? tags : []} key={id}/>
           ))}
         </ul>
       </section>

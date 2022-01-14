@@ -1,5 +1,5 @@
 import ReactMarkdown from 'react-markdown'
-import Comments from '@components/Comments'
+import Comments from '@components/comments'
 import Container from '@components/Container'
 import Codeblock from '@lib/codeblock.js'
 import { getAllPostIds, getPostData } from '@lib/template'
