@@ -12,7 +12,7 @@ const Comments = () => {
         category: metadata.giscus.category,
         categoryId: metadata.giscus.categoryId,
         mapping: "url",
-        theme: "transparent_dark",
+        theme: "dark_dimmed",
         crossorigin: "anonymous",
         ref: comment
     });
