@@ -7,5 +7,7 @@
             "@lib/*": ["lib/*"],
             "@data/*": ["data/*"],
         }
-    }
+    },
+    "typeRoots": [ "./types", "./node_modules/vanta"],
+    "exclude": [ "node_modules", "vanta"],
 }
