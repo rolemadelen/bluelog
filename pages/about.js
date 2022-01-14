@@ -32,7 +32,15 @@ export default function About() {
                         그림 그리는 걸 좋아합니다.
                         <br /> <br />
 
-                        <img src="/video/draw.webp" type="video/webp" alt="Drawing video" className={"mb-1 mx-auto"}/>
+                        <Image
+                            priority
+                            src="/video/draw.webp"
+                            type="video/webp"
+                            className={"mb-1 mx-auto"}
+                            height={350}
+                            width={350}
+                            alt={"Drawing Video"}
+                        />  
                         <Image
                             priority
                             src="/images/draw1.jpg"

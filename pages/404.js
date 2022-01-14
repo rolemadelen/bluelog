@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react'
 import VANTA from 'vanta/dist/vanta.globe.min'
 
@@ -32,7 +33,9 @@ export default function Custom404() {
                 404 - Page Not Found
             </div>
             <div>
-                <a href="/" className={"mt-5 font-semibold"}>Back to Home</a>
+                <Link href="/">
+                    <a className={"mt-5 font-semibold"}>Back to Home</a>
+                </Link> 
             </div>
         </div>
     </div>
