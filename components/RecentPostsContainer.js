@@ -13,7 +13,7 @@ const RecentPostsContainer = props => {
                 <ul className={utilStyles.list}>
                     {props.posts.map(({ id, title, date }) => (
                         <li className={"shadow-none pb-1 flex justify-between items-center"} key={id}>
-                            <NavLink link={`/blog/${id[0]}/${id[1]}`} customClass={"text-sm text-primary dark:text-dprimary"} value={title} />
+                            <NavLink link={`/${props.link}/${id[0]}/${id[1]}`} customClass={"text-sm text-primary dark:text-dprimary"} value={title} />
 
                             <div className={`text-xs text-secondary dark:text-dsecondary`}>
                                 <Date dateString={date} />
