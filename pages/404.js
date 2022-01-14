@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react'
-import VANTA from 'vanta/dist/vanta.globe.min'
+import Vanta from 'vanta/dist/vanta.globe.min'
 
 export default function Custom404() {
     const [vantaEffect, setVantaEffect] = useState(0);
     const vantaRef = useRef(null)
     useEffect(() => {
         if (!vantaEffect) {
-            setVantaEffect(VANTA({
+            setVantaEffect(Vanta({
                 el: vantaRef.current,
                 mouseControls: true,
                 touchControls: true,
@@ -27,7 +27,7 @@ export default function Custom404() {
     }, [vantaEffect])
 
     return (
-    <div ref={vantaRef} className={" absolute top-0 w-full h-full"}>
+    <div ref={vantaRef} className={" absolute top-0 w-full h-full z-10"}>
         <div className={"flex flex-col justify-center items-center h-full"}>
             <div className={"text-xl font-semibold"}>
                 404 - Page Not Found

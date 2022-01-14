@@ -35,6 +35,7 @@ const HeaderContainer = tw.header`
     relative
     items-center
     justify-between
+    flex-wrap
     mb-10
 `
 
