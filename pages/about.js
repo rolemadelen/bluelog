@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Container from '../components/Container';
-import metadata from '../data/metadata';
+import Container from '@components/Container';
+import metadata from '@data/metadata';
 
 export default function About() {
     const customMeta = {
@@ -9,7 +9,7 @@ export default function About() {
     return (
         <Container customMeta={customMeta}>
             <section className={"mx-auto"}>
-                <div className={"text-center text-primary dark:text-dark_primary"}>
+                <div className={"text-center text-primary dark:text-dprimary"}>
                     <Image
                         priority
                         src="/images/profile.jpg"
@@ -32,7 +32,15 @@ export default function About() {
                         그림 그리는 걸 좋아합니다.
                         <br /> <br />
 
-                        <img src="/video/draw.webp" type="video/webp" alt="Drawing video" className={"mb-1 mx-auto"}/>
+                        <Image
+                            priority
+                            src="/video/draw.webp"
+                            type="video/webp"
+                            className={"mb-1 mx-auto"}
+                            height={350}
+                            width={350}
+                            alt={"Drawing Video"}
+                        />  
                         <Image
                             priority
                             src="/images/draw1.jpg"
