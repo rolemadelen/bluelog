@@ -1,9 +1,8 @@
 import React from 'react'
 import Head from 'next/head'
-import styles from '../styles/container.module.scss'
-import metadata from '../data/metadata'
-import NavLink from './NavLink'
-import LightSwitch from './LightSwitch'
+import Header from '@components/Header'
+import metadata from '@data/metadata'
+import tw from 'tailwind-styled-components'
 
 const Container = (props) => {
     const meta = {
@@ -17,7 +16,7 @@ const Container = (props) => {
         ...props.customMeta,
     }
     return (
-        <section className={`${styles.container} mt-8`}>
+        <BaseContainer>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <title>{meta.title}</title>
@@ -37,30 +36,17 @@ const Container = (props) => {
                 <meta name="twitter:site" content={meta.twitterHandle} />
                 <meta name="twitter:image" content={meta.image} />
             </Head>
-
-            <header className={`flex relative items-center justify-end mb-5`}>
-                <NavLink link={"/"} customClass={`${styles.navLogo} text-primary dark:text-dark_primary absolute left-0 top-[-1.7em]`} value="Blue" />
-                <div className={"flex items-center"}>
-                    <div className={styles.navLink}>
-                        <NavLink link={"/blog"} customClass={"text-primary dark:text-dark_primary"} value={"Blog"} />
-                        <NavLink link={"/about"} customClass={"text-primary dark:text-dark_primary"} value={"About"} />
-                        <NavLink link={"/ds"} customClass={"text-primary dark:text-dark_primary"} value={"DS"} />
-                        <NavLink link={"/algo"} customClass={"text-primary dark:text-dark_primary"} value="Algo" />
-                        <NavLink link={"/cp"} customClass={"text-primary dark:text-dark_primary"} value="CP" />
-                    </div>
-                    <LightSwitch customIcon={"fa fa-bolt"} customClass={"hover:cursor-pointer dark:text-white duration-300"} />
-                </div>
-                {meta.page == "blog" && (
-                    <div className={styles.navLanguage}>
-                        <NavLink link={"/blog/ko"} value={"🇰🇷 "} />
-                        <NavLink link={"/blog/en"} value={"🇺🇸 "} />
-                        <NavLink link={"/blog/ja"} value={"🇯🇵 "} />
-                    </div>
-                )}
-            </header>
+            <Header page={meta.page}/>
             <main>{props.children}</main>
-        </section>
+        </BaseContainer>
     )
 }
+
+const BaseContainer = tw.section`
+    max-w-[50rem]
+    px-[1rem]
+    mb-[5rem]
+    mx-auto
+`
 
 export default Container;

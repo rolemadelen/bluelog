@@ -1,9 +1,9 @@
-import Container from '../components/Container'
-import utilStyles from '../styles/utils.module.scss'
-import { generateRSSFeed } from '../lib/generateRSSFeed'
-import { getSortedPostsData } from '../lib/blog'
-import Card from '../components/Card'
-import metadata from '../data/metadata'
+import Container from '@components/Container'
+import CardContainer from '@components/CardContainer'
+import utilStyles from '@styles/utils.module.scss'
+import { generateRSSFeed } from '@lib/generateRSSFeed'
+import { getSortedPostsData } from '@lib/blog'
+import metadata from '@data/metadata'
 
 export default function Blog({ allPostsData }) {
     const customMeta = {
@@ -14,7 +14,7 @@ export default function Blog({ allPostsData }) {
             <>
                 <ul className={utilStyles.list}>
                     {allPostsData.map(({ id, subtitle, date, title, tags }) => (
-                      <Card lang={id[0]} slug={id[1]} subtitle={subtitle} date={date} title={title} tags={tags ? tags : []}/>
+                      <CardContainer lang={id[0]} slug={id[1]} subtitle={subtitle} date={date} title={title} tags={tags ? tags : []}/>
                     ))}
                 </ul>
             </>

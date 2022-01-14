@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
-import metadata from "../data/metadata";
-import giscus from "/lib/giscus";
-
+import metadata from "@data/metadata";
+import giscus from "@lib/giscus";
 
 const Comments = () => {
     const comment = useRef(null);
@@ -13,7 +12,7 @@ const Comments = () => {
         category: metadata.giscus.category,
         categoryId: metadata.giscus.categoryId,
         mapping: "url",
-        theme: "dark_dimmed",
+        theme: "transparent_dark",
         crossorigin: "anonymous",
         ref: comment
     });

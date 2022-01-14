@@ -1,7 +1,7 @@
-import { getSortedPostsData } from '../lib/template'
-import Container from '../components/Container'
-import CPSection from '../components/CPSection'
-import metadata from '../data/metadata'
+import { getSortedPostsData } from '@lib/template'
+import Container from '@components/Container'
+import CPSection from '@components/CPSection'
+import metadata from '@data/metadata'
 
 export default function Code({ posts }) {
     const baekjoonPosts = posts.filter(post => { return post.from == 'baekjoon' })

@@ -1,15 +1,9 @@
-@import "./colors.module";
-
-.container {
-    max-width: 42rem;
-    padding: 0 1rem;
-    margin: 3rem auto 5rem;
-}
+@import "@styles/colors.module";
 
 .backToHome { margin: 3rem 0 0; }
 
 .navLogo {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
     transition: all 0.3s ease-in;
     text-shadow: 1px 1px #946b2d;
@@ -26,16 +20,4 @@
 .navLink {
     a { padding: 0 0.7em; }
     a:last-child { margin-right: 1em; }
-}
-
-.navLanguage {
-    position: absolute;
-    right: 0;
-    top: -2.5em;
-
-    a {
-        padding: 0 0.5em;
-
-        &:hover { text-decoration: none; }
-    }
 }
