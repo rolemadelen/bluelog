@@ -1,6 +1,6 @@
 import Image from 'next/image';
-import Container from '../components/Container';
-import metadata from '../data/metadata';
+import Container from '@components/Container';
+import metadata from '@data/metadata';
 
 export default function About() {
     const customMeta = {
@@ -9,7 +9,7 @@ export default function About() {
     return (
         <Container customMeta={customMeta}>
             <section className={"mx-auto"}>
-                <div className={"text-center text-primary dark:text-dark_primary"}>
+                <div className={"text-center text-primary dark:text-dprimary"}>
                     <Image
                         priority
                         src="/images/profile.jpg"

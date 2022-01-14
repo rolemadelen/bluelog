@@ -1,11 +1,11 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import "./colors.module";
+@import "@styles/colors.module";
 
 $--root: 18px;
 $--text: 16px;
-$--MIN-WIDTH: 350px;
+$--MIN-WIDTH: 450px;
 * { box-sizing: border-box; }
 
 html,
@@ -155,6 +155,18 @@ html.dark {
 
     footer {
         a { color: $--primary-dark; }
+    }
+}
+
+
+li {
+    &.bronze, &.easy, &.easy2, &.medium, &.hard {
+        a { color: $--primary-dark; }
+    }
+    &.silver {
+        a {
+            color: $--primary !important;
+        }
     }
 }
 
