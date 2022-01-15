@@ -1,4 +1,4 @@
-import { allPosts } from '.contentlayer/data'
+import { allPosts } from '.contentlayer/data/allPosts.mjs'
 import { getAllPosts } from '@lib/ds'
 import DocLayout from '@layouts/ds'
 
