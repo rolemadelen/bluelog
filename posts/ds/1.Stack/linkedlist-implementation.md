@@ -1,8 +1,7 @@
 ---
-title: "Stack - Linked List"
+title: "Linked List"
+section: "1.2"
 date: "2021-12-02"
-category: 'stack'
-lang: "Ruby"
 ---
 
 Utilized circular linked list that I implemented [here](./circular-doubly-linked-list).

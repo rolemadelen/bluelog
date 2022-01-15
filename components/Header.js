@@ -10,11 +10,11 @@ const Header = props => {
                 <NavLink link={"/"} customClass={`${styles.navLogo}`} value="euisblue" />
                 <div className={"flex items-center"}>
                     <div className={styles.navLink}>
-                        <NavLink link={"/blog"} customClass={"hover:text-blue-400 dark:hover:text-blue-400"} value={"Blog"} />
-                        <NavLink link={"/about"} customClass={"hover:text-blue-400 dark:hover:text-blue-400"} value={"About"} />
-                        <NavLink link={"/ds"} customClass={"hover:text-blue-400 dark:hover:text-blue-400"} value={"DS"} />
-                        <NavLink link={"/algo"} customClass={"hover:text-blue-400 dark:hover:text-blue-400"} value="Algo" />
-                        <NavLink link={"/cp"} customClass={"hover:text-blue-400 dark:hover:text-blue-400"} value="CP" />
+                        <NavLink link={"/blog"} customClass={"hover:text-blue-400 dark:hover:text-[#81b6c6]"} value={"Blog"} />
+                        <NavLink link={"/about"} customClass={"hover:text-blue-400 dark:hover:text-[#81b6c6]"} value={"About"} />
+                        <NavLink link={"/ds/5.Graph/adjacency-list"} customClass={"hover:text-blue-400 dark:hover:text-[#81b6c6]"} value={"DS"} />
+                        <NavLink link={"/algo/Array/0.binary-search"} customClass={"hover:text-blue-400 dark:hover:text-[#81b6c6]"} value="Algo" />
+                        <NavLink link={"/cp"} customClass={"hover:text-blue-400 dark:hover:text-[#81b6c6]"} value="CP" />
                     </div>
                     <LightSwitch customIcon={"fa fa-bolt"} customClass={"hover:cursor-pointer dark:text-white duration-300"} />
                 </div>

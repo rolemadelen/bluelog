@@ -4,7 +4,7 @@ import Header from '@components/Header'
 import metadata from '@data/metadata'
 import tw from 'tailwind-styled-components'
 
-const Container = (props) => {
+const DSContainer = (props) => {
     const meta = {
         author: metadata.author,
         title: metadata.title,
@@ -43,10 +43,10 @@ const Container = (props) => {
 }
 
 const BaseContainer = tw.section`
-    max-w-[50rem]
+    max-w-[60rem]
     px-[1rem]
     mb-[5rem]
     mx-auto
 `
 
-export default Container;
+export default DSContainer;

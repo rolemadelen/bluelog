@@ -1,8 +1,7 @@
 ---
-title: "Circular Queue in array"
+title: "Circular Queue"
+section: "2.3"
 date: "2021-12-04"
-category: 'queue'
-lang: "Ruby"
 ---
 
 ```rb

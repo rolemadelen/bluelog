@@ -1,8 +1,7 @@
 ---
-title: "Stack - Array"
+title: "Array"
+section: "1.1"
 date: "2021-12-02"
-category: 'stack'
-lang: "Ruby"
 ---
 
 ```rb
