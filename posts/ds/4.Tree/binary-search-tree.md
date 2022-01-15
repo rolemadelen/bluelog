@@ -1,8 +1,7 @@
 ---
 title: "Binary Search Tree"
+section: "4.2"
 date: "2021-12-09"
-category: 'tree'
-lang: "Ruby"
 ---
 
 ```rb

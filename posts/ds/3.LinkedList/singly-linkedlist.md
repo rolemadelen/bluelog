@@ -1,8 +1,7 @@
 ---
 title: "Singly Linked List"
+section: "3.1"
 date: "2021-11-30"
-category: 'linkedlist'
-lang: "Ruby"
 ---
 
 ```rb

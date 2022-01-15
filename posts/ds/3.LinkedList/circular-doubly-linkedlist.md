@@ -1,8 +1,7 @@
 ---
-title: "Doubly Linked List"
-date: "2021-12-01"
-category: 'linkedlist'
-lang: "Ruby"
+title: "Circular Linked List"
+section: "3.3"
+date: "2021-12-02"
 ---
 
 ```rb
@@ -19,18 +18,18 @@ end
 ```
 
 ```rb
-class DoublyLinkedList
-  attr_accessor :head 
+class CircularLinkedList
+  attr_accessor :tail 
   attr_reader :node_count
 
   def initialize(data = nil)
     if data != nil 
     puts "[initialize] data = #{data}"
-      @head = Node.new(data)
+      @tail = Node.new(data)
       @node_count = 1
     else 
       puts "[initialize] data = nil"
-      @head = nil 
+      @tail = nil 
       @node_count = 0
     end 
   end 
@@ -38,25 +37,33 @@ class DoublyLinkedList
   def push_front(data)
     puts "[push_front] inserting #{data} "
     new_node = Node.new(data)
-    new_node.next = @head 
-    @head.prev = new_node if @head
-    @head = new_node
+    if @tail == nil 
+      @tail = new_node 
+      @tail.next = @tail 
+      @tail.prev = @tail 
+    else 
+      head = @tail.next 
+      new_node.next = head 
+      new_node.prev = @tail 
+      head.prev = new_node 
+      @tail.next = new_node 
+    end 
 
     @node_count += 1
   end 
 
   def push_back(data)
     puts "[push_back] inserting #{data}"
-    if @head == nil 
-      @head = Node.new(data) 
+    new_node = Node.new(data)
+    if @tail == nil 
+      @tail = new_node
+      @tail.next = @tail 
+      @tail.prev = @tail 
     else 
-      curr = @head 
-      while curr.next != nil 
-        curr = curr.next 
-      end 
-      
-      curr.next = Node.new(data)
-      curr.next.prev = curr
+      new_node.prev = @tail 
+      new_node.next = @tail.next 
+      @tail.next = new_node
+      @tail = new_node
     end 
 
     @node_count += 1
@@ -68,11 +75,11 @@ class DoublyLinkedList
     if idx <= 0
       puts "  index is <= 0"
       push_front(data)
-    elsif idx >= @node_count 
+    elsif idx >= (@node_count - 1)
       puts "  index is >= node_count(#{@node_count})"
       push_back(data)
     else 
-      curr = @head
+      curr = @tail.next
       idx.times { curr = curr.next }
       new_node = Node.new(data)
       curr.prev.next = new_node 
@@ -87,10 +94,18 @@ class DoublyLinkedList
   def pop_front
     if @node_count == 0 
       puts "[pop_front] no more nodes to pop"
+    elsif @node_count == 1 
+      data = @tail.data 
+      @tail = nil 
+      @node_count = 0 
+      puts "[pop_front] pop #{data}"
+      return data 
     else 
-      data = @head.data 
-      @head = @head.next
-      @head.prev = nil if @head != nil
+      data = @tail.next.data 
+      head = @tail.next 
+      @tail.next = head.next
+      head.next.prev = @tail 
+      head = nil
       @node_count -= 1 
 
       puts "[pop_front] pop #{data}"
@@ -102,17 +117,19 @@ class DoublyLinkedList
     if @node_count == 0 
       puts "[pop_back] no more nodes to pop"
     elsif @node_count == 1 
-      data = @head.data 
-      @head = nil 
+      data = @tail.data 
+      @tail = nil 
       @node_count = 0 
       puts "[pop_back] pop #{data}"
       return data 
     else 
-      curr = @head 
-      (@node_count-1).times { curr = curr.next }
+      curr = @tail 
       data = curr.data
-      curr.prev.next = nil 
-      curr = nil
+      @tail.prev.next = @tail.next 
+      @tail.next.prev = @tail.prev 
+      temp = @tail 
+      @tail = @tail.prev
+      temp = nil
       @node_count -= 1 
 
       puts "[pop_back] pop #{data}"
@@ -133,7 +150,7 @@ class DoublyLinkedList
         puts "  [delete_at] idx >= node_count(#{@node_count})... call pop_back"
         pop_back 
       else 
-        curr = @head 
+        curr = @tail.next
         idx.times { curr = curr.next }
         curr.prev.next = curr.next 
         curr.next.prev = curr.prev
@@ -158,9 +175,10 @@ class DoublyLinkedList
 
   def find_node(data) 
     puts "[find_node] looking for a node with #{data}"
-    curr = @head 
+    return nil if @node_count == 0
+    curr = @tail.next 
     index = 0
-    while curr != nil 
+    while curr != @tail
       return index if curr.data == data
       curr = curr.next 
       index += 1
@@ -169,9 +187,11 @@ class DoublyLinkedList
   end 
 
   def print_list
-    curr = @head 
-    while curr && curr.next do 
-      print "#{curr.data} <-> "
+    puts "[Print List]"
+    return if @node_count == 0
+    curr = @tail.next
+    (@node_count-1).times do 
+      print "#{curr.data} - "
       curr = curr.next
     end 
     puts "#{curr.data}" if curr
@@ -179,13 +199,11 @@ class DoublyLinkedList
 
   def reverse_print_list 
     puts "[Reverse Print List]"
-    curr = @head 
-    while curr && curr.next do 
-      curr = curr.next 
-    end 
+    return if @node_count == 0
 
-    while curr != @head do
-      print "#{curr.data} <-> "
+    curr = @tail
+    (@node_count-1).times do
+      print "#{curr.data} - "
       curr = curr.prev
     end
     puts "#{curr.data}" if curr

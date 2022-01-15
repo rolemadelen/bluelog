@@ -144,6 +144,7 @@ html {
 }
 
 html.dark {
+    a {color: #81b6c6}
     article {
         a { color: $--link-dark; }
         p {

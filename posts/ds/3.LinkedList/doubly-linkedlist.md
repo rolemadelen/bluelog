@@ -1,8 +1,7 @@
 ---
-title: "Circular Doubly Linked List"
-date: "2021-12-02"
-category: 'linkedlist'
-lang: "Ruby"
+title: "Doubly Linked List"
+section: "3.2"
+date: "2021-12-01"
 ---
 
 ```rb
@@ -19,18 +18,18 @@ end
 ```
 
 ```rb
-class CircularLinkedList
-  attr_accessor :tail 
+class DoublyLinkedList
+  attr_accessor :head 
   attr_reader :node_count
 
   def initialize(data = nil)
     if data != nil 
     puts "[initialize] data = #{data}"
-      @tail = Node.new(data)
+      @head = Node.new(data)
       @node_count = 1
     else 
       puts "[initialize] data = nil"
-      @tail = nil 
+      @head = nil 
       @node_count = 0
     end 
   end 
@@ -38,33 +37,25 @@ class CircularLinkedList
   def push_front(data)
     puts "[push_front] inserting #{data} "
     new_node = Node.new(data)
-    if @tail == nil 
-      @tail = new_node 
-      @tail.next = @tail 
-      @tail.prev = @tail 
-    else 
-      head = @tail.next 
-      new_node.next = head 
-      new_node.prev = @tail 
-      head.prev = new_node 
-      @tail.next = new_node 
-    end 
+    new_node.next = @head 
+    @head.prev = new_node if @head
+    @head = new_node
 
     @node_count += 1
   end 
 
   def push_back(data)
     puts "[push_back] inserting #{data}"
-    new_node = Node.new(data)
-    if @tail == nil 
-      @tail = new_node
-      @tail.next = @tail 
-      @tail.prev = @tail 
+    if @head == nil 
+      @head = Node.new(data) 
     else 
-      new_node.prev = @tail 
-      new_node.next = @tail.next 
-      @tail.next = new_node
-      @tail = new_node
+      curr = @head 
+      while curr.next != nil 
+        curr = curr.next 
+      end 
+      
+      curr.next = Node.new(data)
+      curr.next.prev = curr
     end 
 
     @node_count += 1
@@ -76,11 +67,11 @@ class CircularLinkedList
     if idx <= 0
       puts "  index is <= 0"
       push_front(data)
-    elsif idx >= (@node_count - 1)
+    elsif idx >= @node_count 
       puts "  index is >= node_count(#{@node_count})"
       push_back(data)
     else 
-      curr = @tail.next
+      curr = @head
       idx.times { curr = curr.next }
       new_node = Node.new(data)
       curr.prev.next = new_node 
@@ -95,18 +86,10 @@ class CircularLinkedList
   def pop_front
     if @node_count == 0 
       puts "[pop_front] no more nodes to pop"
-    elsif @node_count == 1 
-      data = @tail.data 
-      @tail = nil 
-      @node_count = 0 
-      puts "[pop_front] pop #{data}"
-      return data 
     else 
-      data = @tail.next.data 
-      head = @tail.next 
-      @tail.next = head.next
-      head.next.prev = @tail 
-      head = nil
+      data = @head.data 
+      @head = @head.next
+      @head.prev = nil if @head != nil
       @node_count -= 1 
 
       puts "[pop_front] pop #{data}"
@@ -118,19 +101,17 @@ class CircularLinkedList
     if @node_count == 0 
       puts "[pop_back] no more nodes to pop"
     elsif @node_count == 1 
-      data = @tail.data 
-      @tail = nil 
+      data = @head.data 
+      @head = nil 
       @node_count = 0 
       puts "[pop_back] pop #{data}"
       return data 
     else 
-      curr = @tail 
+      curr = @head 
+      (@node_count-1).times { curr = curr.next }
       data = curr.data
-      @tail.prev.next = @tail.next 
-      @tail.next.prev = @tail.prev 
-      temp = @tail 
-      @tail = @tail.prev
-      temp = nil
+      curr.prev.next = nil 
+      curr = nil
       @node_count -= 1 
 
       puts "[pop_back] pop #{data}"
@@ -151,7 +132,7 @@ class CircularLinkedList
         puts "  [delete_at] idx >= node_count(#{@node_count})... call pop_back"
         pop_back 
       else 
-        curr = @tail.next
+        curr = @head 
         idx.times { curr = curr.next }
         curr.prev.next = curr.next 
         curr.next.prev = curr.prev
@@ -176,10 +157,9 @@ class CircularLinkedList
 
   def find_node(data) 
     puts "[find_node] looking for a node with #{data}"
-    return nil if @node_count == 0
-    curr = @tail.next 
+    curr = @head 
     index = 0
-    while curr != @tail
+    while curr != nil 
       return index if curr.data == data
       curr = curr.next 
       index += 1
@@ -188,11 +168,9 @@ class CircularLinkedList
   end 
 
   def print_list
-    puts "[Print List]"
-    return if @node_count == 0
-    curr = @tail.next
-    (@node_count-1).times do 
-      print "#{curr.data} - "
+    curr = @head 
+    while curr && curr.next do 
+      print "#{curr.data} <-> "
       curr = curr.next
     end 
     puts "#{curr.data}" if curr
@@ -200,11 +178,13 @@ class CircularLinkedList
 
   def reverse_print_list 
     puts "[Reverse Print List]"
-    return if @node_count == 0
+    curr = @head 
+    while curr && curr.next do 
+      curr = curr.next 
+    end 
 
-    curr = @tail
-    (@node_count-1).times do
-      print "#{curr.data} - "
+    while curr != @head do
+      print "#{curr.data} <-> "
       curr = curr.prev
     end
     puts "#{curr.data}" if curr
