@@ -25,6 +25,7 @@ const AlgoAside = ({ tree }) => {
     )
 }
 
+<<<<<<< HEAD
 
 const AlgoAsideContainer = tw.section`
     flex
@@ -49,4 +50,6 @@ const AlgoAsideLink = tw.a`
     leading-4
 `
 
+=======
+>>>>>>> ff127ad (Sidebar menu added)
 export default AlgoAside
