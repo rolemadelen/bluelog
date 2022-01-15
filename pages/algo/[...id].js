@@ -1,4 +1,4 @@
-import { allAlgoPosts } from '.contentlayer/data/allAlgoPosts.mjs'
+import { allAlgoPosts } from '.contentlayer/data'
 import { getAllPosts } from '@lib/algo'
 import DocLayout from '@layouts/ds'
 
