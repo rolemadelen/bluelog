@@ -1,9 +1,7 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
 import highlight from 'rehype-highlight'
 
-import type { DocumentGen } from 'contentlayer/core'
-
-export const urlFromFilePath = (doc: DocumentGen): string => {
+export const urlFromFilePath = doc => {
     return doc._raw.flattenedPath.replace(/pages\/?/, '')
 }
 
