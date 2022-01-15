@@ -26,7 +26,10 @@ const AlgoAside = ({ tree }) => {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 55f29e4 (Fixd casing discrepancies)
 const AlgoAsideContainer = tw.section`
     flex
     flex-col
