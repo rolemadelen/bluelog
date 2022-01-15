@@ -25,7 +25,6 @@ const AlgoAside = ({ tree }) => {
     )
 }
 
-
 const AlgoAsideContainer = tw.section`
     flex
     flex-col
