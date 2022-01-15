@@ -1,8 +1,7 @@
 ---
 title: "Min Stack"
+section: "1.3"
 date: "2021-12-04"
-category: 'stack'
-lang: "Ruby"
 ---
 
 ```rb

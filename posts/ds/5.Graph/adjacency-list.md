@@ -1,8 +1,7 @@
 ---
-title: "Graph - Adjacency List"
+title: "Adjacency List"
+section: "5.1"
 date: "2021-12-08"
-category: 'graph'
-lang: "Ruby"
 ---
 
 

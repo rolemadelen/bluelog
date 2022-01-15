@@ -1,8 +1,7 @@
 ---
-title: "Graph - Adjacency Matrix"
+title: "Adjacency Matrix"
+section: "5.2"
 date: "2021-12-08"
-category: 'graph'
-lang: "Ruby"
 ---
 
 

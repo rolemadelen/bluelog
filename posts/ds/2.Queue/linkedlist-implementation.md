@@ -1,8 +1,7 @@
 ---
-title: "Queue - Linked List"
+title: "Linked List"
+section: "2.2"
 date: "2021-12-03"
-category: 'queue'
-lang: "Ruby"
 ---
 
 ```rb
