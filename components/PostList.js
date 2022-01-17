@@ -39,6 +39,7 @@ const List = tw.li`
     mb-[1.5em]
     p-[1.2em]
     rounded
+    list-none
 `
 
 export default PostList;

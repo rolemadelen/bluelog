@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import Image from 'next/image'
-import Link from 'next/link'
 
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
@@ -17,7 +15,7 @@ class MyDocument extends Document {
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
                     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
                     <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-                    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin></link>
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link>
                     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"></link>
                 </Head>
 
