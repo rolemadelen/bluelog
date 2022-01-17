@@ -1,29 +1,35 @@
-import utilStyles from '@styles/utils.module.scss'
 import Container from '@components/Container'
-import CardContainer from '@components/CardContainer'
-import { getSortedPostsData  } from '@lib/blog'
+import PostList from '@components/PostList'
 import Footer from '@components/Footer'
+import { getAllPosts } from '@lib/blog'
+import metadata from '@data/metadata'
+import tw from "tailwind-styled-components"
 
-export async function getStaticProps() {
-    const allPostsData = getSortedPostsData("ko")
-    return{
-        props: {
-            allPostsData
-        }
+export default function Blog({ posts }) {
+    const customMeta = {
+        title: `${metadata.title} - 블로그`
     }
+    return (
+        <Container page={"blog"} customMeta={customMeta}>
+            <PostListContainer>
+                <PostList posts={posts}/>
+            </PostListContainer>
+            <Footer />
+        </Container>
+    )
 }
 
-export default function Blog({ allPostsData }){
-  return (
-    <Container page={"blog"}>
-      <section>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, subtitle, date, title, tags}) => (
-            <CardContainer lang={id[0]} slug={id[1]} subtitle={subtitle} date={date} title={title} tags={tags ? tags : []} key={id}/>
-          ))}
-        </ul>
-      </section>
-      <Footer />
-    </Container>
-  )
+const PostListContainer = tw.ul` 
+    list-none
+    p-0
+    m-0
+`
+
+export async function getStaticProps() {
+    const posts = getAllPosts().filter(post => post.lang === "ko")
+    return {
+        props: {
+            posts
+        }
+    }
 }
