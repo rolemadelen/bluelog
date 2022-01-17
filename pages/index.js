@@ -1,4 +1,5 @@
 import { getBlogPosts } from '@lib/home'
+import Footer from '@components/Footer'
 import Container from '@components/Container'
 import RecentPostsContainer from '@components/RecentPostsContainer'
 import tw from 'tailwind-styled-components'
@@ -14,6 +15,7 @@ export default function Home({ blogPosts }) {
                 <Header>Recent Posts</Header>
                 <RecentPostsContainer value={"Blog"} link={"blog"} posts={blogPosts ? blogPosts : []} />
             </>
+            <Footer />
         </Container>
     )
 }

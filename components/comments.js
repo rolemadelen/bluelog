@@ -19,9 +19,7 @@ const Comments = () => {
 
     return (
         <div className="w-full">
-            {
-                <div ref={comment}></div>
-            }
+            <div ref={comment}></div>
         </div>
     );
 };

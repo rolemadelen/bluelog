@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Footer from '@components/Footer';
 import Container from '@components/Container';
 import metadata from '@data/metadata';
 
@@ -60,6 +61,7 @@ export default function About() {
                     </div>
                 </div>
             </section>
+            <Footer />
         </Container>
     )
 }

@@ -6,7 +6,10 @@
 $--root: 18px;
 $--text: 16px;
 $--MIN-WIDTH: 450px;
-* { box-sizing: border-box; }
+
+* {
+    box-sizing: border-box;
+}
 
 html,
 body {
@@ -49,12 +52,29 @@ li {
         transition: all 0.3s;
     }
 
-    &.ko:before { box-shadow: 0px 0px 2px 0px #ff6666, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #1e242e; }
-    &.en:before { box-shadow: 0px 0px 2px 0px #1e242e8c, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #6464ff; }
-    &.ja:before { box-shadow: 0px 0px 2px 0px #1e242e8c, 0px 0px 3px 0px #ff6666, 0px 0px 2px 0px #ff6666; }
-    &.ko:hover:before { box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px white; }
-    &.en:hover:before { box-shadow: 6px -4px 1px 1px #6464ff, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px #6464ff; }
-    &.ja:hover:before { box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #ff6666, -7px -4px 1px 1px #ff6666; }
+    &.ko:before {
+        box-shadow: 0px 0px 2px 0px #ff6666, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #1e242e;
+    }
+
+    &.en:before {
+        box-shadow: 0px 0px 2px 0px #1e242e8c, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #6464ff;
+    }
+
+    &.ja:before {
+        box-shadow: 0px 0px 2px 0px #1e242e8c, 0px 0px 3px 0px #ff6666, 0px 0px 2px 0px #ff6666;
+    }
+
+    &.ko:hover:before {
+        box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px white;
+    }
+
+    &.en:hover:before {
+        box-shadow: 6px -4px 1px 1px #6464ff, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px #6464ff;
+    }
+
+    &.ja:hover:before {
+        box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #ff6666, -7px -4px 1px 1px #ff6666;
+    }
 }
 
 a:hover {
@@ -63,22 +83,44 @@ a:hover {
 }
 
 html {
-    a { color: $--link; }
+    a {
+        color: $--link;
+    }
 
-    main { position: relative; }
+    main {
+        position: relative;
+    }
 
     li {
-        a { color: #f1f1f1e6; }
+        a {
+            color: #f1f1f1e6;
+        }
 
         box-shadow: 0px 1px 3px 0px black;
-        
-        &.easy { background-color: $--level-easy; }
-        &.easy2 { background-color: $--level-easy2; }
-        &.medium { background-color: $--level-medium; }
-        &.hard { background-color: $--level-hard; }
-        &.bronze { background-color: $--level-bronze; }
-        &.silver { 
+
+        &.easy {
+            background-color: $--level-easy;
+        }
+
+        &.easy2 {
+            background-color: $--level-easy2;
+        }
+
+        &.medium {
+            background-color: $--level-medium;
+        }
+
+        &.hard {
+            background-color: $--level-hard;
+        }
+
+        &.bronze {
+            background-color: $--level-bronze;
+        }
+
+        &.silver {
             background-color: $--level-silver;
+
             a {
                 color: $--primary;
             }
@@ -86,20 +128,41 @@ html {
     }
 
     article {
-        a { color: $--link; }
-        li { 
+        a {
+            color: $--link;
+        }
+
+        li {
             list-style: inside;
             box-shadow: none;
             overflow-wrap: break-word;
-         }
+        }
 
-        h1 { font-size: 1.5em; }
-        h2 { font-size: 1.25em; }
-        h3 { font-size: 1.125em; }
-        h4 { font-size: 1em; }
-        h5 { font-size: 0.875em; }
+        h1 {
+            font-size: 1.5em;
+        }
 
-        h1, h2, h3, h4, h5 {
+        h2 {
+            font-size: 1.25em;
+        }
+
+        h3 {
+            font-size: 1.125em;
+        }
+
+        h4 {
+            font-size: 1em;
+        }
+
+        h5 {
+            font-size: 0.875em;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
             font-weight: bold;
             padding: 1em 0em 0.5em 0;
         }
@@ -107,7 +170,9 @@ html {
         pre {
             font-size: 14px;
 
-            div { border: none !important; }
+            div {
+                border: none !important;
+            }
         }
 
         img {
@@ -138,32 +203,62 @@ html {
         ol {
             list-style: inside;
 
-            li { font-size: $--text; }
+            li {
+                font-size: $--text;
+            }
         }
     }
 }
 
 html.dark {
-    a {color: #81b6c6}
+    a {
+        color: #c6e2ff;
+    }
+
     article {
-        a { color: $--link-dark; }
-        p {
-            code { background-color: $--code-dark; }
+        a {
+            color: $--link-dark;
         }
 
-        hr { color: $--hr-dark; }
+        p {
+            code {
+                background-color: $--code-dark;
+            }
+        }
+
+        hr {
+            color: $--hr-dark;
+        }
     }
 
     footer {
-        a { color: $--primary-dark; }
+        a {
+            color: $--primary-dark;
+        }
+    }
+
+    section {
+        pre {
+            div:first-child {
+                background-color: #19212a !important;
+            }
+        }
     }
 }
 
 
 li {
-    &.bronze, &.easy, &.easy2, &.medium, &.hard {
-        a { color: $--primary-dark; }
+
+    &.bronze,
+    &.easy,
+    &.easy2,
+    &.medium,
+    &.hard {
+        a {
+            color: $--primary-dark;
+        }
     }
+
     &.silver {
         a {
             color: $--primary !important;
@@ -172,17 +267,26 @@ li {
 }
 
 footer {
-    div { margin: 0 0 0.35em 0; }
+    div {
+        margin: 0 0 0.35em 0;
+    }
 
     a {
         color: $--primary;
         font-weight: 500;
     }
 
-    img { margin: 0 0.35em; }
+    img {
+        margin: 0 0.35em;
+    }
 }
 
 @keyframes rotate {
-    from { transform: rotate(0); }
-    to { transform: rotate(540deg); }
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(540deg);
+    }
 }

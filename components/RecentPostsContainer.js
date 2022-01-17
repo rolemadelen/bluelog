@@ -1,5 +1,5 @@
 import NavLink from '@components/NavLink'
-import Date from '@components/date'
+import Date from '@components/Date'
 import utilStyles from '@styles/utils.module.scss'
 
 const RecentPostsContainer = props => {

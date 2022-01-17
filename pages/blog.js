@@ -1,3 +1,4 @@
+import Footer from '@components/Footer'
 import Container from '@components/Container'
 import CardContainer from '@components/CardContainer'
 import utilStyles from '@styles/utils.module.scss'
@@ -18,6 +19,7 @@ export default function Blog({ allPostsData }) {
                     ))}
                 </ul>
             </>
+            <Footer />
         </Container>
     )
 }

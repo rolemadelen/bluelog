@@ -1,6 +1,6 @@
 import { allPosts } from '.contentlayer/data'
-import { getAllPosts } from '@lib/ds'
-import DocLayout from '@layouts/ds'
+import { getAllPosts } from '@lib/doc'
+import DocLayout from '@layouts/doc'
 
 export default function DSPostPage({ post, tree }) {
     return (
@@ -26,7 +26,7 @@ export async function getStaticProps({ params }) {
         _ => _.pathSegments.map((_) => _.pathName).join('/') === pagePath
     )
 
-    const tree = getAllPosts()
+    const tree = getAllPosts("ds")
     return { 
         props: { 
             post, 
