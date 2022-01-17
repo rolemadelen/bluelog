@@ -5,7 +5,9 @@ const DocPost = ({title, date, children}) => {
     return (
         <DocPostContainer>
             <DocPostTitle>{title}</DocPostTitle>
-            <Date dateString={date}/>
+            {date && (
+                <Date dateString={date}/>
+            )}
             { children }
         </DocPostContainer>
     )

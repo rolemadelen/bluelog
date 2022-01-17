@@ -4,7 +4,7 @@ import DocLayout from '@layouts/doc'
 
 export default function DSPostPage({ post, tree }) {
     return (
-        <DocLayout post={post} tree={tree} />
+        <DocLayout post={post} tree={tree} page={"ds"} />
     )
 }
 
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
     const pagePath = params.id.join('/')
     const post = allPosts.find(
-        _ => _.pathSegments.map((_) => _.pathName).join('/') === pagePath
+        (_) => _.pathSegments.map((_) => _.pathName).join('/') === pagePath
     )
 
     const tree = getAllPosts("ds")

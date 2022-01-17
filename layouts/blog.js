@@ -17,15 +17,15 @@ const BlogLayout = ({ post }) => {
                     <Date dateString={post.date} />
                 </div>
             </div>
-            <div className={utilStyles.availableLanguage}>
-                {post.availableLanguage.map((post, i) => (
-                    <div key={i}>
+            <LanguageContainer className={utilStyles.availableLanguage}>
+                {post.availableLanguage.map((post) => (
+                    <>
                         <Link href={`/blog/${post.lang}/${post.slug}`}>
-                            <a className={"text-white dark:text-dprimary bg-tags_bg"}>{post.langName}</a>
+                            <a className={`text-white`}>{post.langName} </a>
                         </Link>
-                    </div>
+                    </>
                 ))}
-            </div>
+            </LanguageContainer>
             <article className={`text-primary dark:text-dprimary pb-5 border-b-[1px] dark:border-gray-600`}>
                 <ReactMarkdown components={Codeblock}>{post.markdown}</ReactMarkdown>
             </article>
@@ -34,6 +34,12 @@ const BlogLayout = ({ post }) => {
         </Container>
     )
 }
+
+const LanguageContainer = tw.div` 
+    flex
+    absolute
+    right-0
+`
 
 const Header = tw.h1`
     text-2xl

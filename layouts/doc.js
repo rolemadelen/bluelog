@@ -8,7 +8,7 @@ import Codeblock from '@lib/codeblock.js'
 import tw from "tailwind-styled-components"
 import Footer from '@components/Footer'
 
-const DocLayout = ({ post, tree }) => {
+const DocLayout = ({ post, tree, page }) => {
     const customMeta = {
         title: post.title,
         description: 'Implementing various data structures.',
@@ -16,7 +16,7 @@ const DocLayout = ({ post, tree }) => {
 
     return (
         <Layout>
-            <DocAside tree={tree} page={"ds"} />
+            <DocAside tree={tree} page={page} />
             <DocContainer customMeta={customMeta}>
                 <DocPost title={post.title} date={post.date}>
                     <ReactMarkdown components={Codeblock}>{post.body.raw}</ReactMarkdown>
