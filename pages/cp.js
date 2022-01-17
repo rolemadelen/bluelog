@@ -1,4 +1,5 @@
-import { getSortedPostsData } from '@lib/template'
+import { getAllPosts } from '@lib/cp'
+import Footer from '@components/Footer'
 import Container from '@components/Container'
 import CPSection from '@components/CPSection'
 import metadata from '@data/metadata'
@@ -18,12 +19,13 @@ export default function Code({ posts }) {
                 <CPSection posts={programmersPosts ? programmersPosts : []} link={"https://programmers.co.kr/learn/challenges"} value={"프로그래머스"} />
                 <CPSection posts={leetcodePosts ? leetcodePosts : []} link={"https://www.acmicpc.net/"} value={"Leetcode"} />
             </>
+            <Footer />
         </Container>
     )
 }
 
 export async function getStaticProps() {
-    const posts = getSortedPostsData("cp")
+    const posts = getAllPosts("cp")
     return {
         props: {
             posts

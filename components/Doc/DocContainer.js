@@ -4,7 +4,7 @@ import Header from '@components/Header'
 import metadata from '@data/metadata'
 import tw from 'tailwind-styled-components'
 
-const DSContainer = (props) => {
+const DocContainer = (props) => {
     const meta = {
         author: metadata.author,
         title: metadata.title,
@@ -20,7 +20,7 @@ const DSContainer = (props) => {
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <title>{meta.title}</title>
-                <meta name="description" content="Blue's Programming Blog" />
+                <meta name="description" content="Data structures and Algorithms" />
                 <meta content="width=device-width, initial-scale=1" name="viewport" />
 
                 <meta property="og:url" content={meta.url} />
@@ -37,16 +37,22 @@ const DSContainer = (props) => {
                 <meta name="twitter:image" content={meta.image} />
             </Head>
             <Header page={meta.page}/>
-            <main className={props.customClass}>{props.children}</main>
+            <Content>{props.children}</Content>
         </BaseContainer>
     )
 }
 
 const BaseContainer = tw.section`
-    max-w-[60rem]
-    px-[1rem]
-    mb-[5rem]
+    w-[75%]
+    mx-auto
+    px-8
+    mx-4
+`
+
+const Content = tw.main`
+    flex
+    w-full
     mx-auto
 `
 
-export default DSContainer;
+export default DocContainer;

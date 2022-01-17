@@ -12,7 +12,7 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html id="vantabg" lang="en" className={"dark:bg-dtheme_surface duration-300 mt-3"}>
+            <Html id="vantabg" lang="en" className={"dark:bg-dtheme_surface duration-300"}>
                 <Head>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
                     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
@@ -25,46 +25,7 @@ class MyDocument extends Document {
                     <Main />
                     <NextScript />
                 </body>
-                <footer className="flex flex-col justify-center items-center mb-8 text-sm text-primary dark:text-dsecondary">
-                    <div>
-                        © 2022 <a href="https://github.com/euisblue">Blue Eu</a>. powered by&nbsp;<a href="https://vercel.com/">Vercel</a>
-                    </div>
-                    <div className="snsLinks flex items-center justify-center">
-                        <Link href="https://github.com/euisblue/bluelog">
-                            <a className={"px-2"}>
-                                <Image
-                                    priority
-                                    src="/images/social/github.svg"
-                                    height={20}
-                                    width={20}
-                                    alt={"github"}
-                                />
-                            </a>
-                        </Link>
-                        <Link href="https://twitter.com/euisblue">
-                            <a className={"px-2"}>
-                                <Image
-                                    priority
-                                    src="/images/social/twitter.svg"
-                                    height={20}
-                                    width={20}
-                                    alt={"github"}
-                                />
-                            </a>
-                        </Link>
-                        <Link href="https://euisblue.me/rss.xml">
-                            <a className={"px-2"}>
-                                <Image
-                                    priority
-                                    src="/images/social/rss.svg"
-                                    height={20}
-                                    width={20}
-                                    alt={"github"}
-                                />
-                            </a>
-                        </Link>
-                    </div>
-                </footer>
+            
             </Html>
         )
     }

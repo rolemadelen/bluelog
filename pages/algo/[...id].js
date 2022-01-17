@@ -1,6 +1,6 @@
 import { allAlgoPosts } from '.contentlayer/data'
-import { getAllPosts } from '@lib/algo'
-import DocLayout from '@layouts/ds'
+import { getAllPosts } from '@lib/doc'
+import DocLayout from '@layouts/doc'
 
 export default function DSPostPage({ post, tree }) {
     return (
@@ -14,23 +14,23 @@ export async function getStaticPaths() {
             id: post.pathSegments.map((_) => _.pathName),
         },
     }))
-    return { 
-        paths, 
-        fallback: 'blocking' 
+    return {
+        paths,
+        fallback: 'blocking'
     }
 }
 
 export async function getStaticProps({ params }) {
     const pagePath = params.id.join('/')
     const post = allAlgoPosts.find(
-        _ => _.pathSegments.map((_) => _.pathName).join('/') === pagePath
+        (_) => _.pathSegments.map((_) => _.pathName).join('/') === pagePath
     )
 
-    const tree = getAllPosts()
-    return { 
-        props: { 
-            post, 
-            tree 
-        } 
+    const tree = getAllPosts("algo")
+    return {
+        props: {
+            post,
+            tree
+        }
     }
 }

@@ -45,7 +45,6 @@ const Container = (props) => {
 const BaseContainer = tw.section`
     max-w-[50rem]
     px-[1rem]
-    mb-[5rem]
     mx-auto
 `
 

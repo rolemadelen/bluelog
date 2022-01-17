@@ -1,4 +1,4 @@
-import Date from "@components/date";
+import Date from "@components/Date";
 import NavLink from "@components/NavLink";
 import utilStyles from '@styles/utils.module.scss'
 import tw from 'tailwind-styled-components'
