@@ -1,35 +1,37 @@
-import Footer from '@components/Footer'
+import PostList from '@components/PostList'
 import Container from '@components/Container'
-import CardContainer from '@components/CardContainer'
-import utilStyles from '@styles/utils.module.scss'
+import Footer from '@components/Footer'
 import { generateRSSFeed } from '@lib/generateRSSFeed'
-import { getSortedPostsData } from '@lib/blog'
+import { getAllPosts } from '@lib/blog'
 import metadata from '@data/metadata'
+import tw from "tailwind-styled-components"
 
-export default function Blog({ allPostsData }) {
+export default function Blog({ posts }) {
     const customMeta = {
         title: `${metadata.title} - Blog`
     }
     return (
         <Container page={"blog"} customMeta={customMeta}>
-            <>
-                <ul className={utilStyles.list}>
-                    {allPostsData.map(({ id, subtitle, date, title, tags }) => (
-                      <CardContainer lang={id[0]} slug={id[1]} subtitle={subtitle} date={date} title={title} tags={tags ? tags : []} key={id}/>
-                    ))}
-                </ul>
-            </>
+            <PostListContainer>
+                <PostList posts={posts} />
+            </PostListContainer>
             <Footer />
         </Container>
     )
 }
 
+const PostListContainer = tw.ul` 
+    list-none
+    p-0
+    m-0
+`
+
 export async function getStaticProps() {
-    const allPostsData = getSortedPostsData("all")
-    generateRSSFeed(allPostsData);
+    const posts = getAllPosts()
+    generateRSSFeed(posts);
     return {
         props: {
-            allPostsData
+            posts
         }
     }
 }
