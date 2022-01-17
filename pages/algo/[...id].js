@@ -1,37 +1,36 @@
-import ReactMarkdown from 'react-markdown'
-import Comments from '@components/comments'
-import Container from '@components/Container'
-import Codeblock from '@lib/codeblock.js'
-import { getAllPostIds, getPostData } from '@lib/template'
+import { allAlgoPosts } from '.contentlayer/data'
+import { getAllPosts } from '@lib/doc'
+import DocLayout from '@layouts/doc'
 
-export default function Algo({ post }) {
-    const customMeta = {
-        title: `Bluelog - ${post.title}`,
-    }
+export default function DSPostPage({ post, tree }) {
     return (
-        <Container customMeta={customMeta}>
-            <h1 className={`text-primary dark:text-dprimary text-xl font-semibold mb-5`}>{post.title}</h1>
-            <article className={`text-primary dark:text-dprimary pb-5 border-b-[1px] dark:border-gray-600`}>
-                <ReactMarkdown components={Codeblock}>{post.markdown}</ReactMarkdown>
-            </article>
-            <Comments />
-        </Container>
+        <DocLayout post={post} tree={tree} />
     )
 }
 
 export async function getStaticPaths() {
-    const paths = getAllPostIds("algo")
+    const paths = allAlgoPosts.map(post => ({
+        params: {
+            id: post.pathSegments.map((_) => _.pathName),
+        },
+    }))
     return {
         paths,
-        fallback: false
+        fallback: 'blocking'
     }
 }
 
 export async function getStaticProps({ params }) {
-    const post = await getPostData("algo", params.id)
+    const pagePath = params.id.join('/')
+    const post = allAlgoPosts.find(
+        (_) => _.pathSegments.map((_) => _.pathName).join('/') === pagePath
+    )
+
+    const tree = getAllPosts("algo")
     return {
         props: {
-            post
+            post,
+            tree
         }
     }
 }

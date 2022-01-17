@@ -6,6 +6,7 @@
             "@styles/*": ["styles/*"],
             "@lib/*": ["lib/*"],
             "@data/*": ["data/*"],
+            "@layouts/*": ["layouts/*"],
         }
     },
     "typeRoots": [ "./types", "./node_modules/vanta"],

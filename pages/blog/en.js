@@ -2,6 +2,7 @@ import utilStyles from '@styles/utils.module.scss'
 import Container from '@components/Container'
 import CardContainer from '@components/CardContainer'
 import { getSortedPostsData  } from '@lib/blog'
+import Footer from '@components/Footer'
 
 export async function getStaticProps() {
     const allPostsData = getSortedPostsData("en")
@@ -22,6 +23,7 @@ export default function Blog({ allPostsData }){
           ))}
         </ul>
       </section>
+      <Footer />
     </Container>
   )
 }

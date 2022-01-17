@@ -37,7 +37,7 @@ const Container = (props) => {
                 <meta name="twitter:image" content={meta.image} />
             </Head>
             <Header page={meta.page}/>
-            <main>{props.children}</main>
+            <main className={props.customClass}>{props.children}</main>
         </BaseContainer>
     )
 }
@@ -45,7 +45,6 @@ const Container = (props) => {
 const BaseContainer = tw.section`
     max-w-[50rem]
     px-[1rem]
-    mb-[5rem]
     mx-auto
 `
 
