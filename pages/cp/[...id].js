@@ -1,26 +1,36 @@
-import ReactMarkdown from 'react-markdown'
-import { getAllPostIds, getPostData } from '@lib/cp'
-import CPLayout from '@layouts/cp'
+import { allCPs } from '.contentlayer/data'
+import { getAllPosts } from '@lib/doc'
+import DocLayout from '@layouts/doc'
 
-export default function Code({ post }) {
+export default function CPPostPage({ post, tree }) {
     return (
-        <CPLayout post={post}/>
+        <DocLayout post={post} tree={tree} page={"cp"}/>
     )
 }
 
 export async function getStaticPaths() {
-    const paths = getAllPostIds()
-    return {
-        paths,
-        fallback: false
+    const paths = allCPs.map(post => ({
+        params: {
+            id: post.pathSegments.map((_) => _.pathName),
+        },
+    }))
+    return { 
+        paths, 
+        fallback: 'blocking' 
     }
 }
 
 export async function getStaticProps({ params }) {
-    const post = await getPostData(params.id)
-    return {
-        props: {
-            post
-        }
+    const pagePath = params.id.join('/')
+    const post = allCPs.find(
+        (_) => _.pathSegments.map((_) => _.pathName).join('/') === pagePath
+    )
+
+    const tree = getAllPosts("cp")
+    return { 
+        props: { 
+            post, 
+            tree 
+        } 
     }
 }

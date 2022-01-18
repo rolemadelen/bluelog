@@ -5,7 +5,7 @@
 
 $--root: 18px;
 $--text: 16px;
-$--MIN-WIDTH: 450px;
+$--MIN-WIDTH: 300px;
 
 * {
     box-sizing: border-box;
@@ -22,6 +22,9 @@ body {
     font-size: $--root;
 }
 
+.home-header {
+    font-size: min(15vw, 3.75em);
+}
 li {
     list-style: none;
     position: relative;
@@ -83,10 +86,6 @@ a:hover {
 }
 
 html {
-    a {
-        color: $--link;
-    }
-
     main {
         position: relative;
     }
@@ -95,8 +94,6 @@ html {
         a {
             color: #f1f1f1e6;
         }
-
-        box-shadow: 0px 1px 3px 0px black;
 
         &.easy {
             background-color: $--level-easy;
@@ -127,84 +124,86 @@ html {
         }
     }
 
-    article {
-        a {
-            color: $--link;
-        }
-
-        li {
-            list-style: inside;
-            box-shadow: none;
-            overflow-wrap: break-word;
-        }
-
-        h1 {
-            font-size: 1.5em;
-        }
-
-        h2 {
-            font-size: 1.25em;
-        }
-
-        h3 {
-            font-size: 1.125em;
-        }
-
-        h4 {
-            font-size: 1em;
-        }
-
-        h5 {
-            font-size: 0.875em;
-        }
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5 {
-            font-weight: bold;
-            padding: 1em 0em 0.5em 0;
-        }
-
-        pre {
-            font-size: 14px;
-
-            div {
-                border: none !important;
+    section {
+        main {
+            a {
+                color: $--link;
             }
-        }
-
-        img {
-            background-color: white;
-            padding: 0.5em;
-            margin: 0.5em 0;
-            border-radius: 5px;
-        }
-
-        p {
-            padding: 0.25em 0;
-            font-size: $--text;
-
-            code {
-                font-size: 0.8em;
-                padding: 0.3em 0.5em;
-                border-radius: 5px;
-                background-color: $--code;
-            }
-        }
-
-        hr {
-            margin: 1em 0;
-            color: $--hr;
-        }
-
-        ul,
-        ol {
-            list-style: inside;
 
             li {
+                list-style: inside;
+                box-shadow: none;
+                overflow-wrap: break-word;
+            }
+
+            h1 {
+                font-size: 1.5em;
+            }
+
+            h2 {
+                font-size: 1.25em;
+            }
+
+            h3 {
+                font-size: 1.125em;
+            }
+
+            h4 {
+                font-size: 1em;
+            }
+
+            h5 {
+                font-size: 0.875em;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                font-weight: bold;
+                padding: 1em 0em 0.5em 0;
+            }
+
+            pre {
+                font-size: 14px;
+
+                div {
+                    border: none !important;
+                }
+            }
+
+            img {
+                background-color: white;
+                padding: 0.5em;
+                margin: 0.5em 0;
+                border-radius: 5px;
+            }
+
+            p {
+                padding: 0.25em 0;
                 font-size: $--text;
+
+                code {
+                    font-size: 0.8em;
+                    padding: 0.3em 0.5em;
+                    border-radius: 5px;
+                    background-color: $--code;
+                }
+            }
+
+            hr {
+                margin: 1em 0;
+                color: $--hr;
+            }
+
+            ul,
+            ol {
+                list-style: inside;
+
+                li {
+                    font-size: $--text;
+                }
             }
         }
     }
@@ -215,33 +214,33 @@ html.dark {
         color: #c6e2ff;
     }
 
-    article {
-        a {
-            color: $--link-dark;
-        }
-
-        p {
-            code {
-                background-color: $--code-dark;
+    section {
+        pre {
+            div:first-child {
+                background-color: #19212a !important;
             }
         }
 
-        hr {
-            color: $--hr-dark;
+        main {
+            a {
+                color: $--link-dark;
+            }
+
+            p {
+                code {
+                    background-color: $--code-dark;
+                }
+            }
+
+            hr {
+                color: $--hr-dark;
+            }
         }
     }
 
     footer {
         a {
             color: $--primary-dark;
-        }
-    }
-
-    section {
-        pre {
-            div:first-child {
-                background-color: #19212a !important;
-            }
         }
     }
 }
@@ -288,5 +287,12 @@ footer {
 
     to {
         transform: rotate(540deg);
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .bg-bluexx {
+        width: 22em;
+        margin-left: -2em;
     }
 }

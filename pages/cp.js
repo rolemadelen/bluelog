@@ -1,13 +1,13 @@
-import { getAllPosts } from '@lib/cp'
-import Footer from '@components/Footer'
+import { getAllPosts } from '@lib/doc'
 import Container from '@components/Container'
 import CPSection from '@components/CPSection'
 import metadata from '@data/metadata'
+import Footer from '@components/Footer'
 
 export default function Code({ posts }) {
-    const baekjoonPosts = posts.filter(post => { return post.from == 'baekjoon' })
-    const leetcodePosts = posts.filter(post => { return post.from == 'leetcode' })
-    const programmersPosts = posts.filter(post => { return post.from == 'programmers' })
+    const baekjoonPosts = posts.filter(post => { return post.dir == 'Baekjoon' })
+    const leetcodePosts = posts.filter(post => { return post.dir == 'Leetcode' })
+    const programmersPosts = posts.filter(post => { return post.dir == 'Programmers' })
     const customMeta = {
         title: `${metadata.title} - CP`
     }

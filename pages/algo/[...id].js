@@ -2,9 +2,9 @@ import { allAlgoPosts } from '.contentlayer/data'
 import { getAllPosts } from '@lib/doc'
 import DocLayout from '@layouts/doc'
 
-export default function DSPostPage({ post, tree }) {
+export default function AlgoPostPage({ post, tree }) {
     return (
-        <DocLayout post={post} tree={tree} />
+        <DocLayout post={post} tree={tree} page={"algo"}/>
     )
 }
 
