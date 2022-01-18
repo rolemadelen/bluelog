@@ -9,8 +9,8 @@ export default function Home({ blogPosts }) {
         <Container>
             <>
                 <div className={"relative"}>
-                    <div className={"rounded bg-bluexx w-full h-[14em] sm:h-[25em] bg-cover bg-no-repeat duration-200"}></div>
-                    <h1 className={"text-primary dark:text-dprimary text-5xl sm:text-6xl font-bold font-[Poppins] absolute top-[20%] sm:top-[28%] left-0 sm:left-[5%]"}>Hello<Span>!</Span><br/>I<Span>&apos;</Span>m Blue<Span>.</Span></h1>
+                    <div className={"rounded bg-bluexx w-full h-[14em] sm:h-[25em] bg-cover bg-no-repeat duration-200 mr-5"}></div>
+                    <h1 className={"home-header text-primary dark:text-dprimary text-5xl sm:text-6xl font-bold font-[Poppins] absolute top-[5%] sm:top-[20%] left-0 sm:left-[5%]"}>Hello<Span>!</Span><br/>I<Span>&apos;</Span>m Blue<Span>.</Span></h1>
                 </div>
                 <Header>Recent Posts</Header>
                 <RecentPostsContainer value={"Blog"} link={"blog"} posts={blogPosts ? blogPosts : []} />
