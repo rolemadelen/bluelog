@@ -3,6 +3,15 @@ import React from "react"
 import tw from 'tailwind-styled-components'
 
 const DocAside = ({ tree, page }) => {
+    function activeLink(e) {
+        const link = document.querySelector('.templink')
+        if (link) { 
+            link.classList.remove('active');
+            link.classList.remove('templink')
+        }
+        e.target.classList.add('templink')
+        e.target.classList.add('active')
+    }
     return (
         <DocAsideContainer>
             {
@@ -34,7 +43,7 @@ const DocAside = ({ tree, page }) => {
                                 post.subPosts.map(({ id, title }) => (
                                     <>
                                         <Link href={`${post.dir}/${id[0]}-${id[1]}`} passHref>
-                                            <DocAsideLink>{title}</DocAsideLink>
+                                            <DocAsideLink onClick={activeLink}>{title}</DocAsideLink>
                                         </Link>
                                     </>
                                 ))))
