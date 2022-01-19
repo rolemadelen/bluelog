@@ -18,7 +18,7 @@ const Comments = () => {
     });
 
     return (
-        <div className="w-full">
+        <div className="w-full mt-[5em]">
             <div ref={comment}></div>
         </div>
     );
