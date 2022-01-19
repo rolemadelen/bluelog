@@ -92,6 +92,12 @@ html {
         position: relative;
     }
 
+    a.active{
+        font-weight: bold;
+        font-size: 1em;
+        color: black;
+    }
+
     li {
         a {
             color: #f1f1f1e6;
@@ -220,6 +226,10 @@ html {
 html.dark {
     a {
         color: #c6e2ff;
+    }
+
+    a.active{
+        color: #ff9c9c;
     }
 
     section {
