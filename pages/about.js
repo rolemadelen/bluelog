@@ -13,7 +13,7 @@ export default function About() {
                 <div className={"text-center text-primary dark:text-dprimary"}>
                     <Image
                         priority
-                        src="/images/profile.jpg"
+                        src={metadata.profileImage}
                         className={"absolute left-0 top-0 rounded mx-auto"}
                         height={180}
                         width={225}
