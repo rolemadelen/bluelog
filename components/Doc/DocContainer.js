@@ -43,8 +43,8 @@ const DocContainer = (props) => {
 }
 
 const BaseContainer = tw.section`
-    w-[69%]
-    ml-[28%]
+    w-[50%]
+    ml-[26%]
     px-8
 `
 
