@@ -4,7 +4,8 @@ const metadata = {
     description: "A natural-born learner's blog",
     repo: 'https://github.com/euisblue/bluelog',
     url: 'https://euisblue.me',
-
+    profileImage: '/images/profile.png',
+    
     social: {
       github: 'https://github.com/euisblue',
       twitter: 'https://twitter.com/euisblue',
