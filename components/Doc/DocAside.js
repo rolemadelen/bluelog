@@ -30,7 +30,7 @@ const DocAside = ({ tree, page }) => {
                         }
                         {
                             (page == "algo" && (
-                                post.subPosts.map(({ id, title }) => (
+                                post.subPosts.map(({ id, title　}) => (
                                     <>
                                         <Link href={`${post.dir}/${id}`} passHref>
                                             <DocAsideLink>{title}</DocAsideLink>
@@ -40,10 +40,10 @@ const DocAside = ({ tree, page }) => {
                         }
                         {
                             (page == "cp" && (
-                                post.subPosts.map(({ id, title }) => (
+                                post.subPosts.map(({ id, title, level }) => (
                                     <>
                                         <Link href={`${post.dir}/${id[0]}-${id[1]}`} passHref>
-                                            <DocAsideLink onClick={activeLink}>{title}</DocAsideLink>
+                                            <DocAsideLink onClick={activeLink} className={level}>{title}</DocAsideLink>
                                         </Link>
                                     </>
                                 ))))
@@ -81,7 +81,7 @@ const DocAsideLink = tw.a`
     py-1
     text-[0.8em]
     font-[Poppins]
-    leading-4
+    leading-5
     text-[#0c64c1]
 `
 export default DocAside
