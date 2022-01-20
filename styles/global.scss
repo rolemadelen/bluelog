@@ -92,7 +92,46 @@ html {
         position: relative;
     }
 
-    a.active{
+    a.bronze::before,
+    a.silver::before,
+    a.easy::before,
+    a.easy2::before,
+    a.medium::before,
+    a.hard::before {
+        content: '';
+        display: inline-block;
+        width: 0.7em;
+        height: 0.7em;
+        border-radius: 50%;
+        margin-right: 10px;
+        border: 1px solid rgb(185, 185, 185);
+    }
+
+    a.bronze::before {
+        background-color: $--level-bronze;
+    }
+
+    a.silver::before {
+        background-color: $--level-silver;
+    }
+
+    a.easy::before {
+        background-color: $--level-easy;
+    }
+
+    a.easy2::before {
+        background-color: $--level-easy2;
+    }
+
+    a.medium::before {
+        background-color: $--level-medium;
+    }
+
+    a.hard::before {
+        background-color: $--level-hard;
+    }
+
+    a.active {
         font-weight: bold;
         font-size: 1em;
         color: black;
@@ -147,6 +186,7 @@ html {
                 ol,
                 ul {
                     margin-left: 2.5em;
+
                     li {
                         list-style: circle !important;
                     }
@@ -187,7 +227,6 @@ html {
             }
 
             img {
-                background-color: white;
                 padding: 0.5em;
                 margin: 0.5em 0;
                 border-radius: 5px;
@@ -228,8 +267,8 @@ html.dark {
         color: #c6e2ff;
     }
 
-    a.active{
-        color: #ff9c9c;
+    a.active {
+        color: #f1f1f1;
     }
 
     section {
@@ -244,10 +283,8 @@ html.dark {
                 color: $--link-dark;
             }
 
-            p {
-                code {
-                    background-color: $--code-dark;
-                }
+            code {
+                background-color: $--code-dark;
             }
 
             hr {
