@@ -55,9 +55,9 @@ module.exports = {
             cool_gray_700: '#3E4C59',
             cool_gray_800: '#323F4B',
             dtags_bg: "#324d64",
-            dprimary: '#E4E7EB',
+            dprimary: '#e5e5e5',
             dsecondary: '#BDC6CF',
-            dtheme_surface: '#1F2933',
+            dtheme_surface: '#131313',
         }),
         columns: {
             auto: 'auto',

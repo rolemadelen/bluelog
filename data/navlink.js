@@ -3,8 +3,7 @@ const navlink = {
         // { name: "About", link: "/about" },
         { name: "Blog", link: "/blog" },
         { name: "CP", link: "/cp" },
-        { name: "DS", link: "/ds/5.Graph/adjacency-list" },
-        { name: "Algo", link: "/algo/Array/0.binary-search" },
+        { name: "DSA", link: "/ds/Graph/adjacency-list" },
     ],
     blog: [
         { name: "🇰🇷 ", link: "/blog/ko" },

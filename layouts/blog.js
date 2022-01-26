@@ -12,18 +12,16 @@ const BlogLayout = ({ post }) => {
     return (
         <Container page={"blog"}>
             <div className={`py-2 my-5 border-b-[1px]`}>
-                <Header>{post.title}</Header>
+                <Header className="font-bold">{post.title}</Header>
                 <div className={`text-xs text-secondary dark:text-dsecondary py-2`}>
                     <Date dateString={post.date} />
                 </div>
             </div>
-            <LanguageContainer className={utilStyles.availableLanguage}>
+            <LanguageContainer className={`postTag`}>
                 {post.availableLanguage.map((post) => (
-                    <>
-                        <Link href={`/blog/${post.lang}/${post.slug}`}>
-                            <a className={`text-white`}>{post.langName} </a>
-                        </Link>
-                    </>
+                    <Link key={post.slug} href={`/blog/${post.lang}/${post.slug}`}>
+                        <a>{post.langName} </a>
+                    </Link>
                 ))}
             </LanguageContainer>
             <article className={`text-primary dark:text-dprimary pb-5 border-b-[1px] dark:border-gray-600`}>

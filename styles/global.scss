@@ -92,6 +92,29 @@ html {
         position: relative;
     }
 
+    .postTag {
+        transition: all 0.2s;
+    
+        a {
+            margin: 0 0.5em;
+            padding: 0.2em 0.7em;
+            margin-top: 1em;
+            font-weight: 400;
+            font-size: 15px;
+            border-radius: 5px;
+            box-shadow: 0px 1px 3px 0px #141414;
+    
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    
+        div:hover {
+            transform: scale(1.1);
+            transition: all 0.2s ease-in;
+        }
+    }
+
     a.bronze::before,
     a.silver::before,
     a.easy::before,
@@ -263,6 +286,11 @@ html {
 }
 
 html.dark {
+    .postTag {
+        a {
+            box-shadow: 0px 1px 3px 0px #566d8b;
+        }
+    }
     a {
         color: #c6e2ff;
     }
@@ -274,14 +302,12 @@ html.dark {
     section {
         pre {
             div:first-child {
-                background-color: #19212a !important;
+                background-color: #131313 !important;
+                border: 1px solid #19212a !important;
             }
         }
 
         main {
-            a {
-                color: $--link-dark;
-            }
 
             code {
                 background-color: $--code-dark;

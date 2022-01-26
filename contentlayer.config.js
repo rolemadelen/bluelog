@@ -33,34 +33,6 @@ export const Post = defineDocumentType(() => ({
     },
 }))
 
-export const AlgoPost = defineDocumentType(() => ({
-    name: 'AlgoPost',
-    filePathPattern: `algo/**/*.md`,
-    fields: {
-        title: { type: 'string', required: true },
-        date: { type: 'date', required: true },
-        lang: { type: 'string'},
-        category: { type: 'string'},
-    },
-    computedFields: {
-        url_path: {
-            type: 'string',
-            description: 'The URL path of this page relative to site root. For example, the site root page would be "/", and doc page would be "docs/getting-started/"',
-            resolve: urlFromFilePath,
-        },
-        pathSegments: {
-            type: 'json',
-            resolve: doc =>
-                doc._raw.flattenedPath
-                    .split('/')
-                    // skip `/docs` prefix
-                    .slice(1)
-                    .map(pathName => {
-                        return { pathName }
-                    }),
-        },
-    },
-}))
 
 export const CP = defineDocumentType(() => ({
     name: 'CP',
@@ -92,6 +64,6 @@ export const CP = defineDocumentType(() => ({
 
 export default makeSource({
     contentDirPath: 'posts',
-    documentTypes: [Post, AlgoPost, CP],
+    documentTypes: [Post, CP],
     markdown: { rehypePlugins: [highlight] },
 })

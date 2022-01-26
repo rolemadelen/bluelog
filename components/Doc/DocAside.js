@@ -23,17 +23,7 @@ const DocAside = ({ tree, page }) => {
                                 post.subPosts.map(({ id, title, section }) => (
                                     <>
                                         <Link href={`${post.dir}/${id}`} passHref>
-                                            <DocAsideLink><span className={`mr-1`}>{section}</span> {title}</DocAsideLink>
-                                        </Link>
-                                    </>
-                                ))))
-                        }
-                        {
-                            (page == "algo" && (
-                                post.subPosts.map(({ id, title　}) => (
-                                    <>
-                                        <Link href={`${post.dir}/${id}`} passHref>
-                                            <DocAsideLink>{title}</DocAsideLink>
+                                            <DocAsideLink><span className={`mr-1`}>[{section}]</span> {title}</DocAsideLink>
                                         </Link>
                                     </>
                                 ))))
@@ -65,8 +55,9 @@ const DocAsideContainer = tw.section`
     w-[25%]
     px-8
     pt-5
+    pb-5
     bg-[#efefef]
-    dark:bg-[#18212a]
+    dark:bg-[#141414]
     duration-300
 `
 const DocAsideHeader = tw.span`
@@ -77,11 +68,12 @@ const DocAsideHeader = tw.span`
     font-[Poppins]
 `
 const DocAsideLink = tw.a`
-    px-3
-    py-1
+    px-2
+    py-0.5
     text-[0.8em]
     font-[Poppins]
     leading-5
-    text-[#0c64c1]
+    text-gray-600
+    dark:text-dsecondary
 `
 export default DocAside
