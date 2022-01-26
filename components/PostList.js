@@ -20,7 +20,7 @@ const PostList = ({ posts }) => {
 
                     <div className={`${utilStyles.tags} flex justify-end`}>
                         {post.tags.map((tag, i) => (
-                            <div key={i} className={"px-2 m-1 text-xs bg-tags_bg text-secondary dark:bg-dtags_bg dark:text-dsecondary"}>
+                            <div key={i} className={"px-2 m-1 text-xs border-[1.5px] border-tags_bg text-secondary dark:border-dtags_bg dark:text-dsecondary"}>
                                 {tag}
                             </div>
                         ))}
