@@ -1,5 +1,6 @@
 import ReactMarkdown from 'react-markdown'
 import Link from 'next/link'
+import Post from '@components/Post'
 import Date from '@components/Date'
 import Footer from '@components/Footer'
 import Comments from '@components/Comments'
@@ -11,12 +12,7 @@ import tw from "tailwind-styled-components"
 const BlogLayout = ({ post }) => {
     return (
         <Container page={"blog"}>
-            <div className={`py-2 my-5 border-b-[1px]`}>
-                <Header className="font-bold">{post.title}</Header>
-                <div className={`text-xs text-secondary dark:text-dsecondary py-2`}>
-                    <Date dateString={post.date} />
-                </div>
-            </div>
+            <Post title={post.title} date={post.date}/>
             <LanguageContainer className={`postTag`}>
                 {post.availableLanguage.map((post) => (
                     <Link key={post.slug} href={`/blog/${post.lang}/${post.slug}`}>

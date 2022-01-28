@@ -10,7 +10,7 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html id="vantabg" lang="en" className={"dark:bg-dtheme_surface duration-300"}>
+            <Html id="vantabg" lang="en" className={"dark dark:bg-dtheme_surface duration-300"}>
                 <Head>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
                     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>

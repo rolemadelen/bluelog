@@ -1,6 +1,6 @@
 import { allCPs } from '.contentlayer/data'
 import { getAllPosts } from '@lib/doc'
-import DocLayout from '@layouts/doc'
+import DocLayout from '@layouts/cp'
 
 export default function CPPostPage({ post, tree }) {
     return (
