@@ -15,9 +15,9 @@ export default function Code({ posts }) {
     return (
         <Container customMeta = {customMeta}>
             <>
+                <CPSection posts={leetcodePosts ? leetcodePosts : []} link={"https://www.acmicpc.net/"} value={"Leetcode"} />
                 <CPSection posts={baekjoonPosts ? baekjoonPosts : []} link={"https://www.acmicpc.net/"} value={"Baekjoon OJ"} />
                 <CPSection posts={programmersPosts ? programmersPosts : []} link={"https://programmers.co.kr/learn/challenges"} value={"프로그래머스"} />
-                <CPSection posts={leetcodePosts ? leetcodePosts : []} link={"https://www.acmicpc.net/"} value={"Leetcode"} />
             </>
             <Footer />
         </Container>

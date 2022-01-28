@@ -16,7 +16,7 @@ const Header = props => {
                         {
                             baseNav.map(tab => (
                                 <>
-                                    <NavLink link={tab.link} customClass={"hover:text-blue-400 dark:hover:text-[#81b6c6] font-[Poppins]"} value={tab.name} />
+                                    <NavLink link={tab.link} customClass={"hover:text-blue-400 dark:hover:text-[#5282db] font-[Poppins]"} value={tab.name} />
                                 </>
                             ))
                         }

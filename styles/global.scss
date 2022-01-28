@@ -302,8 +302,8 @@ html.dark {
     section {
         pre {
             div:first-child {
-                background-color: #131313 !important;
-                border: 1px solid #19212a !important;
+                background-color: $--theme-dark !important;
+                border: 1px solid #3c3c3c !important;
             }
         }
 

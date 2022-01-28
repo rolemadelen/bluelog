@@ -57,7 +57,7 @@ const DocAsideContainer = tw.section`
     pt-5
     pb-5
     bg-[#efefef]
-    dark:bg-[#141414]
+    dark:bg-[#1a1b1e]
     duration-300
 `
 const DocAsideHeader = tw.span`

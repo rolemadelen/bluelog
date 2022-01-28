@@ -57,7 +57,7 @@ module.exports = {
             dtags_bg: "#324d64",
             dprimary: '#e5e5e5',
             dsecondary: '#BDC6CF',
-            dtheme_surface: '#131313',
+            dtheme_surface: '#151515',
         }),
         columns: {
             auto: 'auto',
