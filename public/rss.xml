@@ -4,10 +4,17 @@
         <title>Articles by Blue Eu</title>
         <link>https://euisblue.me/blog</link>
         <description>우당당탕 주니어 개발자의 기록 </description>
-        <lastBuildDate>Sat, 29 Jan 2022 02:33:01 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 29 Jan 2022 03:48:02 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[GitHub - Signing Commits using GPG]]></title>
+            <link>https://euisblue.me/blog/signing-commits-gpg</link>
+            <guid>https://euisblue.me/blog/signing-commits-gpg</guid>
+            <pubDate>Sat, 29 Jan 2022 00:00:00 GMT</pubDate>
+            <author>euisblue@pm.me (Blue Eu)</author>
+        </item>
         <item>
             <title><![CDATA[[RoR] Partial Template 사용하기]]></title>
             <link>https://euisblue.me/blog/ror-partial-template</link>
