@@ -302,15 +302,19 @@ html.dark {
     section {
         pre {
             div:first-child {
-                background-color: $--theme-dark !important;
+                background-color: #1c1e22 !important;
                 border: 1px solid #3c3c3c !important;
+            }
+
+            code {
+                border: none !important;
             }
         }
 
-        main {
-
+        main { 
             code {
-                background-color: $--code-dark;
+                background-color: $--theme-dark;
+                border: 1px solid #6c8bff;
             }
 
             hr {
