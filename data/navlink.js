@@ -3,7 +3,7 @@ const navlink = {
         // { name: "About", link: "/about" },
         { name: "Blog", link: "/blog" },
         { name: "CP", link: "/cp" },
-        { name: "DSA", link: "/ds/Graph/adjacency-list" },
+        { name: "DSA", link: "/dsa/Graph/adjacency-list" },
     ],
     blog: [
         { name: "🇰🇷 ", link: "/blog/ko" },
