@@ -80,7 +80,7 @@ Line #4 determines whether the page should display all posts or only those from 
 
 I need to create `{action_name}.js.erb` (`index.js.erb` in my case) in the view folder where my partial exists.
 
-```erb
+```rb
 $('ul[role="list"]').html("<%= j (render partial: 'post/index', :locals => {:posts => @posts}) %>")
 ```
 

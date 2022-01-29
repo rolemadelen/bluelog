@@ -15,7 +15,7 @@ We have two files: `a.html.erb` and `b.html.erb`, with similar contents.
 
 
 a.html.erb
-```erb
+```rb
 <div class="container mx-auto">
   <h1> a.html.erb </h1>
 
@@ -34,7 +34,7 @@ a.html.erb
 ```
 
 b.html.erb
-```erb
+```rb
 <div class="container mx-auto">
   <h1> b.html.erb </h1>
 
@@ -59,7 +59,7 @@ The name of the partial template or a partial starts with an underscore(`_`).
 
 
 Here's my partial `_langList.html.erb`:
-```erb
+```rb
 <ul role="list">
   <li>Ruby</li>
   <li>Rails</li>
@@ -78,7 +78,7 @@ Now we can replace these codes in `a.html.erb` and `b.html.erb` with the partial
 ### Calling a partial
 
 a.html.erb
-```erb
+```rb
 <div class="container mx-auto">
   <h1> a.html.erb </h1>
   
@@ -87,7 +87,7 @@ a.html.erb
 ```
 
 b.html.erb
-```erb
+```rb
 <div class="container mx-auto">
   <h1> b.html.erb </h1>
 
@@ -100,7 +100,7 @@ Note that I didn't use `'_langList'`. You don't need to include the underscore w
 
 
 Sometimes you might need to specify the partial in a specific view directory. Let say you have a `_langList.html.erb` inside the `home` view.
-```erb
+```rb
 <%= render partial: 'home/langList' %>
 ```
 
@@ -110,14 +110,14 @@ We can further reduce those codes in `a.html.erb` and `b.html.erb` by passing in
 
 
 a.html.erb
-```erb
+```rb
 <div class="container mx-auto">
   <%= render partial: 'langList', :locals => {:title => "a.html.erb"} %>
 </div>
 ```
 
 b.html.erb
-```erb
+```rb
 <div class="container mx-auto">
   <%= render partial: 'langList', :locals => {:title => "b.html.erb"} %>
 </div>
@@ -128,7 +128,7 @@ Using `:locals`, we can pass in variables to the partial. Here, `:title` is the 
 
 
 _langList.html.erb
-```erb
+```rb
 <h1> <%= title %> </h1>
 
 <ul role="list">
@@ -149,7 +149,7 @@ If you want, you can even include those `<div>` tags inside the partial and redu
 
 
 _langList.html.erb
-```erb
+```rb
 <div class="container mx-auto">
   <h1> <%= title %> </h1>
 
@@ -168,12 +168,12 @@ _langList.html.erb
 ```
 
 a.html.erb
-```erb
+```rb
 <%= render partial: 'langList', :locals => {:title => "a.html.erb"} %>
 ```
 
 b.html.erb
-```erb
+```rb
 <%= render partial: 'langList', :locals => {:title => "b.html.erb"} %>
 ```
 

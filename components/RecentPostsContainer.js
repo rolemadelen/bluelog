@@ -2,25 +2,48 @@ import NavLink from '@components/NavLink'
 import Date from '@components/Date'
 import utilStyles from '@styles/utils.module.scss'
 
-const RecentPostsContainer = props => {
+const RecentPostsContainer = ({value, link, posts}) => {
     return (
         <>
             <div className={"mb-8"}>
                 <div className={"flex justify-between items-center border-b-[1px] mb-2"}>
-                    <h1 className={"text-lg font-semibold text-primary dark:text-dprimary"}> {props.value} </h1>
-                    <NavLink link={props.link} customClass={`flex justify-end text-sm text-primary dark:text-dprimary`} value={"View more..."} />
-                </div>
-                <ul className={utilStyles.list}>
-                    {props.posts.map(({ id, title, date }) => (
-                        <li className={"shadow-none pb-1 flex justify-between items-center"} key={id}>
-                            <NavLink link={`/${props.link}/${id[0]}/${id[1]}`} customClass={"text-sm text-primary dark:text-dprimary"} value={title} />
+                    <h1 className={"text-lg font-semibold text-primary dark:text-dprimary"}> {value} </h1>
+                    {link == "dsa" && (
+                        <NavLink link={"/dsa/Graph/dijkstra"} customClass={`flex justify-end text-sm text-primary dark:text-dprimary`} value={"View more..."} />
+                    )}
 
-                            <div className={`text-xs text-secondary dark:text-dsecondary`}>
-                                <Date dateString={date} />
-                            </div>
-                        </li>
-                    ))}
-                </ul>
+                    {link != "dsa" && (
+                        <NavLink link={link} customClass={`flex justify-end text-sm text-primary dark:text-dprimary`} value={"View more..."} />
+                    )}
+                </div>
+
+                {link != 'cp' && (
+                    <ul className={utilStyles.list}>
+                        {posts.map(({ url_path, title, date }) => (
+                            <li className={"pb-1 flex justify-between items-center"} key={title}>
+                                <NavLink link={url_path.replace('-','/')} customClass={"text-sm text-primary dark:text-dprimary"} value={title} />
+
+                                <div className={`text-xs text-secondary dark:text-dsecondary`}>
+                                    <Date dateString={date} />
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+
+                {link == 'cp' && (
+                    <ul className={utilStyles.list}>
+                        {posts.map(({ url_path, title, from, level }) => (
+                            <li className={"pb-1 flex justify-between items-center"} key={title}>
+                                <NavLink link={url_path} customClass={"text-sm text-primary dark:text-dprimary"} value={title} />
+
+                                <div className={`text-xs text-secondary dark:text-dsecondary`}>
+                                {from} - {level}
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </div>
         </>
     )

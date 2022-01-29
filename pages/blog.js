@@ -7,6 +7,7 @@ import metadata from '@data/metadata'
 import tw from "tailwind-styled-components"
 
 export default function Blog({ posts }) {
+
     const customMeta = {
         title: `${metadata.title} - Blog`
     }

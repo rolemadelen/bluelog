@@ -8,34 +8,32 @@ const Header = props => {
     const baseNav = navlink.base
     const blogNav = navlink.blog
     return (
-        <>
-            <HeaderContainer>
-                <NavLink link={"/"} customClass={`${styles.navLogo}`} value="euisblue" />
-                <div className={"flex items-center"}>
-                    <div className={styles.navLink}>
-                        {
-                            baseNav.map(tab => (
-                                <>
-                                    <NavLink link={tab.link} customClass={"hover:text-blue-400 dark:hover:text-[#5282db] font-[Poppins]"} value={tab.name} />
-                                </>
-                            ))
-                        }
-                    </div>
-                    <LightSwitch customIcon={"fa fa-bolt"} customClass={"hover:cursor-pointer dark:text-white duration-300"} />
+        <HeaderContainer>
+            <NavLink link={"/"} customClass={`${styles.navLogo}`} value="euisblue" />
+            <div className={"flex items-center"}>
+                <div className={styles.navLink}>
+                    {
+                        baseNav.map(tab => (
+                            <>
+                                <NavLink link={tab.link} customClass={"font-poppin hover:text-[#289aff] dark:hover:text-[#289aff]"} value={tab.name} />
+                            </>
+                        ))
+                    }
                 </div>
-                {props.page == "blog" && (
-                    <NavLanguage>
-                        {
-                            blogNav.map(tab => (
-                                <>
-                                    <NavLink link={tab.link} customClass={"px-[0.5em]"} value={tab.name} />
-                                </>
-                            ))
-                        }
-                    </NavLanguage>
-                )}
-            </HeaderContainer>
-        </>
+                <LightSwitch customIcon={"fa fa-bolt"} customClass={"hover:cursor-pointer dark:text-white duration-300"} />
+            </div>
+            {props.page == "blog" && (
+                <NavLanguage>
+                    {
+                        blogNav.map(tab => (
+                            <>
+                                <NavLink link={tab.link} customClass={"px-[0.5em]"} value={tab.name} />
+                            </>
+                        ))
+                    }
+                </NavLanguage>
+            )}
+        </HeaderContainer>
     )
 }
 

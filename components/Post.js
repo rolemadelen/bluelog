@@ -1,15 +1,18 @@
 import Date from "@components/Date";
 import tw from 'tailwind-styled-components'
 
-const Post = ({title, date, children}) => {
+const Post = ({ title, subtitle, date, children }) => {
     return (
         <PostContainer>
-            <PostTitle>{title}</PostTitle>
-            {date && (
-                <Date dateString={date}/>
+            <PostTitle className={"font-poppin"}>{title}</PostTitle>
+            {subtitle && (
+                <PostSubtitle>{subtitle}</PostSubtitle>
             )}
-            <Hr />
-            { children }
+            {date && (
+                <Date customClass={"text-xs"} dateString={date} />
+            )}
+            <hr />
+            {children}
         </PostContainer>
     )
 }
@@ -22,16 +25,18 @@ const PostContainer = tw.section`
     w-full
 `
 
-const PostTitle = tw.h1`
+const PostTitle = tw.div`
     text-primary
     dark:text-dprimary
-    font-[Poppins]
-    text-lg
+    text-xl
+    font-bold
 `
 
-const Hr = tw.hr`
-    border-[1px]
-    border-[#ffffff1c]
+const PostSubtitle = tw.div`
+    text-secondary
+    dark:text-dsecondary
+    py-1
+    text-sm
 `
 
 export default Post;

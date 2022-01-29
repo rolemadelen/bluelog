@@ -1,10 +1,9 @@
 import { allCPs } from '.contentlayer/data'
-import { getAllPosts } from '@lib/doc'
-import DocLayout from '@layouts/cp'
+import CPLayout from '@layouts/cp'
 
-export default function CPPostPage({ post, tree }) {
+export default function CPPostPage({ post }) {
     return (
-        <DocLayout post={post} tree={tree} page={"cp"}/>
+        <CPLayout post={post} page={"cp"} />
     )
 }
 
@@ -14,9 +13,9 @@ export async function getStaticPaths() {
             id: post.pathSegments.map((_) => _.pathName),
         },
     }))
-    return { 
-        paths, 
-        fallback: 'blocking' 
+    return {
+        paths,
+        fallback: 'blocking'
     }
 }
 
@@ -26,11 +25,9 @@ export async function getStaticProps({ params }) {
         (_) => _.pathSegments.map((_) => _.pathName).join('/') === pagePath
     )
 
-    const tree = getAllPosts("cp")
-    return { 
-        props: { 
-            post, 
-            tree 
-        } 
+    return {
+        props: {
+            post,
+        }
     }
 }
