@@ -7,7 +7,7 @@ export const urlFromFilePath = doc => {
 
 export const Post = defineDocumentType(() => ({
     name: 'Post',
-    filePathPattern: `ds/**/*.md`,
+    filePathPattern: `dsa/**/*.md`,
     fields: {
         title: { type: 'string', required: true },
         date: { type: 'date', required: true },

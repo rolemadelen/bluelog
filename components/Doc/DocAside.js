@@ -19,7 +19,7 @@ const DocAside = ({ tree, page }) => {
                     <React.Fragment key={post.dir}>
                         <DocAsideHeader>{post.dir}</DocAsideHeader>
                         {
-                            (page === "ds" && (
+                            (page === "dsa" && (
                                 post.subPosts.map(({ id, title, section }) => (
                                     <>
                                         <Link href={`${post.dir}/${id}`} passHref>
