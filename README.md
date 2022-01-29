@@ -43,6 +43,17 @@
   + Reviewed how other people built their blogs using Next.js
   + Refactored my code - Tried to break my codes into components. 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 7dabddf (Refactored my codes - components)
 =======
 >>>>>>> 5da0dba (Refactored my codes - components)
+=======
+- 2022-01-15
+  + Home header added. <br /> <img src="./public/readme/20220115-header.jpg" width="400" alt="header">
+- 2022-01-26
+  + DS and Algo tab merged. <br /> <img src="./public/readme/20220126-dsa.jpg" width="400" alt="DSA">
+- 2022-01-29
+  + UI updated <br /> <img src="./public/readme/20220129-ui.gif" width="400" alt="new UI">
+  + SASS code refactored
+  + Display recent posts in Home (was removed for .contentlayer)
+>>>>>>> 7a38e11 (Refactored code and updated UI)

@@ -1,23 +1,32 @@
-@import "@styles/colors.module";
-
-.backToHome { margin: 3rem 0 0; }
-
 .navLogo {
     font-size: 1.5em;
     font-weight: bold;
-    transition: all 0.3s ease-in;
-    text-shadow: 1px 1px #946b2d;
+    transition: transform 0.3s ease-in-out;
+
+    background: linear-gradient(to right, #4bb8fd 20%, #7acbfe 40%, #3464bf 60%, #32a9ed 80%);
+    background-size: 200% auto;
+
+    color: #000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 1.5s alternate infinite;
 
     &:hover {
         text-decoration: none;
         transform: rotate(-5deg);
-        text-shadow: 15px 6px #3f5ed138;
-        color: #6183ff;
-        transition: all 0.3s ease-out;
+        transition: transform 0.3s ease-in-out;
     }
 }
 
 .navLink {
     a { padding: 0 0.7em; }
     a:last-child { margin-right: 1em; }
+}
+
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
 }

@@ -4,7 +4,7 @@ import tw from 'tailwind-styled-components'
 const DocPost = ({title, date, children}) => {
     return (
         <DocPostContainer>
-            <DocPostTitle>{title}</DocPostTitle>
+            <DocPostTitle className={"font-poppin"}>{title}</DocPostTitle>
             {date && (
                 <Date dateString={date}/>
             )}
@@ -24,7 +24,6 @@ const DocPostContainer = tw.section`
 const DocPostTitle = tw.h1`
     text-primary
     dark:text-dprimary
-    font-[Poppins]
     text-lg
 `
 

@@ -12,7 +12,7 @@ import tw from "tailwind-styled-components"
 const BlogLayout = ({ post }) => {
     return (
         <Container page={"blog"}>
-            <Post title={post.title} date={post.date}/>
+            <Post title={post.title} subtitle={post.subtitle} date={post.date} />
             <LanguageContainer className={`postTag`}>
                 {post.availableLanguage.map((post) => (
                     <Link key={post.slug} href={`/blog/${post.lang}/${post.slug}`}>

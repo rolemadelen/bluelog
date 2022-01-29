@@ -3,37 +3,18 @@ import React from "react"
 import tw from 'tailwind-styled-components'
 
 const DocAside = ({ tree, page }) => {
-    function activeLink(e) {
-        const link = document.querySelector('.templink')
-        if (link) { 
-            link.classList.remove('active');
-            link.classList.remove('templink')
-        }
-        e.target.classList.add('templink')
-        e.target.classList.add('active')
-    }
     return (
-        <DocAsideContainer>
+        <DocAsideContainer style={{ scrollBehavior: 'smooth' }}>
             {
                 tree.map(post => (
                     <React.Fragment key={post.dir}>
-                        <DocAsideHeader>{post.dir}</DocAsideHeader>
+                        <DocAsideHeader className={"font-poppin"}>{post.dir}</DocAsideHeader>
                         {
                             (page === "dsa" && (
                                 post.subPosts.map(({ id, title, section }) => (
                                     <>
                                         <Link href={`${post.dir}/${id}`} passHref>
-                                            <DocAsideLink><span className={`mr-1`}>[{section}]</span> {title}</DocAsideLink>
-                                        </Link>
-                                    </>
-                                ))))
-                        }
-                        {
-                            (page == "cp" && (
-                                post.subPosts.map(({ id, title, level }) => (
-                                    <>
-                                        <Link href={`${post.dir}/${id[0]}-${id[1]}`} passHref>
-                                            <DocAsideLink onClick={activeLink} className={level}>{title}</DocAsideLink>
+                                            <DocAsideLink className={"font-poppin"}><span className={`mr-1`}>[{section}]</span> {title}</DocAsideLink>
                                         </Link>
                                     </>
                                 ))))
@@ -61,19 +42,21 @@ const DocAsideContainer = tw.section`
     duration-300
 `
 const DocAsideHeader = tw.span`
-    text-[0.85em]
+    text-1
     text-primary
     dark:text-dprimary
     mt-2
-    font-[Poppins]
 `
 const DocAsideLink = tw.a`
     px-2
     py-0.5
     text-[0.8em]
-    font-[Poppins]
     leading-5
     text-gray-600
     dark:text-dsecondary
+    hover:text-[#289aff]
+    hover:dark:text-[#289aff]
+    hover:no-underline
+    duration-300
 `
 export default DocAside

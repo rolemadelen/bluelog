@@ -15,7 +15,7 @@ tags:
  비슷한 내용을 가진 두 개의 파일 `a.html.erb` 와 `b.html.erb` 가 있다.
 
 a.html.erb
-```erb
+```rb
 <div class="container mx-auto">
   <h1> a.html.erb </h1>
 
@@ -34,7 +34,7 @@ a.html.erb
 ```
 
 b.html.erb
-```erb
+```rb
 <div class="container mx-auto">
   <h1> b.html.erb </h1>
 
@@ -60,7 +60,7 @@ b.html.erb
 
 중복되는 `<ul>` 태그의 리스트들은 프로그래밍의 이름을 나열하고 있으니 `_langList.html.erb` 라는 이름으로 부분 템플릿을 만들어 보겠다.
 
-```erb
+```rb
 <ul role="list">
   <li>Ruby</li>
   <li>Rails</li>
@@ -81,7 +81,7 @@ b.html.erb
 각각 `a.html.erb`와 `b.html.erb`의 중복되는 부분을 지우고, 해당 템플릿을 삽입했다.
 
 a.html.erb
-```erb
+```rb
 <div class="container mx-auto">
   <h1> a.html.erb </h1>
   
@@ -90,7 +90,7 @@ a.html.erb
 ```
 
 b.html.erb
-```erb
+```rb
 <div class="container mx-auto">
   <h1> b.html.erb </h1>
 
@@ -102,7 +102,7 @@ b.html.erb
 
 
 템플릿을 호출할 때 경로를 포함할 수 있다. 예를들면 `home` view에 있는 `_langList.html.erb`를 호출하기 위해서는 아래와 같이 할 수 있다.
-```erb
+```rb
 <%= render partial: 'home/langList' %>
 ```
 
@@ -111,14 +111,14 @@ b.html.erb
 
 
 a.html.erb
-```erb
+```rb
 <div class="container mx-auto">
   <%= render partial: 'langList', :locals => {:title => "a.html.erb"} %>
 </div>
 ```
 
 b.html.erb
-```erb
+```rb
 <div class="container mx-auto">
   <%= render partial: 'langList', :locals => {:title => "b.html.erb"} %>
 </div>
@@ -131,7 +131,7 @@ b.html.erb
 
 
 _langList.html.erb
-```erb
+```rb
 <h1> <%= title %> </h1>
 
 <ul role="list">
@@ -151,7 +151,7 @@ _langList.html.erb
 
 
 _langList.html.erb
-```erb
+```rb
 <div class="container mx-auto">
   <h1> <%= title %> </h1>
 
@@ -170,12 +170,12 @@ _langList.html.erb
 ```
 
 a.html.erb
-```erb
+```rb
 <%= render partial: 'langList', :locals => {:title => "a.html.erb"} %>
 ```
 
 b.html.erb
-```erb
+```rb
 <%= render partial: 'langList', :locals => {:title => "b.html.erb"} %>
 ```
 
