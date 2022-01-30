@@ -1,17 +1,27 @@
 @import "@styles/colors.module";
 
+.mobileDocAside {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 45px;
+    height: 45px;
+}
+
+.docAside {
+    padding-bottom: 15em;
+}
+
 @media only screen and (max-width: 750px) {
     .docAside {
         width: 99%;
         z-index: 776;
-        transform:translate(-40em, 4em);
-    }    
+        transform: translate(-40em, 4em);
+    }
 
     .unfold {
         display: inherit !important;
         width: 99%;
-        transition: all 0.5s ease;
-        transform:translate(0em, 4em);
+        transform: translate(0em, 4em);
     }
 
     .docContainer {
@@ -28,6 +38,5 @@
 
     .mobileDocAsideSlide {
         left: 85% !important;
-        transition: all 0.5s ease;
     }
 }

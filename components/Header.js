@@ -39,7 +39,7 @@ const Header = props => {
             <LightSwitch customIcon={"fa fa-moon"} customClass={`${styles.lightswitch} hover:cursor-pointer dark:text-white duration-300 ml-4`} />
 
             <MobileNav className={styles.mobileNavLink}>
-                <div className={"dark:bg-mobile-dark bg-mobile-light bg-cover bg-no-repeat duration-200 w-[25px] h-[20px]"} width="24px" height="24px" onClick={toggleMobileMenu}></div>
+                <div className={`${styles.mobileHamburger} dark:bg-mobile-dark bg-mobile-light duration-200 w-[25px] h-[20px]`} onClick={toggleMobileMenu}></div>
                 <div id="mobileMenu" className={`hide ${styles.mobileMenu}`}>
                     {
                         baseNav.map(tab => (

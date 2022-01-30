@@ -42,7 +42,7 @@ module.exports = {
             fuchsia: colors.fuchsia,
             pink: colors.pink,
             rose: colors.rose,
-            theme: '#f1f1f175',
+            theme: '#fbfbfb',
             primary: '#1b212e',
             secondary: '#1b212e91',
             card_bg: '#cbddf36e',

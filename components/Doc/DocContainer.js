@@ -17,7 +17,7 @@ const DocContainer = (props) => {
         ...props.customMeta,
     }
     return (
-        <BaseContainer className={styles.docContainer}>
+        <BaseContainer id="docContainer" className={styles.docContainer}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <title>{meta.title}</title>
