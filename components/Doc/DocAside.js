@@ -4,11 +4,17 @@ import tw from 'tailwind-styled-components'
 import css from '@styles/docaside.module.scss'
 
 const DocAside = ({ tree, page }) => {
-    function toggleMobileMenu(e) {
+    function toggleMobileMenu() {
         document.querySelector('#docAside').classList.toggle(css.unfold)
         document.querySelector('#docAsideMenu').classList.toggle(css.mobileDocAsideSlide)
         const docContainer = document.querySelector('#docContainer')
         docContainer.style.position = (docContainer.style.position == "fixed") ? "relative" : "fixed"
+    }
+
+    function foldSide() {
+        document.querySelector('#docAside').classList.toggle(css.unfold)
+        document.querySelector('#docAsideMenu').classList.toggle(css.mobileDocAsideSlide)
+        document.querySelector('#docContainer').style.position = "relative"
     }
 
     return (
@@ -22,7 +28,7 @@ const DocAside = ({ tree, page }) => {
                                 (page === "dsa" && (
                                     post.subPosts.map(({ id, title, section }) => (
                                         <Link href={`${post.dir}/${id}`} key={title} passHref>
-                                            <DocAsideLink onClick={toggleMobileMenu} className={"font-poppin"}><span className={`mr-1`}>[{section}]</span> {title}</DocAsideLink>
+                                            <DocAsideLink onClick={foldSide} className={"font-poppin"}><span className={`mr-1`}>[{section}]</span> {title}</DocAsideLink>
                                         </Link>
                                     ))))
                             }
