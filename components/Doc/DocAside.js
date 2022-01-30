@@ -1,26 +1,35 @@
 import Link from "next/link"
 import React from "react"
 import tw from 'tailwind-styled-components'
+import styles from '@styles/docaside.module.scss'
 
 const DocAside = ({ tree, page }) => {
+    function toggleMobileMenu(e) {
+        document.querySelector('#docAside').classList.toggle(styles.unfold)
+        document.querySelector('#docAsideMenu').classList.toggle(styles.mobileDocAsideSlide)
+    }
+
     return (
-        <DocAsideContainer style={{ scrollBehavior: 'smooth' }}>
-            {
-                tree.map(post => (
-                    <React.Fragment key={post.dir}>
-                        <DocAsideHeader className={"font-poppin"}>{post.dir}</DocAsideHeader>
-                        {
-                            (page === "dsa" && (
-                                post.subPosts.map(({ id, title, section }) => (
-                                    <Link href={`${post.dir}/${id}`} key={title} passHref>
-                                        <DocAsideLink className={"font-poppin"}><span className={`mr-1`}>[{section}]</span> {title}</DocAsideLink>
-                                    </Link>
-                                ))))
-                        }
-                    </React.Fragment>
-                ))
-            }
-        </DocAsideContainer>
+        <>
+            <DocAsideContainer id="docAside" style={{ scrollBehavior: 'smooth' }} className={styles.docAside}>
+                {
+                    tree.map(post => (
+                        <React.Fragment key={post.dir}>
+                            <DocAsideHeader className={"font-poppin"}>{post.dir}</DocAsideHeader>
+                            {
+                                (page === "dsa" && (
+                                    post.subPosts.map(({ id, title, section }) => (
+                                        <Link href={`${post.dir}/${id}`} key={title} passHref>
+                                            <DocAsideLink onClick={toggleMobileMenu}  className={"font-poppin"}><span className={`mr-1`}>[{section}]</span> {title}</DocAsideLink>
+                                        </Link>
+                                    ))))
+                            }
+                        </React.Fragment>
+                    ))
+                }
+            </DocAsideContainer>
+            <div id="docAsideMenu" className={`${styles.mobileDocAside} dark:bg-docaside-mobile-dark bg-docaside-mobile-light bg-cover bg-no-repeat duration-200 w-[45px] h-[45px]`} onClick={toggleMobileMenu}></div>
+        </>
     )
 }
 

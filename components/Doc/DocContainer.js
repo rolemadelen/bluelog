@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Header from '@components/Header'
 import metadata from '@data/metadata'
 import tw from 'tailwind-styled-components'
+import styles from '@styles/docaside.module.scss'
 
 const DocContainer = (props) => {
     const meta = {
@@ -16,7 +17,7 @@ const DocContainer = (props) => {
         ...props.customMeta,
     }
     return (
-        <BaseContainer>
+        <BaseContainer className={styles.docContainer}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <title>{meta.title}</title>

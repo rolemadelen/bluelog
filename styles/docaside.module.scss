@@ -1,0 +1,33 @@
+@import "@styles/colors.module";
+
+@media only screen and (max-width: 750px) {
+    .docAside {
+        width: 99%;
+        z-index: 776;
+        transform:translate(-40em, 4em);
+    }    
+
+    .unfold {
+        display: inherit !important;
+        width: 99%;
+        transition: all 0.5s ease;
+        transform:translate(0em, 4em);
+    }
+
+    .docContainer {
+        padding: 0 1.4em !important;
+        margin: 1.25em 0em !important;
+    }
+
+    .mobileDocAside {
+        position: fixed;
+        bottom: 3em;
+        left: 3em;
+        z-index: 777;
+    }
+
+    .mobileDocAsideSlide {
+        left: 85% !important;
+        transition: all 0.5s ease;
+    }
+}

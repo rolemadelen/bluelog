@@ -41,7 +41,7 @@
     border-top: 1px solid #363636;
     border-bottom: 1px solid #363636;
     text-align: center;
-    padding-bottom: 1em;
+    padding: 1em 0;
 
     a {
         font-size: 1.2em;
@@ -71,8 +71,8 @@
     }
 
     .lightswitch {
-        right: 2.7em;
-        // top: 1.2em;
+        right: 2.8em;
+        top: -1px;
         font-size: 1.3em;
     }
 }

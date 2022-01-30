@@ -46,3 +46,4 @@
 - 2022-01-30
   + i.p. Mobile UI <br /> <img src="./public/readme/20220130-mobile-ui.gif" width="400" alt="Mobile UI">
   + Light mode icon changed
+  + DSA (sidebar menu) mobile ui added <br /> <img src="./public/readme/20220130-mobile-docaside.gif" width="400" alt="Mobile UI Docaside">
