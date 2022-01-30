@@ -61,6 +61,7 @@ main {
 
 a {
     color: #289aff;
+
     &:hover {
         text-decoration: underline;
         text-decoration-thickness: from-font;
@@ -71,7 +72,9 @@ li {
     list-style: none;
     position: relative;
 
-    &.ko, &.en, &.ja {
+    &.ko,
+    &.en,
+    &.ja {
         &:before {
             content: '';
             display: block;
@@ -85,6 +88,7 @@ li {
             transform: rotate(0);
             transition: all 0.3s ease-out;
         }
+
         &:hover {
             &:before {
                 transform: rotate(540deg);
@@ -100,6 +104,7 @@ li {
         &:before {
             box-shadow: 0px 0px 2px 0px #ff6666, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px black;
         }
+
         &:hover:before {
             box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px black;
         }
@@ -110,8 +115,9 @@ li {
         &:before {
             box-shadow: 0px 0px 2px 0px #1e242e8c, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #6464ff;
         }
+
         &:hover:before {
-            box-shadow: 6px -4px 1px 1px #6464ff, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px #6464ff;   
+            box-shadow: 6px -4px 1px 1px #6464ff, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px #6464ff;
         }
     }
 
@@ -119,11 +125,16 @@ li {
         &:before {
             box-shadow: 0px 0px 2px 0px #1e242e8c, 0px 0px 3px 0px #ff6666, 0px 0px 2px 0px #ff6666;
         }
+
         &:hover:before {
             box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #ff6666, -7px -4px 1px 1px #ff6666;
         }
     }
 
+}
+
+.hide {
+    display: none !important;
 }
 
 .postTag {
@@ -177,31 +188,32 @@ section {
             padding: 0.15em 0;
 
             ol,
-                ul {
-                    margin-left: 2.5em;
+            ul {
+                margin-left: 2.5em;
 
-                    li {
-                        list-style: circle !important;
-                        font-size: $--text;
-                    }
+                li {
+                    list-style: circle !important;
+                    font-size: $--text;
                 }
+            }
         }
+
         hr {
             margin: 1em 0;
             border-color: $--hr;
         }
     }
-    
+
     footer {
         div {
             margin: 0 0 0.35em 0;
         }
-    
+
         a {
             color: $--primary;
             font-weight: 500;
         }
-    
+
         img {
             margin: 0 0.35em;
         }
@@ -226,7 +238,7 @@ section {
                 background-color: #1c1e22 !important;
                 border: 1px solid #3c3c3c !important;
             }
-            
+
             code {
                 border: none !important;
             }
@@ -286,14 +298,21 @@ section {
 //        CP tab
 ////////////////////////////////////////////////////////////////
 
-.easy, .easy2, .medium, .hard, .bronze {
+.easy,
+.easy2,
+.medium,
+.hard,
+.bronze {
     color: $--primary-dark !important;
+
     &:hover {
         color: $--primary-dark !important;
     }
 }
+
 .silver {
     color: $--primary !important;
+
     &:hover {
         color: $--primary !important;
     }
@@ -321,4 +340,22 @@ section {
 
 .silver {
     background-color: $--level-silver;
+}
+
+.fa-sun {
+    color: #1b212e;
+
+    &:hover {
+        color: #ff8686;
+        transform: rotate(-270deg);
+    }
+}
+
+.fa-moon {
+    color: #e5e5e5;
+
+    &:hover {
+        color: #74c0f8;
+        transform: rotate(270deg);
+    }
 }

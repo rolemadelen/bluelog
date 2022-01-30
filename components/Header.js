@@ -7,33 +7,58 @@ import navlink from '@data/navlink'
 const Header = props => {
     const baseNav = navlink.base
     const blogNav = navlink.blog
+
+    function toggleMobileMenu(e) {
+        document.querySelector('#mobileMenu').classList.toggle('hide');
+    }
+
     return (
-        <HeaderContainer>
-            <NavLink link={"/"} customClass={`${styles.navLogo}`} value="euisblue" />
-            <div className={"flex items-center"}>
-                <div className={styles.navLink}>
+        <>
+            <HeaderContainer className={styles.header}>
+                <NavLink link={"/"} customClass={`${styles.navLogo}`} value="euisblue" />
+                <div className={"flex items-center"}>
+                    <div className={styles.navLink}>
+                        {
+                            baseNav.map(tab => (
+                                <NavLink key={tab.link} link={tab.link} customClass={"font-poppin hover:text-[#289aff] dark:hover:text-[#289aff]"} value={tab.name} />
+                            ))
+                        }
+                        {props.page == "blog" && (
+                            <NavLanguage>
+                                {
+                                    blogNav.map(tab => (
+                                        <NavLink key={tab.link} link={tab.link} customClass={"px-[0.5em]"} value={tab.name} />
+                                    ))
+                                }
+                            </NavLanguage>
+                        )}
+                    </div>
+                </div>
+            </HeaderContainer>
+
+            <LightSwitch customIcon={"fa fa-moon"} customClass={`${styles.lightswitch} hover:cursor-pointer duration-300 ml-4`} />
+
+            <MobileNav className={styles.mobileNavLink}>
+                <div className={"dark:bg-mobile-dark bg-mobile-light bg-cover bg-no-repeat duration-200 w-[25px] h-[20px]"} width="24px" height="24px" onClick={toggleMobileMenu}></div>
+                <div id="mobileMenu" className={`hide ${styles.mobileMenu}`}>
                     {
                         baseNav.map(tab => (
-                            <>
-                                <NavLink link={tab.link} customClass={"font-poppin hover:text-[#289aff] dark:hover:text-[#289aff]"} value={tab.name} />
-                            </>
+                            <NavLink key={tab.link} link={tab.link} customClass={"font-poppin hover:text-[#289aff] dark:hover:text-[#289aff] py-1"} value={tab.name} />
                         ))
                     }
+                    {props.page == "blog" && (
+                        <div className={"my-[0.5em]"}>
+                            {
+                                blogNav.map(tab => (
+                                    <NavLink key={tab.link} link={tab.link} customClass={"px-[0.7em]"} value={tab.name} />
+                                ))
+                            }
+                        </div>
+                    )}
+                    {/* <LightSwitch customIcon={"fa fa-bolt"} customClass={"hover:cursor-pointer dark:text-white duration-300 pt-2 text-2xl"} passHref /> */}
                 </div>
-                <LightSwitch customIcon={"fa fa-bolt"} customClass={"hover:cursor-pointer dark:text-white duration-300"} />
-            </div>
-            {props.page == "blog" && (
-                <NavLanguage>
-                    {
-                        blogNav.map(tab => (
-                            <>
-                                <NavLink link={tab.link} customClass={"px-[0.5em]"} value={tab.name} />
-                            </>
-                        ))
-                    }
-                </NavLanguage>
-            )}
-        </HeaderContainer>
+            </MobileNav>
+        </>
     )
 }
 
@@ -45,6 +70,10 @@ const HeaderContainer = tw.header`
     flex-wrap
     mb-10
     mt-5
+`
+
+const MobileNav = tw.div`
+    flex
 `
 
 const NavLanguage = tw.div`

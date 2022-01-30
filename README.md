@@ -43,3 +43,6 @@
   + UI updated <br /> <img src="./public/readme/20220129-ui.gif" width="400" alt="new UI">
   + SASS code refactored
   + Display recent posts in Home (was removed for .contentlayer)
+- 2022-01-30
+  + i.p. Mobile UI <br /> <img src="./public/readme/20220130-mobile-ui.gif" width="400" alt="Mobile UI">
+  + Light mode icon changed

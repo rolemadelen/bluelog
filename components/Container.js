@@ -46,6 +46,7 @@ const BaseContainer = tw.section`
     max-w-[50rem]
     px-[1rem]
     mx-auto
+    relative
 `
 
 export default Container;

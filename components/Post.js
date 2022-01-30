@@ -18,6 +18,7 @@ const Post = ({ title, subtitle, date, children }) => {
 }
 
 const PostContainer = tw.section`
+    mt-8
     text-primary
     dark:text-dprimary
     dark:border-gray-600
