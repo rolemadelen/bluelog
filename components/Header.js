@@ -55,7 +55,6 @@ const Header = props => {
                             }
                         </div>
                     )}
-                    {/* <LightSwitch customIcon={"fa fa-bolt"} customClass={"hover:cursor-pointer dark:text-white duration-300 pt-2 text-2xl"} passHref /> */}
                 </div>
             </MobileNav>
         </>
