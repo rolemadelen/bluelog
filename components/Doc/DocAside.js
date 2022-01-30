@@ -1,17 +1,19 @@
 import Link from "next/link"
 import React from "react"
 import tw from 'tailwind-styled-components'
-import styles from '@styles/docaside.module.scss'
+import css from '@styles/docaside.module.scss'
 
 const DocAside = ({ tree, page }) => {
     function toggleMobileMenu(e) {
-        document.querySelector('#docAside').classList.toggle(styles.unfold)
-        document.querySelector('#docAsideMenu').classList.toggle(styles.mobileDocAsideSlide)
+        document.querySelector('#docAside').classList.toggle(css.unfold)
+        document.querySelector('#docAsideMenu').classList.toggle(css.mobileDocAsideSlide)
+        const docContainer = document.querySelector('#docContainer')
+        docContainer.style.position = (docContainer.style.position == "fixed") ? "relative" : "fixed"
     }
 
     return (
         <>
-            <DocAsideContainer id="docAside" style={{ scrollBehavior: 'smooth' }} className={styles.docAside}>
+            <DocAsideContainer id="docAside" style={{ scrollBehavior: 'smooth' }} className={css.docAside}>
                 {
                     tree.map(post => (
                         <React.Fragment key={post.dir}>
@@ -20,7 +22,7 @@ const DocAside = ({ tree, page }) => {
                                 (page === "dsa" && (
                                     post.subPosts.map(({ id, title, section }) => (
                                         <Link href={`${post.dir}/${id}`} key={title} passHref>
-                                            <DocAsideLink onClick={toggleMobileMenu}  className={"font-poppin"}><span className={`mr-1`}>[{section}]</span> {title}</DocAsideLink>
+                                            <DocAsideLink onClick={toggleMobileMenu} className={"font-poppin"}><span className={`mr-1`}>[{section}]</span> {title}</DocAsideLink>
                                         </Link>
                                     ))))
                             }
@@ -28,7 +30,7 @@ const DocAside = ({ tree, page }) => {
                     ))
                 }
             </DocAsideContainer>
-            <div id="docAsideMenu" className={`${styles.mobileDocAside} dark:bg-docaside-mobile-dark bg-docaside-mobile-light bg-cover bg-no-repeat duration-200 w-[45px] h-[45px]`} onClick={toggleMobileMenu}></div>
+            <div id="docAsideMenu" className={`${css.mobileDocAside} dark:bg-docaside-mobile-dark bg-docaside-mobile-light duration-200 w-[45px] h-[45px]`} onClick={toggleMobileMenu}></div>
         </>
     )
 }

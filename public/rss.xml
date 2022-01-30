@@ -4,10 +4,17 @@
         <title>Articles by Blue Eu</title>
         <link>https://euisblue.me/blog</link>
         <description>우당당탕 주니어 개발자의 기록 </description>
-        <lastBuildDate>Sun, 30 Jan 2022 05:56:52 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 30 Jan 2022 08:36:32 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[GPG 'failed to write commit object'?]]></title>
+            <link>https://euisblue.me/blog/gpg-failed-to-commit</link>
+            <guid>https://euisblue.me/blog/gpg-failed-to-commit</guid>
+            <pubDate>Sun, 30 Jan 2022 00:00:00 GMT</pubDate>
+            <author>euisblue@pm.me (Blue Eu)</author>
+        </item>
         <item>
             <title><![CDATA[GitHub - Signing Commits using GPG]]></title>
             <link>https://euisblue.me/blog/signing-commits-gpg</link>

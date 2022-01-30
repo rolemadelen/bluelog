@@ -33,6 +33,12 @@
     padding-bottom: 1em;
 }
 
+.mobileHamburger {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 20px;
+}
 .mobileMenu {
     display: flex;
     flex-direction: column;
