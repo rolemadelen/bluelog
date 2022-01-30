@@ -47,6 +47,8 @@ const BaseContainer = tw.section`
     w-full
     ml-[26%]
     px-8
+    relative
+    mt-5
 `
 
 const Content = tw.main`

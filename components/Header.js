@@ -36,7 +36,7 @@ const Header = props => {
                 </div>
             </HeaderContainer>
 
-            <LightSwitch customIcon={"fa fa-moon"} customClass={`${styles.lightswitch} hover:cursor-pointer duration-300 ml-4`} />
+            <LightSwitch customIcon={"fa fa-moon"} customClass={`${styles.lightswitch} hover:cursor-pointer dark:text-white duration-300 ml-4`} />
 
             <MobileNav className={styles.mobileNavLink}>
                 <div className={"dark:bg-mobile-dark bg-mobile-light bg-cover bg-no-repeat duration-200 w-[25px] h-[20px]"} width="24px" height="24px" onClick={toggleMobileMenu}></div>
@@ -69,7 +69,6 @@ const HeaderContainer = tw.header`
     justify-between
     flex-wrap
     mb-10
-    mt-5
 `
 
 const MobileNav = tw.div`
