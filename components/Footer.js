@@ -15,19 +15,17 @@ const Footer = () => {
             <div className="snsLinks flex items-center justify-center">
                 {
                     sns.map((social) => (
-                        <>
-                            <Link href={social.link} passHref>
-                                <a className={"px-2"}>
-                                    <Image
-                                        priority
-                                        src={`/images/social/${social.name}.svg`}
-                                        height={20}
-                                        width={20}
-                                        alt={social.name}
-                                    />
-                                </a>
-                            </Link>
-                        </>
+                        <Link href={social.link} key={social.link} passHref>
+                            <a className={"px-2"}>
+                                <Image
+                                    priority
+                                    src={`/images/social/${social.name}.svg`}
+                                    height={20}
+                                    width={20}
+                                    alt={social.name}
+                                />
+                            </a>
+                        </Link>
                     ))
                 }
             </div>

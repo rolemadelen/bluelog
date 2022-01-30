@@ -12,11 +12,9 @@ const DocAside = ({ tree, page }) => {
                         {
                             (page === "dsa" && (
                                 post.subPosts.map(({ id, title, section }) => (
-                                    <>
-                                        <Link href={`${post.dir}/${id}`} passHref>
-                                            <DocAsideLink className={"font-poppin"}><span className={`mr-1`}>[{section}]</span> {title}</DocAsideLink>
-                                        </Link>
-                                    </>
+                                    <Link href={`${post.dir}/${id}`} key={title} passHref>
+                                        <DocAsideLink className={"font-poppin"}><span className={`mr-1`}>[{section}]</span> {title}</DocAsideLink>
+                                    </Link>
                                 ))))
                         }
                     </React.Fragment>

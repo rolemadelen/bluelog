@@ -36,6 +36,7 @@ const List = tw.li`
     mt-[1em]
     mb-[1.5em]
     p-[1.2em]
+    pr-0
     rounded
     list-none
 `
