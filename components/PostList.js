@@ -1,7 +1,7 @@
 import Date from "@components/Date";
 import utilStyles from '@styles/utils.module.scss'
-import tw from 'tailwind-styled-components'
 import Link from "next/link";
+import { List, Subtitle, Title } from "./custom-tw-components";
 
 const PostList = ({ posts }) => {
     return (
@@ -31,29 +31,5 @@ const PostList = ({ posts }) => {
         </>
     )
 }
-
-const List = tw.li`
-    mt-[1em]
-    mb-[1.5em]
-    p-[1.2em]
-    pr-0
-    rounded
-    list-none
-`
-
-const Title = tw.div` 
-    text-lg 
-    font-semibold 
-    text-primary 
-    dark:text-dprimary
-`
-
-const Subtitle = tw.div` 
-    text-sm
-    pt-1 
-    pb-2 
-    text-secondary 
-    dark:text-dsecondary
-`
 
 export default PostList;

@@ -1,8 +1,8 @@
 import NavLink from '@components/NavLink'
 import LightSwitch from '@components/LightSwitch'
 import styles from '@styles/container.module.scss'
-import tw from 'tailwind-styled-components'
 import navlink from '@data/navlink'
+import { HeaderContainer, MobileNav, NavLanguage } from './custom-tw-components'
 
 const Header = props => {
     const baseNav = navlink.base
@@ -60,24 +60,5 @@ const Header = props => {
         </>
     )
 }
-
-const HeaderContainer = tw.header`
-    flex 
-    relative
-    items-center
-    justify-between
-    flex-wrap
-    mb-10
-`
-
-const MobileNav = tw.div`
-    flex
-`
-
-const NavLanguage = tw.div`
-    absolute
-    right-0
-    top-[3em]
-`
 
 export default Header;

@@ -5,8 +5,8 @@ import Comments from "@components/Comments";
 
 import ReactMarkdown from 'react-markdown'
 import Codeblock from '@lib/codeblock.js'
-import tw from "tailwind-styled-components"
 import Footer from '@components/Footer'
+import { Layout } from "@components/custom-tw-components";
 
 const DocLayout = ({ post, tree, page }) => {
     const customMeta = {
@@ -27,10 +27,5 @@ const DocLayout = ({ post, tree, page }) => {
         </Layout>
     )
 }
-
-const Layout = tw.div`
-    flex
-    w-full
-`
 
 export default DocLayout
