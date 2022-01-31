@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Header from '@components/Header'
 import metadata from '@data/metadata'
-import tw from 'tailwind-styled-components'
+import { BaseContainer } from './custom-tw-components'
 
 const Container = (props) => {
     const meta = {
@@ -41,13 +41,5 @@ const Container = (props) => {
         </BaseContainer>
     )
 }
-
-const BaseContainer = tw.section`
-    max-w-[50rem]
-    px-[1rem]
-    mx-auto
-    relative
-    mt-5
-`
 
 export default Container;

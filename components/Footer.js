@@ -1,7 +1,7 @@
 import metadata from "@data/metadata"
 import Image from "next/image"
 import Link from "next/link"
-import tw from "tailwind-styled-components"
+import { FooterContainer } from "./custom-tw-components"
 
 const Footer = () => {
     const sns = [
@@ -12,7 +12,7 @@ const Footer = () => {
     return (
         <FooterContainer>
             <div>© 2022 <a href={sns[0].link}>{metadata.author}</a>. powered by&nbsp;<a href="https://vercel.com/">Vercel</a></div>
-            <div className="snsLinks flex items-center justify-center">
+            <div className="snsLinks flex items-center justify-center mt-1">
                 {
                     sns.map((social) => (
                         <Link href={social.link} key={social.link} passHref>
@@ -32,16 +32,5 @@ const Footer = () => {
         </FooterContainer>
     )
 }
-
-const FooterContainer = tw.footer` 
-    flex 
-    flex-col 
-    justify-center 
-    items-center 
-    my-8
-    text-sm 
-    text-primary 
-    dark:text-dsecondary
-`
 
 export default Footer

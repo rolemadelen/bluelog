@@ -1,7 +1,8 @@
 import Date from "@components/Date";
-import tw from 'tailwind-styled-components'
+import Link from 'next/link'
+import { LanguageButtons, PostContainer, PostSubtitle, PostTitle } from "./custom-tw-components";
 
-const Post = ({ title, subtitle, date, children }) => {
+const Post = ({ post, title, subtitle, date, children }) => {
     return (
         <PostContainer>
             <PostTitle className={"font-poppin"}>{title}</PostTitle>
@@ -11,33 +12,19 @@ const Post = ({ title, subtitle, date, children }) => {
             {date && (
                 <Date customClass={"text-xs"} dateString={date} />
             )}
+            {post && (
+                <LanguageButtons className={`postTag`}>
+                    {post.availableLanguage.map((post) => (
+                        <Link key={post.slug} href={`/blog/${post.lang}/${post.slug}`}>
+                            <a>{post.langName} </a>
+                        </Link>
+                    ))}
+                </LanguageButtons>
+            )}
             <hr />
             {children}
         </PostContainer>
     )
 }
-
-const PostContainer = tw.section`
-    mt-8
-    text-primary
-    dark:text-dprimary
-    dark:border-gray-600
-    text-sm
-    w-full
-`
-
-const PostTitle = tw.div`
-    text-primary
-    dark:text-dprimary
-    text-xl
-    font-bold
-`
-
-const PostSubtitle = tw.div`
-    text-secondary
-    dark:text-dsecondary
-    py-1
-    text-sm
-`
 
 export default Post;

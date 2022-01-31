@@ -1,6 +1,6 @@
 import utilStyles from '@styles/utils.module.scss'
 import NavLink from '@components/NavLink';
-import tw from 'tailwind-styled-components'
+import { CPHeader } from './custom-tw-components';
 
 const CPSection = props => {
     return (
@@ -18,14 +18,5 @@ const CPSection = props => {
         </section>
     )
 }
-
-const CPHeader = tw.h1`
-    text-lg 
-    font-semibold 
-    text-primary 
-    dark:text-dprimary 
-    mt-8 
-    pb-2
-`
 
 export default CPSection;

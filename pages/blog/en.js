@@ -3,7 +3,8 @@ import PostList from '@components/PostList'
 import Footer from '@components/Footer'
 import { getAllPosts } from '@lib/blog'
 import metadata from '@data/metadata'
-import tw from "tailwind-styled-components"
+import { PostListContainer } from '@components/custom-tw-components'
+import tw from 'tailwind-styled-components'
 
 export default function Blog({ posts }) {
     const customMeta = {
@@ -18,12 +19,6 @@ export default function Blog({ posts }) {
         </Container>
     )
 }
-
-const PostListContainer = tw.ul` 
-    list-none
-    p-0
-    m-0
-`
 
 export async function getStaticProps() {
     const posts = getAllPosts().filter(post => post.lang === "en")

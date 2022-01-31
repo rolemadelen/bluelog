@@ -1,9 +1,9 @@
 import { getAllPostIds, getPostData } from '@lib/blog'
-import BlogLayout from '@layouts/blog'
+import BlogPostLayout from '@layouts/blogpost'
 
 export default function Post({ post }) {
     return (
-        <BlogLayout post={post} />
+        <BlogPostLayout post={post} />
     )
 }
 

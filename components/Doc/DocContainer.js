@@ -2,8 +2,8 @@ import React from 'react'
 import Head from 'next/head'
 import Header from '@components/Header'
 import metadata from '@data/metadata'
-import tw from 'tailwind-styled-components'
 import styles from '@styles/docaside.module.scss'
+import { DocBaseContainer, DocContent } from '@components/custom-tw-components'
 
 const DocContainer = (props) => {
     const meta = {
@@ -17,7 +17,7 @@ const DocContainer = (props) => {
         ...props.customMeta,
     }
     return (
-        <BaseContainer id="docContainer" className={styles.docContainer}>
+        <DocBaseContainer id="docContainer" className={styles.docContainer}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <title>{meta.title}</title>
@@ -38,24 +38,9 @@ const DocContainer = (props) => {
                 <meta name="twitter:image" content={meta.image} />
             </Head>
             <Header page={meta.page}/>
-            <Content>{props.children}</Content>
-        </BaseContainer>
+            <DocContent>{props.children}</DocContent>
+        </DocBaseContainer>
     )
 }
-
-const BaseContainer = tw.section`
-    max-w-[50rem]
-    w-full
-    ml-[26%]
-    px-8
-    relative
-    mt-5
-`
-
-const Content = tw.main`
-    flex
-    w-full
-    mx-auto
-`
 
 export default DocContainer;

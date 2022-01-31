@@ -24,9 +24,4 @@ const CPLayout = ({ post, page }) => {
     )
 }
 
-const Layout = tw.div`
-    flex
-    w-full
-`
-
 export default CPLayout
