@@ -4,8 +4,9 @@ section: "C++"
 date: "2022-02-08"
 ---
 
-- Uses adjacency list `vector<set<int>>`
-- used `set<int>` to visit neighbors with a smaller value first in the frontier.
+- used adjacency list `vector<set<int>>`
+- used `set<int>` to visit neighbors with a smaller value first in the frontier. 
+  - if the order doesn't matter, use `vector<vector<int>>` 
 
 ## DFS
 

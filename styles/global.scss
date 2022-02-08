@@ -177,6 +177,11 @@ section {
             margin: 0.5em 0;
         }
 
+        pre {
+            code {
+                background-color: transparent;
+            }
+        }
         code {
             font-size: 0.8em;
             padding: 0.3em 0.4em;
@@ -246,6 +251,7 @@ section {
             }
 
             code {
+                background-color: transparent;
                 border: none !important;
             }
         }
