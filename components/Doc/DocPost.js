@@ -8,6 +8,7 @@ const DocPost = ({title, date, children}) => {
             {date && (
                 <Date dateString={date}/>
             )}
+            <hr />
             { children }
         </DocPostContainer>
     )
