@@ -3,8 +3,8 @@
 @import 'tailwindcss/utilities';
 @import "@styles/colors.module";
 
-$--root: 18px;
-$--text: 16px;
+$--root: 17px;
+$--text: 15px;
 $--MIN-WIDTH: 300px;
 
 * {
@@ -168,9 +168,9 @@ li {
 
 section {
     main {
+        font-size: $--text;
         p {
             padding: 0.25em 0;
-            font-size: $--text;
         }
 
         img {
@@ -196,7 +196,6 @@ section {
             list-style: inside;
             box-shadow: none;
             overflow-wrap: break-word;
-            padding: 0.15em 0;
 
             ol,
             ul {
@@ -204,7 +203,6 @@ section {
 
                 li {
                     list-style: circle !important;
-                    font-size: $--text;
                 }
             }
         }
@@ -263,7 +261,7 @@ section {
 
             code {
                 background-color: $--theme-dark;
-                border: 1px solid #6c8bff;
+                border: 1px solid #2f579f;
                 white-space: pre;
                 transition: background-color 0.3s ease;
             }
