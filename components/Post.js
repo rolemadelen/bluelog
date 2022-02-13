@@ -3,7 +3,7 @@ import Link from 'next/link'
 import utilStyles from '@styles/utils.module.scss'
 import { LanguageButtons, PostContainer, PostSubtitle, PostTitle } from "./custom-tw-components";
 
-const Post = ({ post, title, subtitle, date, children }) => {
+const Post = ({ post, tags, title, subtitle, date, children }) => {
     return (
         <PostContainer>
             <PostTitle className={"font-poppin"}>{title}</PostTitle>
@@ -15,7 +15,7 @@ const Post = ({ post, title, subtitle, date, children }) => {
             )}
             {tags && (
                 <div className={`${utilStyles.tags} flex justify-end`}>
-                    {post.tags.map((tag, i) => (
+                    {tags.map((tag, i) => (
                         <div key={i} className={"px-2 mr-1 text-xs border-[1.5px] border-tags_bg text-secondary dark:border-dtags_bg dark:text-dsecondary"}>
                             {tag}
                         </div>
