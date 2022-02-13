@@ -17,7 +17,7 @@ const RecentPostsContainer = ({ posts, title, link }) => {
                 )}
             </div>
 
-            {link != 'cp' && (
+            {link == 'blog' && (
                 <ul className={utilStyles.list}>
                     {posts.map(({ url_path, title, date }) => (
                         <li className={"pb-1 flex justify-between items-center"} key={title}>
@@ -39,6 +39,19 @@ const RecentPostsContainer = ({ posts, title, link }) => {
 
                             <div className={`text-xs text-secondary dark:text-dsecondary`}>
                                 {from} - {level}
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            )}
+
+            {link == 'dsa' && (
+                <ul className={utilStyles.list}>
+                    {posts.map(({ url_path, title, date }) => (
+                        <li className={"pb-1 flex justify-between items-center"} key={title}>
+                            <NavLink link={url_path} customClass={"text-sm text-primary dark:text-dprimary"} value={title} />
+                            <div className={`text-xs text-secondary dark:text-dsecondary w-[35%] text-right`}>
+                                <Date dateString={date} />
                             </div>
                         </li>
                     ))}

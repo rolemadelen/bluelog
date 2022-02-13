@@ -9,7 +9,7 @@ import { Article } from '@components/custom-tw-components'
 const BlogPostLayout = ({ post }) => {
     return (
         <Container page={"blog"}>
-            <Post post={post} title={post.title} subtitle={post.subtitle} date={post.date} />
+            <Post post={post} title={post.title} tags={post.tags} subtitle={post.subtitle} date={post.date} />
             <Article>
                 <ReactMarkdown components={Codeblock}>{post.markdown}</ReactMarkdown>
             </Article>
