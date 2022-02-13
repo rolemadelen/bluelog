@@ -9,7 +9,7 @@ const PostList = ({ posts }) => {
                 <Link href={`/blog/${post.lang}/${post.slug}`} key={`${post.lang}-${post.slug}`} passHref>
                     <a className={`hover:no-underline`}>
                         <List className={`${post.lang}`}>
-                            <div className={`text-xs text-secondary dark:text-dsecondary w-[7em] whitespace-pre`}>
+                            <div className={`text-xs text-secondary dark:text-dsecondary w-[7em] whitespace-pre ml-5 mr-1`}>
                                 <Date dateString={post.date} />
                             </div>
                             <Title> {post.title} </Title>

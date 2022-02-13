@@ -23,6 +23,7 @@
 
 .navLink {
     margin-right: 2em;
+
     a {
         padding: 0 0.7em;
     }
@@ -38,7 +39,30 @@
     background-repeat: no-repeat;
     width: 25px;
     height: 20px;
+    position: relative;
 }
+
+.bar {
+    width: 100%;
+    height: 3px;
+    border-radius: 15px;
+    background-color: #1a212e;
+    position: absolute;
+    top: 0;
+
+    &:nth-child(2) {
+        top: 8px;
+    }
+
+    &:nth-child(3) {
+        top: 16px;
+    }
+}
+
+.active {
+    transform: rotate(90deg);
+}
+
 .mobileMenu {
     display: flex;
     flex-direction: column;

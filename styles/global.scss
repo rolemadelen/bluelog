@@ -84,6 +84,9 @@ li {
             content: '';
             display: block;
             margin-right: 1em;
+            position: absolute;
+            left: 0;
+            top: 10px;
             width: 0.6em;
             height: 0.6em;
             border-radius: 50%;

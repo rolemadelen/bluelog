@@ -10,6 +10,7 @@ const Header = props => {
 
     function toggleMobileMenu(e) {
         document.querySelector('#mobileMenu').classList.toggle('hide');
+        document.querySelector('#hamburger').classList.toggle(`${styles.active}`);
     }
 
     return (
@@ -39,7 +40,11 @@ const Header = props => {
             <LightSwitch customIcon={"fa fa-moon"} customClass={`${styles.lightswitch} hover:cursor-pointer dark:text-white duration-300 ml-4`} />
 
             <MobileNav className={styles.mobileNavLink}>
-                <div className={`${styles.mobileHamburger} dark:bg-mobile-dark bg-mobile-light duration-200 w-[25px] h-[20px]`} onClick={toggleMobileMenu}></div>
+                <div id="hamburger" className={`${styles.mobileHamburger} duration-200`} onClick={toggleMobileMenu}>
+                    <div className={`${styles.bar} dark:bg-[#f9f9f9]`}></div>
+                    <div className={`${styles.bar} dark:bg-[#f9f9f9]`}></div>
+                    <div className={`${styles.bar} dark:bg-[#f9f9f9]`}></div>
+                </div>
                 <div id="mobileMenu" className={`hide ${styles.mobileMenu}`}>
                     {
                         baseNav.map(tab => (
