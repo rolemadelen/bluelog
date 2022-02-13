@@ -83,11 +83,9 @@ li {
         &:before {
             content: '';
             display: block;
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            top: 0;
-            left: 0;
+            margin-right: 1em;
+            width: 0.6em;
+            height: 0.6em;
             border-radius: 50%;
             background-color: transparent;
             transform: rotate(0);

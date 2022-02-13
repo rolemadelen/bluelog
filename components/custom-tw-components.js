@@ -8,6 +8,7 @@ export const PostListContainer = tw.ul`
     list-none
     p-0
     m-0
+    mt-[4em]
 `
 
 //////////////////////////////////////////////////////
@@ -57,27 +58,18 @@ export const LanguageButtons = tw.div`
 ///  PostList Component
 //////////////////////////////////////////////////////
 export const List = tw.li`
-    mt-[1em]
-    mb-[1.5em]
-    p-[1.2em]
-    pr-0
-    rounded
+    flex
     list-none
+    items-center
 `
 
 export const Title = tw.div` 
-    text-lg 
-    font-semibold 
     text-primary 
     dark:text-dprimary
-`
-
-export const Subtitle = tw.div` 
-    text-sm
-    pt-1 
-    pb-2 
-    text-secondary 
-    dark:text-dsecondary
+    overflow-hidden
+    text-ellipsis
+    w-[25em]
+    whitespace-pre
 `
 
 //////////////////////////////////////////////////////
@@ -222,7 +214,7 @@ export const DocPostTitle = tw.h1`
 ///  Container  Component
 //////////////////////////////////////////////////////
 export const BaseContainer = tw.section`
-    max-w-[50rem]
+    max-w-[40rem]
     w-full
     px-[1rem]
     mx-auto

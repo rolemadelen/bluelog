@@ -11,6 +11,43 @@
     padding-bottom: 15em;
 }
 
+.circle {
+    width: 2.5em;
+    height: 2.5em;
+    background-color: #4b4b4b;
+    border-radius: 50%;
+    border: 1px solid #fbfbfb;
+    position: relative;
+    z-index: -1;
+}
+
+.active {
+    transform: rotate(180deg);
+}
+
+.bar {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 22px;
+    height: 3px;
+    left: 10px;
+    top: 19px;
+    border-radius: 15px;
+    background-color: #fbfbfb;
+    transform-origin: right;
+    text-align: center;
+    z-index: 1;
+}
+
+.bar:nth-child(1) {
+    transform: rotate(21deg);
+}
+.bar:nth-child(2) {
+    transform: rotate(-21deg);
+}
+
+
 @media only screen and (max-width: 750px) {
     .docAside {
         width: 99%;

@@ -160,8 +160,6 @@ module.exports = {
             'bluexy': "url('/images/bluexy.png')",
             "mobile-dark": "url('/images/mobile-menu-dark.svg')",
             "mobile-light": "url('/images/mobile-menu-light.svg')",
-            "docaside-mobile-dark": "url('/images/docaside-mobile-menu-dark.svg')",
-            "docaside-mobile-light": "url('/images/docaside-mobile-menu-light.svg')",
         },
         backgroundOpacity: ({ theme }) => theme('opacity'),
         backgroundPosition: {
