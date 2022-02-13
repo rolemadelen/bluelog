@@ -7,6 +7,7 @@ const DocAside = ({ tree, page }) => {
     function toggleMobileMenu() {
         document.querySelector('#docAside').classList.toggle(css.unfold)
         document.querySelector('#docAsideMenu').classList.toggle(css.mobileDocAsideSlide)
+        document.querySelector('#docAsideMenu > div').classList.toggle(css.active);
         const docContainer = document.querySelector('#docContainer')
         docContainer.style.position = (docContainer.style.position == "fixed") ? "relative" : "fixed"
     }
@@ -15,6 +16,7 @@ const DocAside = ({ tree, page }) => {
         document.querySelector('#docAside').classList.toggle(css.unfold)
         document.querySelector('#docAsideMenu').classList.toggle(css.mobileDocAsideSlide)
         document.querySelector('#docContainer').style.position = "relative"
+        document.querySelector('#docAsideMenu > div').classList.remove(css.active);
     }
 
     return (
@@ -38,7 +40,12 @@ const DocAside = ({ tree, page }) => {
                     ))
                 }
             </DocAsideContainer>
-            <div id="docAsideMenu" className={`${css.mobileDocAside} dark:bg-docaside-mobile-dark bg-docaside-mobile-light duration-200 w-[45px] h-[45px]`} onClick={toggleMobileMenu}></div>
+            <div id="docAsideMenu" className={`${css.mobileDocAside} duration-200 w-[45px] h-[45px]`} onClick={toggleMobileMenu}>
+                <div className={`${css.circle} dark:bg-[#fbfbfb] duration-200`}>
+                    <div className={`${css.bar} dark:bg-[#363636]`}></div>
+                    <div className={`${css.bar} dark:bg-[#363636]`}></div>
+                </div>
+            </div>
         </>
     )
 }

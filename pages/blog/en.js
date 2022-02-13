@@ -4,7 +4,6 @@ import Footer from '@components/Footer'
 import { getAllPosts } from '@lib/blog'
 import metadata from '@data/metadata'
 import { PostListContainer } from '@components/custom-tw-components'
-import tw from 'tailwind-styled-components'
 
 export default function Blog({ posts }) {
     const customMeta = {
