@@ -1,6 +1,5 @@
 import NavLink from '@components/NavLink'
 import Date from '@components/Date'
-import utilStyles from '@styles/utils.module.scss'
 import { SubContainer, Subtitle } from './custom-tw-components'
 
 const RecentPostsContainer = ({ posts, title, link }) => {
