@@ -4,6 +4,8 @@ import Footer from '@components/Footer'
 import { getAllPosts } from '@lib/blog'
 import metadata from '@data/metadata'
 import { PostListContainer } from '@components/custom-tw-components'
+import PageBanner from '@components/PageBanner'
+import LanguageSelector from '@components/LanguageSelector'
 
 export default function Blog({ posts }) {
     const customMeta = {
@@ -11,6 +13,8 @@ export default function Blog({ posts }) {
     }
     return (
         <Container page={"blog"} customMeta={customMeta}>
+            <PageBanner title={"Blue Log"} subtitle={"Miscellaneous record."}/>
+            <LanguageSelector />
             <PostListContainer>
                 <PostList posts={posts} />
             </PostListContainer>

@@ -157,7 +157,6 @@ module.exports = {
             'gradient-to-l': 'linear-gradient(to left, var(--tw-gradient-stops))',
             'gradient-to-tl': 'linear-gradient(to top left, var(--tw-gradient-stops))',
             'bluexx': "url('/images/bluexx.png')",
-            'bluexy': "url('/images/bluexy.png')",
             "mobile-dark": "url('/images/mobile-menu-dark.svg')",
             "mobile-light": "url('/images/mobile-menu-light.svg')",
         },

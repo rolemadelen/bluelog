@@ -8,7 +8,9 @@ export const PostListContainer = tw.ul`
     list-none
     p-0
     m-0
-    mt-[4em]
+    pt-[3em]
+    border-t-[1px]
+    dark:border-slate-700
 `
 
 //////////////////////////////////////////////////////
@@ -20,6 +22,26 @@ export const Article = tw.article`
     pb-5 
     border-b-[1px] 
     dark:border-gray-600
+`
+
+//////////////////////////////////////////////////////
+///  LanguageSelector Layout
+//////////////////////////////////////////////////////
+export const LanguageListWrapper = tw.ul` 
+    flex
+    mb-5
+`
+
+export const LanguageList = tw.li` 
+    list-none
+    px-4
+    mr-2
+    border
+    rounded-md
+    font-medium
+
+    hover:bg-[#289aff]
+    dark:hover:bg-[#289aff]
 `
 
 //////////////////////////////////////////////////////
@@ -60,7 +82,8 @@ export const LanguageButtons = tw.div`
 export const List = tw.li`
     flex
     list-none
-    items-center
+    flex-col
+    pb-12
 `
 
 export const Title = tw.div` 
@@ -68,50 +91,57 @@ export const Title = tw.div`
     dark:text-dprimary
     overflow-hidden
     text-ellipsis
-    w-[25em]
     whitespace-pre
+
+    cursor-pointer
+    font-semibold 
+    text-xl 
+    md:text-2xl 
+    tracking-tighter 
+    hover:text-[#289aff]
+    dark:hover:text-[#289aff]
+    duration-150
+`
+
+export const Subtitle = tw.div` 
+    text-primary 
+    dark:text-dprimary
+    pt-2
+    pl-1
 `
 
 //////////////////////////////////////////////////////
 ///  Home Layout
 //////////////////////////////////////////////////////
-export const BannerEmp = tw.span`
-    dark:text-[#66caff]
-    text-[#ff7ca8]
-`
 
 export const Banner = tw.div` 
     relative
+    text-center
 `
 
-export const BannerImage = tw.div`
-    w-full 
-    h-[14em] 
-    sm:h-[25em] 
-    mr-5
-
-    bg-bluexx 
-    bg-cover 
-    bg-no-repeat 
-    rounded 
-    duration-200 
+//////////////////////////////////////////////////////
+///  PageBanner Layout
+//////////////////////////////////////////////////////
+export const PageHeader = tw.header`
+    pb-[2em]
 `
 
-export const BannerText = tw.h1`
-    home-header 
-    
-    font-poppin 
-    text-primary 
-    dark:text-dprimary 
-    text-5xl 
-    sm:text-6xl 
+export const PageTitle = tw.div` 
+    text-4xl 
+    md:text-5xl 
+    md:leading-tight 
     font-bold 
-    
-    absolute 
-    top-[5%] 
-    sm:top-[20%] 
-    left-0 
-    sm:left-[5%]
+    text-gray-800 
+    dark:text-dprimary
+`
+
+export const PageSubtitle = tw.div` 
+    mt-3 
+    text-md
+    md:text-lg
+    dark:text-dprimary
+    font-light
+    whitespace-pre-line
 `
 
 //////////////////////////////////////////////////////
@@ -175,8 +205,9 @@ export const DocAsideLink = tw.a`
 ///  DocContainer  Component
 //////////////////////////////////////////////////////
 export const DocBaseContainer = tw.section`
-    max-w-[50rem]
-    w-full
+    max-w-screen-xl
+    mx-auto
+    w-full 
 
     mt-5
     mr-4
@@ -214,7 +245,7 @@ export const DocPostTitle = tw.h1`
 ///  Container  Component
 //////////////////////////////////////////////////////
 export const BaseContainer = tw.section`
-    max-w-[40rem]
+    max-w-screen-xl
     w-full
     px-[1rem]
     mx-auto
@@ -257,16 +288,9 @@ export const HeaderContainer = tw.header`
     items-center
     justify-between
     flex-wrap
-    mb-10
+    pb-32
 `
 
 export const MobileNav = tw.div`
     flex
 `
-
-export const NavLanguage = tw.div`
-    absolute
-    right-0
-    top-[3em]
-`
-

@@ -10,13 +10,12 @@ class MyDocument extends Document {
 
     render() {
         return (
-            <Html id="vantabg" lang="en" className={"dark dark:bg-dtheme_surface duration-300"} style={{ scrollBehavior: 'smooth' }}>
+            <Html id="vantabg" lang="en" className={"dark:bg-dtheme_surface duration-300"} style={{ scrollBehavior: 'smooth' }}>
                 <Head>
                     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
                     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.waves.min.js"></script>
                     <link rel="preconnect" href="https://fonts.googleapis.com"></link>
                     <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true"></link>
-                    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"></link>
                 </Head>
 
                 <body className={"bg-theme dark:bg-dtheme_surface duration-300"}>

@@ -6,7 +6,7 @@ import { LanguageButtons, PostContainer, PostSubtitle, PostTitle } from "./custo
 const Post = ({ post, tags, title, subtitle, date, children }) => {
     return (
         <PostContainer>
-            <PostTitle className={"font-poppin"}>{title}</PostTitle>
+            <PostTitle className={""}>{title}</PostTitle>
             {subtitle && (
                 <PostSubtitle>{subtitle}</PostSubtitle>
             )}

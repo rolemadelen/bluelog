@@ -77,66 +77,29 @@ li {
     list-style: none;
     position: relative;
 
-    &.ko,
-    &.en,
-    &.ja {
-        &:before {
-            content: '';
-            display: block;
-            margin-right: 1em;
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 0.6em;
-            height: 0.6em;
-            border-radius: 50%;
-            background-color: transparent;
-            transform: rotate(0);
-            transition: all 0.3s ease-out;
+    &.languageSelector {
+        &:hover {
+            a {
+                color: $--theme !important;
+            }
         }
 
-        &:hover {
-            &:before {
-                transform: rotate(540deg);
-                animation: rotate 0.7s infinite;
-                animation-direction: alternate;
-                animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-                transition: all 0.3s;
+        &.active {
+            background-color: #289aff;
+
+            a {
+                color: $--theme !important;
+            }
+        }
+
+        a {
+            color: $--primary;
+
+            &:hover {
+                text-decoration: none;
             }
         }
     }
-
-    &.ko {
-        &:before {
-            box-shadow: 0px 0px 2px 0px #ff6666, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px black;
-        }
-
-        &:hover:before {
-            box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px black;
-        }
-    }
-
-
-    &.en {
-        &:before {
-            box-shadow: 0px 0px 2px 0px #1e242e8c, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #6464ff;
-        }
-
-        &:hover:before {
-            box-shadow: 6px -4px 1px 1px #6464ff, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px #6464ff;
-        }
-    }
-
-    &.ja {
-        &:before {
-            box-shadow: 0px 0px 2px 0px #1e242e8c, 0px 0px 3px 0px #ff6666, 0px 0px 2px 0px #ff6666;
-        }
-
-        &:hover:before {
-            box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #ff6666, -7px -4px 1px 1px #ff6666;
-        }
-    }
-
 }
 
 .hide {
@@ -162,14 +125,10 @@ li {
     }
 }
 
-.font-poppin {
-    font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-        Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
 section {
     main {
         font-size: $--text;
+
         p {
             padding: 0.25em 0;
         }
@@ -183,6 +142,7 @@ section {
                 background-color: transparent;
             }
         }
+
         code {
             font-size: 0.8em;
             padding: 0.3em 0.4em;
@@ -270,13 +230,18 @@ section {
     }
 
     li {
+        &.languageSelector {
+            &.active {
+                background-color: #289aff;
 
-        &.ko:before {
-            box-shadow: 0px 0px 2px 0px #ff6666, 0px 0px 3px 0px #6464ff, 0px 0px 2px 0px #efefef !important;
-        }
+                a {
+                    color: $--theme !important;
+                }
+            }
 
-        &.ko:hover:before {
-            box-shadow: 6px -4px 1px 1px #ff6666, 0px 7px 1px 1px #6464ff, -7px -4px 1px 1px #efefef !important;
+            a {
+                color: $--primary-dark;
+            }
         }
     }
 
@@ -295,13 +260,6 @@ section {
 
     to {
         transform: rotate(540deg);
-    }
-}
-
-@media only screen and (max-width: 380px) {
-    .bg-bluexx {
-        width: 22em;
-        margin-left: -2em;
     }
 }
 
@@ -354,8 +312,6 @@ section {
 }
 
 .fa-sun {
-    color: #1b212e;
-
     &:hover {
         color: #ff8686;
         transform: rotate(-270deg);
