@@ -29,7 +29,8 @@ export const Article = tw.article`
 //////////////////////////////////////////////////////
 export const LanguageListWrapper = tw.ul` 
     flex
-    mb-5
+    mt-3
+    mb-4
 `
 
 export const LanguageList = tw.li` 
@@ -59,7 +60,8 @@ export const PostContainer = tw.section`
 export const PostTitle = tw.div`
     text-primary
     dark:text-dprimary
-    text-xl
+    text-2xl
+    md:text-3xl
     font-bold
 `
 

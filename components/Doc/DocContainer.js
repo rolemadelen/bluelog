@@ -11,7 +11,7 @@ const DocContainer = (props) => {
         title: metadata.title,
         description: metadata.description,
         type: 'website',
-        image: encodeURI(`${metadata.url}/images/profile.jpg`),
+        image: encodeURI(`${metadata.url}/images/blue.png`),
         twitterHandle: metadata.socialHandle.twitter,
         page: props.page,
         ...props.customMeta,
