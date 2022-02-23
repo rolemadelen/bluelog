@@ -1,35 +1,33 @@
 import Date from "@components/Date";
 import Link from 'next/link'
-import utilStyles from '@styles/utils.module.scss'
-import { LanguageButtons, PostContainer, PostSubtitle, PostTitle } from "./custom-tw-components";
+import { PostContainer, PageTitle, PageSubtitle } from "./custom-tw-components";
+import { LanguageList, LanguageListWrapper } from "./custom-tw-components";
 
 const Post = ({ post, tags, title, subtitle, date, children }) => {
     return (
         <PostContainer>
-            <PostTitle className={""}>{title}</PostTitle>
+            <PageTitle className={""}>{title}</PageTitle>
             {subtitle && (
-                <PostSubtitle>{subtitle}</PostSubtitle>
+                <PageSubtitle>
+                    {subtitle} &nbsp;
+                    <Date dateString={date} customClass={"italic text-sm break-normal inline-block"} />
+                </PageSubtitle>
             )}
-            {date && (
-                <Date customClass={"text-xs"} dateString={date} />
-            )}
-            {tags && (
-                <div className={`${utilStyles.tags} flex justify-end`}>
-                    {tags.map((tag, i) => (
-                        <div key={i} className={"px-2 mr-1 text-xs border-[1.5px] border-tags_bg text-secondary dark:border-dtags_bg dark:text-dsecondary"}>
-                            {tag}
-                        </div>
-                    ))}
-                </div>
+            {!subtitle && date && (
+                <Date customClass={"italic text-sm break-normal inline-block"} dateString={date} />
             )}
             {post && (
-                <LanguageButtons className={`postTag`}>
+                <LanguageListWrapper>
                     {post.availableLanguage.map((post) => (
-                        <Link key={post.slug} href={`/blog/${post.lang}/${post.slug}`}>
-                            <a>{post.langName} </a>
-                        </Link>
+                        <LanguageList className="languageSelector" key={post.slug}>
+                            <Link href={`/blog/${post.lang}/${post.slug}`}>
+                                <a>
+                                    {post.langName}
+                                </a>
+                            </Link>
+                        </LanguageList>
                     ))}
-                </LanguageButtons>
+                </LanguageListWrapper>
             )}
             <hr />
             {children}

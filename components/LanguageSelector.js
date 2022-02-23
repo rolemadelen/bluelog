@@ -2,7 +2,6 @@ import { LanguageList, LanguageListWrapper } from "./custom-tw-components";
 import navlink from '@data/navlink'
 import Link from "next/link";
 
-
 const LanguageSelector = props => {
     const blogNav = navlink.blog
     return (

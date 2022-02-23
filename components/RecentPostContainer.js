@@ -6,7 +6,7 @@ const RecentPostsContainer = ({ posts, title, link }) => {
     return (
         <SubContainer>
             <div className={"flex justify-between items-center mt-4 border-b dark:border-slate-700"}>
-                <div className={"py-2 text-xl md:text-2xl font-bold text-primary dark:text-dprimary"}> {title} </div>
+                <div className={"py-2 text-xl md:text-2xl font-semibold text-primary dark:text-dprimary"}> {title} </div>
                 {link == "dsa" && (
                     <NavLink link={"/dsa/Graph/dijkstra"} customClass={`flex justify-end text-sm text-primary dark:text-dprimary`} value={"View more..."} />
                 )}
