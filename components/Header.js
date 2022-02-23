@@ -2,11 +2,10 @@ import NavLink from '@components/NavLink'
 import LightSwitch from '@components/LightSwitch'
 import styles from '@styles/container.module.scss'
 import navlink from '@data/navlink'
-import { HeaderContainer, MobileNav, NavLanguage } from './custom-tw-components'
+import { HeaderContainer, MobileNav } from './custom-tw-components'
 
 const Header = props => {
     const baseNav = navlink.base
-    const blogNav = navlink.blog
 
     function toggleMobileMenu(e) {
         document.querySelector('#mobileMenu').classList.toggle('hide');
@@ -21,23 +20,14 @@ const Header = props => {
                     <div className={styles.navLink}>
                         {
                             baseNav.map(tab => (
-                                <NavLink key={tab.link} link={tab.link} customClass={"font-poppin hover:text-[#289aff] dark:hover:text-[#289aff]"} value={tab.name} />
+                                <NavLink key={tab.link} link={tab.link} customClass={"hover:text-[#289aff] dark:hover:text-[#289aff]"} value={tab.name} />
                             ))
                         }
-                        {props.page == "blog" && (
-                            <NavLanguage>
-                                {
-                                    blogNav.map(tab => (
-                                        <NavLink key={tab.link} link={tab.link} customClass={"px-[0.5em]"} value={tab.name} />
-                                    ))
-                                }
-                            </NavLanguage>
-                        )}
                     </div>
                 </div>
             </HeaderContainer>
 
-            <LightSwitch customIcon={"fa fa-moon"} customClass={`${styles.lightswitch} hover:cursor-pointer dark:text-white duration-300 ml-4`} />
+            <LightSwitch customIcon={"fa fa-moon"} customClass={`${styles.lightswitch} hover:cursor-pointer text-gray-700 dark:text-white duration-300 ml-4`} />
 
             <MobileNav className={styles.mobileNavLink}>
                 <div id="hamburger" className={`${styles.mobileHamburger} duration-200`} onClick={toggleMobileMenu}>
@@ -48,18 +38,9 @@ const Header = props => {
                 <div id="mobileMenu" className={`hide ${styles.mobileMenu}`}>
                     {
                         baseNav.map(tab => (
-                            <NavLink key={tab.link} link={tab.link} customClass={"font-poppin hover:text-[#289aff] dark:hover:text-[#289aff] py-1"} value={tab.name} />
+                            <NavLink key={tab.link} link={tab.link} customClass={"hover:text-[#289aff] dark:hover:text-[#289aff] py-1"} value={tab.name} />
                         ))
                     }
-                    {props.page == "blog" && (
-                        <div className={"my-[0.5em]"}>
-                            {
-                                blogNav.map(tab => (
-                                    <NavLink key={tab.link} link={tab.link} customClass={"px-[0.7em]"} value={tab.name} />
-                                ))
-                            }
-                        </div>
-                    )}
                 </div>
             </MobileNav>
         </>

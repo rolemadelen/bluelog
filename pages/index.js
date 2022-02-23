@@ -10,7 +10,7 @@ export default function Home({ posts, cps, dsas }) {
 }
 
 export async function getStaticProps() {
-    const NUM_POSTS = 5;
+    const NUM_POSTS = 4;
     
     const posts = allBlogs.sort((a, b) => {
         return (a.date < b.date) ? 1 : -1;
@@ -18,9 +18,9 @@ export async function getStaticProps() {
 
     const dsas = allDSAs.sort((a, b) => {
         return (a.date < b.date) ? 1 : -1;
-    }).slice(0, NUM_POSTS);
+    }).slice(0, NUM_POSTS * 2);
 
-    const cps = allCPs.sort(() => .5 - Math.random()).slice(0, NUM_POSTS);
+    const cps = allCPs.sort(() => .5 - Math.random()).slice(0, NUM_POSTS * 2);
     
     return {
         props: {
