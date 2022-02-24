@@ -2,7 +2,6 @@ import Comments from "@components/Comments";
 
 import ReactMarkdown from 'react-markdown'
 import Codeblock from '@lib/codeblock.js'
-import tw from "tailwind-styled-components"
 import Footer from '@components/Footer'
 import Container from "@components/Container";
 import Post from "@components/Post";

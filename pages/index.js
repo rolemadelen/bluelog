@@ -5,12 +5,12 @@ import { allDSAs } from '.contentlayer/data'
 
 export default function Home({ posts, cps, dsas }) {
     return (
-        <HomeLayout blog={posts} cp={cps} dsa={dsas} />
+        <HomeLayout blog={posts}/>
     )
 }
 
 export async function getStaticProps() {
-    const NUM_POSTS = 4;
+    const NUM_POSTS = 8;
     
     const posts = allBlogs.sort((a, b) => {
         return (a.date < b.date) ? 1 : -1;
@@ -18,9 +18,9 @@ export async function getStaticProps() {
 
     const dsas = allDSAs.sort((a, b) => {
         return (a.date < b.date) ? 1 : -1;
-    }).slice(0, NUM_POSTS * 2);
+    }).slice(0, NUM_POSTS);
 
-    const cps = allCPs.sort(() => .5 - Math.random()).slice(0, NUM_POSTS * 2);
+    const cps = allCPs.sort(() => .5 - Math.random()).slice(0, NUM_POSTS);
     
     return {
         props: {

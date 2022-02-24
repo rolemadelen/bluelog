@@ -6,7 +6,7 @@ import PageBanner from '@components/PageBanner'
 import Image from 'next/image'
 import utilStyles from '@styles/utils.module.scss'
 
-const HomeLayout = ({ blog, cp, dsa }) => {
+const HomeLayout = ({ blog }) => {
     return (
         <Container>
             <Banner>
@@ -16,9 +16,7 @@ const HomeLayout = ({ blog, cp, dsa }) => {
                     subtitle={"If you're a living organism, failure in life is inevitable. \nWe fail by default. So why not we learn from it?"}
                 />
             </Banner>
-            <RecentPostContainer title={"BLog"} link={"blog"} posts={blog} />
-            <RecentPostContainer title={"Competitive Programming"} link={"cp"} posts={cp} />
-            <RecentPostContainer title={"Data Structure & Algorithm"} link={"dsa"} posts={dsa} />
+            <RecentPostContainer title={"Recent Posts"} link={"blog"} posts={blog} />
             <Footer />
         </Container>
     )
