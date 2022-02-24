@@ -6,7 +6,7 @@ const DocPost = ({title, date, children}) => {
         <DocPostContainer>
             <DocPostTitle>{title}</DocPostTitle>
             {date && (
-                <Date dateString={date}/>
+                <Date dateString={date} customClass={"italic text-sm break-normal inline-block"} />
             )}
             <hr />
             { children }

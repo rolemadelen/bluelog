@@ -8,7 +8,19 @@ const PostList = ({ posts }) => {
             {posts.map((post) => (
                 <List key={`${post.lang}-${post.slug}`}>
                     <Link href={`/blog/${post.lang}/${post.slug}`} passHref>
-                        <Title> {post.title} </Title>
+                        <Title>
+                            {post.lang == "ko" && (
+                                <span>🇰🇷</span>
+                            )}
+                            {post.lang == "ja" && (
+                                <span>🇯🇵</span>
+                            )}
+                            {post.lang == "en" && (
+                                <span>🇺🇸</span>
+                            )}
+                            &nbsp; &nbsp;
+                            {post.title}
+                        </Title>
                     </Link>
                     <Subtitle>
                         {post.subtitle} &nbsp;

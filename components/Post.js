@@ -6,7 +6,7 @@ import { LanguageList, LanguageListWrapper } from "./custom-tw-components";
 const Post = ({ post, tags, title, subtitle, date, children }) => {
     return (
         <PostContainer>
-            <PageTitle className={""}>{title}</PageTitle>
+            <PageTitle>{title}</PageTitle>
             {subtitle && (
                 <PageSubtitle>
                     {subtitle} &nbsp;

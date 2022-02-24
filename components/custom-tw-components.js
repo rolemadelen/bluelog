@@ -10,6 +10,7 @@ export const PostListContainer = tw.ul`
     m-0
     pt-[3em]
     border-t-[1px]
+    border-b-[1px]
     dark:border-slate-700
 `
 
@@ -167,7 +168,7 @@ export const Layout = tw.div`
 export const DocAsideContainer = tw.section`
     w-[28%]
     h-full
-    px-6
+    px-8
     pt-5
     
     fixed
@@ -188,7 +189,7 @@ export const DocAsideHeader = tw.span`
     dark:text-dprimary
 `
 export const DocAsideLink = tw.a`
-    px-1
+    px-2
     py-0.5
     leading-5
     
@@ -238,9 +239,15 @@ export const DocPostContainer = tw.section`
 `
 
 export const DocPostTitle = tw.h1`
-    text-primary
+    text-primary 
     dark:text-dprimary
-    text-lg
+    overflow-hidden
+    text-ellipsis
+    whitespace-pre
+
+    font-semibold 
+    text-2xl 
+    md:text-3xl 
 `
 
 //////////////////////////////////////////////////////
@@ -259,7 +266,8 @@ export const BaseContainer = tw.section`
 ///  CPSection Component
 //////////////////////////////////////////////////////
 export const CPHeader = tw.h1`
-    text-lg 
+    text-xl
+    md:text-2xl
     font-semibold 
     text-primary 
     dark:text-dprimary 
