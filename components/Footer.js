@@ -11,17 +11,16 @@ const Footer = () => {
     ]
     return (
         <FooterContainer>
-            <div>© 2022 <a href={sns[0].link}>{metadata.author}</a>. powered by&nbsp;<a href="https://vercel.com/">Vercel</a></div>
-            <div className="snsLinks flex items-center justify-center mt-1">
+            <div className="snsLinks flex items-center justify-center">
                 {
                     sns.map((social) => (
                         <Link href={social.link} key={social.link} passHref>
-                            <a className={"px-2"}>
+                            <a className={"px-1"}>
                                 <Image
                                     priority
                                     src={`/images/social/${social.name}.svg`}
-                                    height={20}
-                                    width={20}
+                                    height={18}
+                                    width={18}
                                     alt={social.name}
                                 />
                             </a>
@@ -29,6 +28,7 @@ const Footer = () => {
                     ))
                 }
             </div>
+            <div>© 2022 <a href={sns[0].link}>{metadata.author}</a>. powered by&nbsp;<a href="https://vercel.com/">Vercel</a></div>
         </FooterContainer>
     )
 }
