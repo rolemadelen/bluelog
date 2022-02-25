@@ -127,6 +127,9 @@ export const Banner = tw.div`
 //////////////////////////////////////////////////////
 export const PageHeader = tw.header`
     pb-[2em]
+    flex
+    flex-col
+    justify-center
 `
 
 export const PageTitle = tw.div` 
@@ -298,7 +301,7 @@ export const HeaderContainer = tw.header`
     items-center
     justify-between
     flex-wrap
-    pb-32
+    pb-20
 `
 
 export const MobileNav = tw.div`
