@@ -11,7 +11,7 @@ const HomeLayout = ({ blog }) => {
     return (
         <Container>
             <Banner>
-                <Image className={utilStyles.circleImage} width={135} height={135} src={"/images/animoji2.gif"} alt="Blue Eu" />
+                <Image className={utilStyles.circleImage} width={135} height={135} src={"/images/animoji.gif"} alt="Blue Eu" />
                 <PageBanner
                     title={"Failure leads to understanding."}
                     subtitle={"If you're a living organism, failure in life is inevitable. \nWe fail by default. So why not we learn from it?"}
