@@ -1,4 +1,3 @@
-import DocContainer from "@components/Doc/DocContainer";
 import DocAside from "@components/Doc/DocAside";
 import DocPost from "@components/Doc/DocPost";
 import Comments from "@components/Comments";
@@ -6,7 +5,8 @@ import Comments from "@components/Comments";
 import ReactMarkdown from 'react-markdown'
 import Codeblock from '@lib/codeblock.js'
 import Footer from '@components/Footer'
-import { Layout } from "@components/custom-tw-components";
+import Container from "@components/Container";
+import styles from '@styles/docaside.module.scss'
 
 const DocLayout = ({ post, tree, page }) => {
     const customMeta = {
@@ -15,16 +15,16 @@ const DocLayout = ({ post, tree, page }) => {
     }
 
     return (
-        <Layout>
-            <DocAside tree={tree} page={page} />
-            <DocContainer customMeta={customMeta}>
+        <Container>
+            <div className={styles.flex}>
+                <DocAside tree={tree} page={page} />
                 <DocPost title={post.title} date={post.date}>
                     <ReactMarkdown components={Codeblock}>{post.body.raw}</ReactMarkdown>
                     <Comments />
                     <Footer />
                 </DocPost>
-            </DocContainer>
-        </Layout>
+            </div>
+        </Container>
     )
 }
 

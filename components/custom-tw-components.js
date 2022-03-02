@@ -158,29 +158,18 @@ export const SubContainer = tw.div`
 `
 
 //////////////////////////////////////////////////////
-///  Doc Layout
-//////////////////////////////////////////////////////
-export const Layout = tw.div`
-    flex
-    w-full
-`
-
-//////////////////////////////////////////////////////
 ///  DocAside  Component
 //////////////////////////////////////////////////////
 export const DocAsideContainer = tw.section`
-    w-[28%]
+    w-[35%]
     h-full
-    px-8
+    pr-8
     pt-5
     
-    fixed
+    relative
     flex
     flex-col
     overflow-y-scroll
-    
-    bg-[#efefef]
-    dark:bg-[#1a1b1e]
     
     duration-300
 `
@@ -193,11 +182,9 @@ export const DocAsideHeader = tw.span`
 `
 export const DocAsideLink = tw.a`
     px-2
-    py-0.5
-    leading-5
     
-    text-[0.8em]
-    text-gray-600
+    text-[0.9em]
+    text-[#2a75e9]
     dark:text-dsecondary
     
     hover:text-[#289aff]
@@ -210,20 +197,6 @@ export const DocAsideLink = tw.a`
 //////////////////////////////////////////////////////
 ///  DocContainer  Component
 //////////////////////////////////////////////////////
-export const DocBaseContainer = tw.section`
-    max-w-screen-xl
-    mx-auto
-    w-full 
-
-    mt-5
-    mr-4
-    ml-[26%]
-    pl-4
-    pr-4
-
-    relative
-`
-
 export const DocContent = tw.main`
     flex
     w-full
