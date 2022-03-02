@@ -7,10 +7,6 @@
     height: 45px;
 }
 
-.docAside {
-    padding-bottom: 15em;
-}
-
 .circle {
     width: 2.5em;
     height: 2.5em;
@@ -47,12 +43,18 @@
     transform: rotate(-21deg);
 }
 
+.flex {
+    display: flex;
+}
 
 @media only screen and (max-width: 750px) {
+    .flex {
+        display: block;
+    }
     .docAside {
         width: 99%;
         z-index: 776;
-        transform: translate(-40em, 4em);
+        // transform: translate(-40em, 4em);
     }
 
     .unfold {
