@@ -280,3 +280,21 @@ export const HeaderContainer = tw.header`
 export const MobileNav = tw.div`
     flex
 `
+
+//////////////////////////////////////////////////////
+///  Header Component
+//////////////////////////////////////////////////////
+export const ProjectContainer = tw.div` 
+    flex
+    flex-wrap
+    relative
+    justify-center
+`
+
+export const ProjectCard = tw.div` 
+    m-4
+    flex
+    flex-col
+    text-center
+    rounded-md
+`

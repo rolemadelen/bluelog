@@ -191,7 +191,7 @@ void BinaryTree::deleteNode(void) {
 ```
 
 ### Practice (leetcode)
-- [617. Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) ([code](https://github.com/yuueu/cp/tree/leetcode/easy/617/617.cpp))
+- [617. Merge Two Binary Trees](https://leetcode.com/problems/merge-two-binary-trees/) ([code](https://github.com/euisblue/cp/tree/leetcode/easy/617/617.cpp))
 
 ## Reference
 - [https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm](https://www.tutorialspoint.com/data_structures_algorithms/tree_data_structure.htm)

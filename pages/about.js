@@ -5,6 +5,7 @@ import { PageHeader, PageSubtitle, PageTitle } from '@components/custom-tw-compo
 import Link from 'next/link';
 import utilStyles from '@styles/utils.module.scss'
 import Image from 'next/image';
+import profileImg from '../public/images/animoji2.gif';
 
 export default function About() {
     const customMeta = {
@@ -12,7 +13,7 @@ export default function About() {
     }
     return (
         <Container customMeta={customMeta}>
-            <Image priority className={utilStyles.circleImage} src="/images/animoji2.gif" width={120} height={120} alt="Blue.gif" />
+            <Image priority className={utilStyles.circleImage} src={profileImg} width={120} height={120} alt="Blue.gif" />
             <PageHeader>
                 <PageTitle>{"Hi, I'm Blue."}</PageTitle>
                 <PageSubtitle>
