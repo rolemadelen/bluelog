@@ -1,11 +1,11 @@
+import Image from 'next/image'
 import Footer from '@components/Footer'
 import Container from '@components/Container'
 import RecentPostContainer from '@components/RecentPostContainer'
-import { Banner } from '@components/custom-tw-components'
 import PageBanner from '@components/PageBanner'
-import Image from 'next/image'
 import utilStyles from '@styles/utils.module.scss'
-import profileImg from '../public/images/animoji2.gif';
+import { Banner } from '@components/custom-tw-components'
+import profileImg from '../public/images/profile.gif';
 
 const HomeLayout = ({ blog }) => {
     return (

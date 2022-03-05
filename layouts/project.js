@@ -26,8 +26,7 @@ const ProjectLayout = () => {
                                 src={p.cover}
                                 className={utilStyles.roundedImage}
                                 alt={p.title}
-                                width={300}
-                                height={200}
+                                width={300} height={200}
                                 objectFit="cover"
                             />
                         </ProjectCard>

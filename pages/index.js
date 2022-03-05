@@ -1,9 +1,7 @@
 import HomeLayout from "@layouts/home";
 import { allBlogs } from '.contentlayer/data'
-import { allCPs } from '.contentlayer/data'
-import { allDSAs } from '.contentlayer/data'
 
-export default function Home({ posts, cps, dsas }) {
+export default function Home({ posts }) {
     return (
         <HomeLayout blog={posts}/>
     )
@@ -16,17 +14,9 @@ export async function getStaticProps() {
         return (a.date < b.date) ? 1 : -1;
     }).slice(0, NUM_POSTS);
 
-    const dsas = allDSAs.sort((a, b) => {
-        return (a.date < b.date) ? 1 : -1;
-    }).slice(0, NUM_POSTS);
-
-    const cps = allCPs.sort(() => .5 - Math.random()).slice(0, NUM_POSTS);
-    
     return {
         props: {
             posts,
-            cps,
-            dsas,
         }
     }
 }
