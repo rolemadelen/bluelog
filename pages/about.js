@@ -1,11 +1,11 @@
-import Footer from '@components/Footer';
-import Container from '@components/Container';
-import metadata from '@data/metadata';
-import { PageHeader, PageSubtitle, PageTitle } from '@components/custom-tw-components';
-import Link from 'next/link';
-import utilStyles from '@styles/utils.module.scss'
 import Image from 'next/image';
-import profileImg from '../public/images/animoji2.gif';
+import Link from 'next/link';
+import Footer from '@components/Footer';
+import metadata from '@data/metadata';
+import Container from '@components/Container';
+import utilStyles from '@styles/utils.module.scss'
+import { PageHeader, PageSubtitle, PageTitle } from '@components/custom-tw-components';
+import profileImg from '../public/images/profile.gif';
 
 export default function About() {
     const customMeta = {

@@ -1,5 +1,5 @@
-import DocAside from "@components/Doc/DocAside";
-import DocPost from "@components/Doc/DocPost";
+import DocAside from "@components/DocAside";
+import DocPost from "@components/DocPost";
 import Comments from "@components/Comments";
 
 import ReactMarkdown from 'react-markdown'
