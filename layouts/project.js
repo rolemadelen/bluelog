@@ -25,7 +25,7 @@ const ProjectLayout = () => {
                                 priority
                                 src={p.cover}
                                 className={utilStyles.roundedImage}
-                                alt={"til logger"}
+                                alt={p.title}
                                 width={300}
                                 height={200}
                                 objectFit="cover"
