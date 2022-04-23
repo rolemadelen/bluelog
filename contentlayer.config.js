@@ -5,6 +5,23 @@ export const urlFromFilePath = doc => {
     return doc._raw.flattenedPath.replace(/pages\/?/, '')
 }
 
+const computedFields = {
+    url_path: {
+        type: 'string',
+        description: 'The URL path of this page relative to site root. For example, the site root page would be "/", and doc page would be "docs/getting-started/"',
+        resolve: urlFromFilePath,
+    },
+    pathSegments: {
+        type: 'json',
+        resolve: doc =>
+            doc._raw.flattenedPath
+                .split('/')
+                .slice(1)
+                .map(pathName => {
+                    return { pathName }
+                }),
+    },
+}
 export const Blog = defineDocumentType(() => ({
     name: 'Blog',
     filePathPattern: `blog/**/*.md`,
@@ -15,23 +32,7 @@ export const Blog = defineDocumentType(() => ({
         lang: { type: 'string', required: true },
         tags: { type: 'string', required: false },
     },
-    computedFields: {
-        url_path: {
-            type: 'string',
-            description: 'The URL path of this page relative to site root. For example, the site root page would be "/", and doc page would be "docs/getting-started/"',
-            resolve: urlFromFilePath,
-        },
-        pathSegments: {
-            type: 'json',
-            resolve: doc =>
-                doc._raw.flattenedPath
-                    .split('/')
-                    .slice(1)
-                    .map(pathName => {
-                        return { pathName }
-                    }),
-        },
-    },
+    computedFields,
 }))
 
 export const DSA = defineDocumentType(() => ({
@@ -42,23 +43,7 @@ export const DSA = defineDocumentType(() => ({
         date: { type: 'date', required: true },
         section: { type: 'string', required: true },
     },
-    computedFields: {
-        url_path: {
-            type: 'string',
-            description: 'The URL path of this page relative to site root. For example, the site root page would be "/", and doc page would be "docs/getting-started/"',
-            resolve: urlFromFilePath,
-        },
-        pathSegments: {
-            type: 'json',
-            resolve: doc =>
-                doc._raw.flattenedPath
-                    .split('/')
-                    .slice(1)
-                    .map(pathName => {
-                        return { pathName }
-                    }),
-        },
-    },
+    computedFields,
 }))
 
 
@@ -70,23 +55,7 @@ export const CP = defineDocumentType(() => ({
         from: { type: 'string', required: true },
         level: { type: 'string'},
     },
-    computedFields: {
-        url_path: {
-            type: 'string',
-            description: 'The URL path of this page relative to site root. For example, the site root page would be "/", and doc page would be "docs/getting-started/"',
-            resolve: urlFromFilePath,
-        },
-        pathSegments: {
-            type: 'json',
-            resolve: doc =>
-                doc._raw.flattenedPath
-                    .split('/')
-                    .slice(1)
-                    .map(pathName => {
-                        return { pathName }
-                    }),
-        },
-    },
+    computedFields,
 }))
 
 export default makeSource({
