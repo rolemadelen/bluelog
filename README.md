@@ -1,4 +1,4 @@
-# [Blue Blog](http://euisblue.me/)
+# [Blue Blog](https://bluelog-b6d3ilsz3-euisblue.vercel.app/)
 
 
 ## Progress
@@ -63,7 +63,11 @@
   + i.p. Mobile UI <br /> <img src="./public/readme/20220130-mobile-ui.gif" width="400" alt="Mobile UI">
   + Light mode icon changed
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cd88d9b (Mobile UI in progress)
 =======
   + DSA (sidebar menu) mobile ui added <br /> <img src="./public/readme/20220130-mobile-docaside.gif" width="400" alt="Mobile UI Docaside">
 >>>>>>> a897ac0 (Mobile UI - sidebar added)
+=======
+  + DSA (sidebar menu) mobile ui added <br /> <img src="./public/readme/20220130-mobile-docaside.gif" width="400" alt="Mobile UI Docaside">
+>>>>>>> c587cd3 (Update README.md)
